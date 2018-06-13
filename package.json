@@ -1,0 +1,26 @@
+{
+  "name": "100x-frontend",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "apollo-boost": "^0.1.7",
+    "draft-convert": "^1.4.10",
+    "draft-js": "^0.10.1",
+    "graphql": "^0.13.2",
+    "graphql-tag": "^2.9.2",
+    "medium-draft": "^0.5.5",
+    "react": "^16.4.0",
+    "react-apollo": "^2.1.4",
+    "react-dom": "^16.4.0",
+    "react-router-dom": "^4.2.2",
+    "react-scripts": "1.1.4"
+  },
+  "scripts": {
+    "sass": "sass --watch src/assets/stylesheets/scss:src/assets/stylesheets/css",
+    "sass:build": "sass - update src/assets/stylesheets/scss:src/assets/stylesheets/css",
+    "start": "react-scripts start",
+    "build": "npm sass:build && react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
