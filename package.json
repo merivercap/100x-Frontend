@@ -17,9 +17,9 @@
   },
   "scripts": {
     "sass": "sass --watch src/assets/stylesheets/scss:src/assets/stylesheets/css",
-    "sass:build": "sass - update src/assets/stylesheets/scss:src/assets/stylesheets/css",
+    "sass:build": "sass --update src/assets/stylesheets/scss:src/assets/stylesheets/css",
     "start": "react-scripts start",
-    "build": "npm sass:build && react-scripts build",
+    "build": "npm run sass:build && react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   }
