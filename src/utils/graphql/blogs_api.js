@@ -13,7 +13,15 @@ export const fetchBlog = id => (
 );
 
 export const fetchBlogs = () => (
-  gql``
+  gql`
+    {
+      getAllPosts {
+        title,
+        body,
+        author,
+      }
+    }
+  `
 );
 
 export const deleteBlog = id => (
