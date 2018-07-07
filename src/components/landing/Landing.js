@@ -1,5 +1,6 @@
 // React
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 // Apollo / GraphQL
 import gql from 'graphql-tag';
@@ -8,65 +9,55 @@ import { Query } from 'react-apollo';
 // HOCs
 import Layout from '../../HOCs/Layout';
 
+// Components
+import BlogPeek from '../blogs/BlogPeek';
+
 // Utils
 import { fetchBlogs } from '../../graphql/blogs_api';
+import client from '../../utils/apollo';
+import Blog from '../blogs/blogs/Blog';
 
-const QUERY = gql`
-    {
-      getAllPosts {
-        id,
-        author,
-        body,
-        title,
-      }
-    }
-  `
-
-const Landing = () => (
-  <Layout>
-    <section className="landing">
-      <Query query={QUERY}>
-        {({ loading, error, data }) => {
-          if (loading) return 'Loading...';
-          if (error) {
-            console.log('error: ', error);
-            return `Error in Landing! ${error.message}`;
-          }
-
-          return (
-            <select name="blog">
-              {data.blogs.map(blog => (
-                <div key={blog.id}>
-                  title: {blog.title}
-                  body: {blog.body}
-                  author: {blog.author}
+class Landing extends React.Component {
+  mapBlogs = () => (
+    /** TODO: fetch blogs from backend endpoint and map them into HTTML elements */
+    this.blogsToRender.map(blog => <BlogPeek blog={blog} />)
+  );
+  
+  render() {
+    return (
+      <Layout>
+        <section className="landing">
+          <Query query={fetchBlogs()}>
+            {({ loading, error, data }) => {
+              if (loading) return 'Loading...';
+              if (error) {
+                console.log('error: ', error);
+                return `Error in Landing! ${error.message}`;
+              }
+              
+              return (
+                <div name="landing-blogs">
+                  {data.getAllPosts.map(blog => (
+                    <li className='blog-container' key={blog.id}>
+                      <Link to={`/blogs/${blog.id}`}>
+                        <BlogPeek blog={ blog }/>
+                      </Link>
+                    </li>
+                  ))}
                 </div>
-              ))}
-            </select>
-          );
-        }}
-      </Query>
-    </section>
-  </Layout>
-);
+              );
+            }}
+          </Query>
+        </section>
+      </Layout>
+    );
+  }
+}
 
 export default Landing;
 
-// const Dogs = ({ onDogSelected }) => (
-//   <Query query={GET_DOGS}>
-//     {({ loading, error, data }) => {
-//       if (loading) return 'Loading...';
-//       if (error) return `Error! ${error.message}`;
-
-//       return (
-//         <select name="dog" onChange={onDogSelected}>
-//           {data.dogs.map(dog => (
-//             <option key={dog.id} value={dog.breed}>
-//               {dog.breed}
-//             </option>
-//           ))}
-//         </select>
-//       );
-//     }}
-//   </Query>
-// );
+{/* <div key={blog.id}>
+  title: {blog.title}
+  body: {blog.body}
+  author: {blog.author}
+</div> */}

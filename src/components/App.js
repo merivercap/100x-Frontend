@@ -6,6 +6,7 @@ import { ApolloProvider } from 'react-apollo';
 import gql from 'graphql-tag';
 
 import client from '../utils/apollo';
+// import ApolloClient from 'apollo-boost';
 
 /**
  * TODO:
@@ -30,18 +31,19 @@ class App extends Component {
   constructor() {
     super();
     
-    // client
-    //   .query({
-    //     query: gql`
-    // {
-    //   getAllPosts {
-    //     id
-    //     author
-    //   }
-    // }
-    // `
-    //   })
-    //   .then(result => console.log(result));
+    console.log('about to make query')
+    client
+      .query({
+        query: gql`
+    {
+      getAllPosts {
+        id
+        author
+      }
+    }
+    `
+      })
+      .then(result => console.log(result));
   }
   
   render() {
@@ -50,7 +52,7 @@ class App extends Component {
         <Router history={ createBrowserHistory() }>
           <div className="App">
             <Switch>
-              <Route exact path="/" render={ Landing } />
+              <Route exact path="/" component={ Landing } />
               <Route exact path="/login" component={ Login } />
               <Route exact path="/register" component={ Register } />
               <Route exact path="/blogs/:id" component={ Blog } />

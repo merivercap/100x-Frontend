@@ -8,7 +8,7 @@ import Layout from '../../HOCs/Layout';
 
 // Utils
 import { createUser } from '../../graphql/users_api';
-import { handleInputChange } from '../../utils/helper';
+import { handleInputChange } from '../../utils/form';
 
 class Register extends React.Component {
   state = {

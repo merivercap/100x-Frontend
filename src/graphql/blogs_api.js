@@ -16,10 +16,18 @@ export const fetchBlogs = () => (
   gql`
     {
       getAllPosts {
-        id,
-        author,
-        body,
-        title,
+        id
+        author
+        body
+        children
+        created
+        curator_payout_value
+        hot
+        net_votes
+        permlink
+        tag1
+        title
+        trending
       }
     }
   `
