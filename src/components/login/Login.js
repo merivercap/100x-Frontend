@@ -7,7 +7,7 @@ import { Query } from 'react-apollo';
 import Layout from '../../HOCs/Layout';
 
 // Utils
-import { loginUser } from '../../utils/graphql/users_api';
+import { loginUser } from '../../graphql/users_api';
 import { handleInputChange } from '../../utils/helper';
 
 class Login extends React.Component {

@@ -10,7 +10,7 @@ import Layout from '../../../HOCs/Layout';
 import BlogPeek from '../BlogPeek';
 
 // Utils
-import { fetchBlogs } from '../../../utils/graphql/blogs_api';
+import { fetchBlogs } from '../../../graphql/blogs_api';
 
 class Blogs extends React.Component {
   blogsToRender = [
@@ -36,17 +36,17 @@ class Blogs extends React.Component {
   
   mapBlogs = () => (
     /** TODO: fetch blogs from backend endpoint and map them into HTTML elements */
-    blogsToRender.map(blog => <BlogPeek blog={ blog } /> )
+    this.blogsToRender.map(blog => <BlogPeek blog={ blog } /> )
   );
   
   render() {
     
     return (
       <Layout>
-        <Query query={ fetchBlogs }>
+        <Query query={ fetchBlogs() }>
           {({ data, error, loading }) => {
-            if (error) { return `${ error }`; }
             if (loading) { return `${ loading }`; }
+            if (error) { return `${ error }`; }
             
             return (
               <Fragment>

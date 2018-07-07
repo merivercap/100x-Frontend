@@ -16,9 +16,10 @@ export const fetchBlogs = () => (
   gql`
     {
       getAllPosts {
-        title,
-        body,
+        id,
         author,
+        body,
+        title,
       }
     }
   `

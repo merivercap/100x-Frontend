@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
-import { Switch, Route, HashRouter } from 'react-router-dom';
+import { Switch, Route, Router } from 'react-router-dom';
+import createBrowserHistory from 'history/createBrowserHistory';
 
 import { ApolloProvider } from 'react-apollo';
-import { apolloClient } from '../utils/apollo';
+import gql from 'graphql-tag';
+
+import client from '../utils/apollo';
 
 /**
  * TODO:
@@ -24,10 +27,27 @@ import VideoBlog from './blogs/video_blogs/VideoBlog';
 import VideoBlogs from './blogs/video_blogs/VideoBlogs';
 
 class App extends Component {
+  constructor() {
+    super();
+    
+    // client
+    //   .query({
+    //     query: gql`
+    // {
+    //   getAllPosts {
+    //     id
+    //     author
+    //   }
+    // }
+    // `
+    //   })
+    //   .then(result => console.log(result));
+  }
+  
   render() {
     return (
-      <ApolloProvider client={ apolloClient }>
-        <HashRouter>
+      <ApolloProvider client={ client }>
+        <Router history={ createBrowserHistory() }>
           <div className="App">
             <Switch>
               <Route exact path="/" render={ Landing } />
@@ -41,7 +61,7 @@ class App extends Component {
               <Route exact path="/video_blogs" component={ VideoBlogs } />
             </Switch>
           </div>
-        </HashRouter>
+        </Router>
       </ApolloProvider>
     );
   }

@@ -10,7 +10,7 @@ import Layout from '../../../HOCs/Layout';
 import BlogPeek from '../BlogPeek';
 
 // Utils
-import { fetchVideoBlogs } from '../../../utils/graphql/video_blogs_api';
+import { fetchVideoBlogs } from '../../../graphql/video_blogs_api';
 
 class VideoBlogs extends React.Component {
   mapVideoBlogs() {
