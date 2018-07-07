@@ -5,7 +5,7 @@ import React from 'react';
  * Replace static data with actual data
  */
 
-const BlogHeader = blog => (
+const BlogHeader = ({ blog }) => (
   <header className="blog-header">
     <section className="about-author">
       <div className="author-profile-pic">
@@ -13,22 +13,18 @@ const BlogHeader = blog => (
       </div>
       <div className="info">
         <h3>
-          tradewonk
-          {/* { blog.author.username } */}
+          { blog.author }
         </h3>
         <p>
-          2 hours ago
-          {/* { blog.updatedAt } */}
+          { blog.created }
         </p>
       </div>
     </section>
     <section>
       <h2>
-        $120
-        {/* { blog.payout } */}
+        ${ blog.curator_payout_value }
       </h2>
       <p>
-        5 min read
         {/* { blog.readTime } */}
       </p>
     </section>

@@ -15,7 +15,7 @@ import Layout from '../../../HOCs/Layout';
 import MediumEditor from '../../editor/MediumEditor';
 
 // Utils
-import { createBlog } from '../../utils/graphql/blogs_api';
+import { createBlog } from '../../graphql/blogs_api';
 import { handleInputChange } from '../../utils/helper';
 
 class BlogForm extends React.Component {

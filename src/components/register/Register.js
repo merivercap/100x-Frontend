@@ -7,8 +7,8 @@ import { Query } from 'react-apollo';
 import Layout from '../../HOCs/Layout';
 
 // Utils
-import { createUser } from '../../utils/graphql/users_api';
-import { handleInputChange } from '../../utils/helper';
+import { createUser } from '../../graphql/users_api';
+import { handleInputChange } from '../../utils/form';
 
 class Register extends React.Component {
   state = {

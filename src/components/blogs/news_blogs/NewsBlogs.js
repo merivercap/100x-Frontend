@@ -10,7 +10,7 @@ import Layout from '../../../HOCs/Layout';
 import BlogPeek from '../BlogPeek';
 
 // Utils
-import { fetchNewsBlogs } from '../../../utils/graphql/news_blogs_api';
+import { fetchNewsBlogs } from '../../../graphql/news_blogs_api';
 
 class NewsBlogs extends React.Component {
   mapNewsBlogs() {

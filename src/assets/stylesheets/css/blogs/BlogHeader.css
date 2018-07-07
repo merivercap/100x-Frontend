@@ -1,0 +1,28 @@
+.blog-header {
+  display: flex;
+  justify-content: space-between; }
+
+.about-author {
+  display: flex; }
+  .about-author .author-profile-pic {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    background-color: lightgrey; }
+  .about-author .info {
+    height: 60px; }
+    .about-author .info h3 {
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 22px;
+      color: #000000;
+      text-align: left;
+      margin: 7px; }
+    .about-author .info p {
+      font-size: 12px;
+      font-weight: 300;
+      line-height: 18px;
+      color: #777777;
+      margin: 7px; }
+
+/*# sourceMappingURL=BlogHeader.css.map */

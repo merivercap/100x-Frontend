@@ -12,7 +12,7 @@ import { EditorState, convertToRaw, convertFromRaw } from 'draft-js';
 import Layout from '../../../HOCs/Layout';
 
 // Utils
-import { createNewsBlog } from '../../utils/graphql/news_blogs_api';
+import { createNewsBlog } from '../../graphql/news_blogs_api';
 import { handleInputChange } from '../../utils/helper';
 
 class BlogForm extends React.Component {

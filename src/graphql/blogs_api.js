@@ -13,7 +13,24 @@ export const fetchBlog = id => (
 );
 
 export const fetchBlogs = () => (
-  gql``
+  gql`
+    {
+      getAllPosts {
+        id
+        author
+        body
+        children
+        created
+        curator_payout_value
+        hot
+        net_votes
+        permlink
+        tag1
+        title
+        trending
+      }
+    }
+  `
 );
 
 export const deleteBlog = id => (
