@@ -1,7 +1,19 @@
-.blog h1 {
-  font-size: 20px;
-  line-height: 26px;
-  font-weight: 500;
-  color: grey; }
+.blog {
+  width: 100%;
+  max-width: 1200px;
+  box-sizing: border-box;
+  padding: 25px 60px; }
+  .blog h1 {
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: 500;
+    color: #999;
+    text-align: left; }
+  .blog p {
+    font-size: 16px;
+    line-height: 22px;
+    color: #5a5a5a;
+    word-break: break-all;
+    text-align: left; }
 
 /*# sourceMappingURL=Blog.css.map */

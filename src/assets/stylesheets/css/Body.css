@@ -1,6 +1,7 @@
 body {
   margin: 0;
-  padding: 0;
-  font-family: sans-serif; }
+  padding: 65px 0 0;
+  font-family: sans-serif;
+  box-sizing: border-box; }
 
 /*# sourceMappingURL=Body.css.map */
