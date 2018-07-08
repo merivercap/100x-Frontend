@@ -1,4 +1,12 @@
+// React
 import React from 'react';
+
+// Apollo / GraphQL
+import { Query } from 'react-apollo';
+import { fetchBlog } from '../../../graphql/blogs_api';
+
+// HOCs
+import Layout from '../../../HOCs/Layout';
 
 // Components
 import BlogHeader from '../BlogHeader';
@@ -6,27 +14,53 @@ import Comments from '../../comments/Comments';
 
 /**
  * TODO:
- * Replace static data with actual data
+ * Create loading component and render that instead of 'Loading text'
+ * Extract image urls out of body and display
  */
+export default class Blog extends React.Component {
+  state = {
+    blogId: window.location.pathname.slice(7)
+  };
 
-const Blog = blog => (
-  <div className="blog">
-    <BlogHeader blog={ blog } />
-    <content>
-      <h1>
-        Bitcoin and Litecoin Are Rising While Other Cryptocurrencies Are Falling
-        {/* { blog.title } */}
-      </h1>
-      <div className="blog-img">
-        {/* <img src={ blog.image_url } /> */}
-      </div>
-      <p>
-        Bitcoin and Litecoin are both up, but Ethereum, Ripple and Bitcoin Cash are all in red. The leading digital currency has increased more th...-
-        {/* { blog.body } */}
-      </p>
-    </content>
-    <Comments blog={ blog } />
-  </div>
-);
+  render() {
+    return (
+      <Layout>
+        <Query 
+          query={ fetchBlog }
+          variables={ { postId: this.state.blogId } }
+          notifyOnNetworkStatusChange
+        >
+          {
+            ({ loading, error, data }) => {
+              if (loading) return 'Loading...';
+              if (error) {
+                console.log('error', error);
+                return `Error in landing! ${error.message}`;
+              }
 
-export default Blog;
+              const blog = data.getPost;
+
+              return (
+                <article className="blog">
+                  <BlogHeader blog={blog} />
+                  <content>
+                    <h1>
+                      { blog.title }
+                    </h1>
+                    <div className="blog-img">
+                      {/* <img src={ blog.image_url } /> */}
+                    </div>
+                    <p>
+                      { blog.body }
+                    </p>
+                  </content>
+                  {/* <Comments blog={blog} /> */}
+                </article>
+              );
+            }
+          }
+        </Query>
+      </Layout>
+    );
+  }
+}

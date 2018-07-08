@@ -19,7 +19,7 @@ const BlogPeek = ({ blog }) => (
         {/* <img src={ blog.image_url } /> */}
       </div>
       <p>
-        { blog.permlink }
+        { blog.body.slice(0, 133) }...
       </p>
     </content>
   </div>

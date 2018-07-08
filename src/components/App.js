@@ -27,25 +27,7 @@ import NewsBlogs from './blogs/news_blogs/NewsBlogs';
 import VideoBlog from './blogs/video_blogs/VideoBlog';
 import VideoBlogs from './blogs/video_blogs/VideoBlogs';
 
-class App extends Component {
-  constructor() {
-    super();
-    
-    console.log('about to make query')
-    client
-      .query({
-        query: gql`
-    {
-      getAllPosts {
-        id
-        author
-      }
-    }
-    `
-      })
-      .then(result => console.log(result));
-  }
-  
+export default class App extends Component {  
   render() {
     return (
       <ApolloProvider client={ client }>
@@ -68,5 +50,3 @@ class App extends Component {
     );
   }
 }
-
-export default App;

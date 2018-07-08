@@ -3,19 +3,14 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 // Apollo / GraphQL
-import gql from 'graphql-tag';
 import { Query } from 'react-apollo';
+import { fetchBlogs } from '../../graphql/blogs_api';
 
 // HOCs
 import Layout from '../../HOCs/Layout';
 
 // Components
 import BlogPeek from '../blogs/BlogPeek';
-
-// Utils
-import { fetchBlogs } from '../../graphql/blogs_api';
-import client from '../../utils/apollo';
-import Blog from '../blogs/blogs/Blog';
 
 class Landing extends React.Component {
   mapBlogs = () => (
@@ -26,38 +21,40 @@ class Landing extends React.Component {
   render() {
     return (
       <Layout>
-        <section className="landing">
-          <Query query={fetchBlogs()}>
-            {({ loading, error, data }) => {
-              if (loading) return 'Loading...';
-              if (error) {
-                console.log('error: ', error);
-                return `Error in Landing! ${error.message}`;
+          <Query query={ fetchBlogs }>
+            {
+              ({ loading, error, data }) => {
+                if (loading) return 'Loading...';
+                if (error) {
+                  console.log('error: ', error);
+                  return `Error in Landing! ${error.message}`;
+                }
+                
+                return (
+                  <section className="landing">
+                    <img
+                      className="landing-logo"
+                      src="https://res.cloudinary.com/ddgtwtbre/image/upload/v1531042766/hundredx-logo_knkvo1.png"
+                    />
+                    <div className="landing-blogs">
+                      {
+                        data.getAllPosts.map(blog => (
+                          <Link to={ `/blogs/${blog.id}` } key={ blog.id }>
+                            <li className='blog-peek-container'>
+                              <BlogPeek blog={ blog }/>
+                            </li>
+                          </Link>
+                        ))
+                      }
+                    </div>
+                  </section>
+                );
               }
-              
-              return (
-                <div name="landing-blogs">
-                  {data.getAllPosts.map(blog => (
-                    <li className='blog-container' key={blog.id}>
-                      <Link to={`/blogs/${blog.id}`}>
-                        <BlogPeek blog={ blog }/>
-                      </Link>
-                    </li>
-                  ))}
-                </div>
-              );
-            }}
+            }
           </Query>
-        </section>
       </Layout>
     );
   }
 }
 
 export default Landing;
-
-{/* <div key={blog.id}>
-  title: {blog.title}
-  body: {blog.body}
-  author: {blog.author}
-</div> */}

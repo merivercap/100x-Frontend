@@ -1,10 +1,5 @@
 import React from 'react';
 
-/**
- * TODO:
- * Replace static data with actual data
- */
-
 const BlogHeader = ({ blog }) => (
   <header className="blog-header">
     <section className="about-author">
