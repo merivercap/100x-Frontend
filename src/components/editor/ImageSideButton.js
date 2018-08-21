@@ -11,8 +11,8 @@ import {
   AtomicBlockUtils,
 } from 'draft-js';
 
-import Camera from 'react-icons/lib/fa/camera';
-import Chain from 'react-icons/lib/fa/chain';
+// import Camera from 'react-icons/lib/fa/camera';
+// import Chain from 'react-icons/lib/fa/chain';
 
 export class ImageSideButton extends React.Component {
 
@@ -67,7 +67,7 @@ export class ImageSideButton extends React.Component {
         title="Add an Image"
       >
         <div className='full flex-center'>
-          <Camera size={20}/>
+          {/* <Camera size={20}/> */}
         </div>
 
         <input
@@ -119,9 +119,6 @@ export class EmbedSideButton extends React.Component {
         'E'
       )
     );
-    debugger;
-    console.log('hello world');
-    debugger;
   }
 
   render() {
@@ -144,7 +141,7 @@ export class EmbedSideButton extends React.Component {
         onClick={this.onClick}
       >
         <div className='full flex-center'>
-          <Chain size={20}/>
+          {/* <Chain size={20}/> */}
         </div>
       </button>
     );
