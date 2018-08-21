@@ -20,44 +20,68 @@ const selectCustomer = gql`
   }
 `;
 
-// 55755699
 export const fetchBlog = gql`
   query fetchBlog($postId: Int!) {
     getPost(postId: $postId) {
       id
-      author
-      body
-      children
-      created
-      curator_payout_value
-      hot
-      net_votes
-      permlink
-      tag1
+      permLink
       title
+      body
+      createdAt
+      netVotes
+      children
+      pendingPayoutValue
       trending
+      hot
+      postType
+      tag1
+      tag2
+      tag3
+      tag4
+      tag5
     }
   }
 `;
 
+/** fetching author and replies breaks query */
 export const fetchBlogs = gql`
-  {
-    getAllPosts {
+  query {
+    getAllPosts{
       id
-      author
-      body
-      children
-      created
-      curator_payout_value
-      hot
-      net_votes
-      permlink
-      tag1
+      # author { id }
+      # replies {
+      #   id
+      #   commenter { id }
+      #   post { id }
+      #   parent { id }
+      #   permLink
+      #   body
+      #   createdAt
+      #   netVotes
+      #   pendingPayoutValue
+      #   children
+      #   depth
+      # }
+      permLink
       title
+      body
+      createdAt
+      netVotes
+      children
+      pendingPayoutValue
       trending
+      hot
+      postType
+      tag1
+      tag2
+      tag3
+      tag4
+      tag5
     }
   }
 `;
+
+
 
 // export const deleteBlog = gql`
 
