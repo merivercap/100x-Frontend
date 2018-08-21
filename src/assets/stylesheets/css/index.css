@@ -1,122 +1,60 @@
-.App {
-  text-align: center; }
+/*
+Error: File to import not found or unreadable: nav/index.
+       Load path: /Users/jayhwang/.sandbox/projects/todo/100x/100x-frontend/src/assets/stylesheets/scss
+        on line 5 of src/assets/stylesheets/scss/index.scss
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px; }
+1: @import 'reset';
+2: @import 'App';
+3: @import 'Body';
+4: @import 'Layout';
+5: @import 'nav/index';
+6: @import 'landing/index';
+7: @import 'blogs/index';
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white; }
-
-.App-title {
-  font-size: 1.5em; }
-
-.App-intro {
-  font-size: large; }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg); }
-  to {
-    transform: rotate(360deg); } }
-body {
-  margin: 0;
-  padding: 65px 0 0;
-  font-family: sans-serif;
-  box-sizing: border-box; }
-
-.nav {
-  height: 64px;
-  width: 100vw;
-  display: flex;
-  justify-content: flex-end;
-  position: fixed;
-  top: 0;
-  right: 0;
-  height: 65px;
-  box-sizing: border-box;
-  padding: 0 60px;
-  box-shadow: 0 4px 2px -2px lightgrey;
-  background-color: white; }
-  .nav content {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center; }
-    .nav content .logo {
-      height: 100%; }
-    .nav content img {
-      height: 100%; }
-
-.landing {
-  width: 100vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; }
-
-.landing-blogs a {
-  text-decoration: none; }
-
-.blog {
-  width: 100%;
-  max-width: 1200px;
-  box-sizing: border-box;
-  padding: 25px 60px; }
-  .blog h1 {
-    font-size: 20px;
-    line-height: 26px;
-    font-weight: 500;
-    color: #999;
-    text-align: left; }
-  .blog p {
-    font-size: 16px;
-    line-height: 22px;
-    color: #5a5a5a;
-    word-break: break-all;
-    text-align: left; }
-
-.blog-header {
-  display: flex;
-  justify-content: space-between; }
-  .blog-header h2 {
-    color: #000;
-    font-weight: 400;
-    font-size: 22px; }
-
-.about-author {
-  display: flex; }
-  .about-author .author-profile-pic {
-    height: 60px;
-    width: 60px;
-    border-radius: 50%;
-    background-color: lightgrey; }
-  .about-author .info {
-    height: 60px; }
-    .about-author .info h3 {
-      font-size: 16px;
-      font-weight: 600;
-      line-height: 22px;
-      color: #000000;
-      text-align: left;
-      margin: 7px; }
-    .about-author .info p {
-      font-size: 12px;
-      font-weight: 300;
-      line-height: 18px;
-      color: #777777;
-      margin: 7px; }
-
-.blog-peek-container {
-  border: 1px solid #000000;
-  margin: 20px;
-  list-style: none;
-  box-sizing: border-box;
-  padding: 25px 60px;
-  max-width: 900px; }
-
-/*# sourceMappingURL=index.css.map */
+Backtrace:
+src/assets/stylesheets/scss/index.scss:5
+/Users/jayhwang/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/import_node.rb:67:in `rescue in import'
+/Users/jayhwang/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/import_node.rb:45:in `import'
+/Users/jayhwang/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/import_node.rb:28:in `imported_file'
+/Users/jayhwang/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/import_node.rb:37:in `css_import?'
+/Users/jayhwang/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:314:in `visit_import'
+/Users/jayhwang/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/jayhwang/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+/Users/jayhwang/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.6/lib/sass/stack.rb:79:in `block in with_base'
+/Users/jayhwang/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.6/lib/sass/stack.rb:135:in `with_frame'
+/Users/jayhwang/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.6/lib/sass/stack.rb:79:in `with_base'
+/Users/jayhwang/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:162:in `visit'
+/Users/jayhwang/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/Users/jayhwang/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/visitors/base.rb:52:in `map'
+/Users/jayhwang/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/Users/jayhwang/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:171:in `block in visit_children'
+/Users/jayhwang/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
+/Users/jayhwang/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:170:in `visit_children'
+/Users/jayhwang/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/Users/jayhwang/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:190:in `visit_root'
+/Users/jayhwang/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/jayhwang/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:161:in `visit'
+/Users/jayhwang/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:10:in `visit'
+/Users/jayhwang/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/root_node.rb:36:in `css_tree'
+/Users/jayhwang/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+/Users/jayhwang/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.6/lib/sass/engine.rb:389:in `_render_with_sourcemap'
+/Users/jayhwang/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.6/lib/sass/engine.rb:307:in `render_with_sourcemap'
+/Users/jayhwang/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.6/lib/sass/plugin/compiler.rb:462:in `update_stylesheet'
+/Users/jayhwang/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.6/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/Users/jayhwang/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.6/lib/sass/plugin/compiler.rb:209:in `each'
+/Users/jayhwang/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.6/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/Users/jayhwang/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.6/lib/sass/plugin/compiler.rb:443:in `on_file_changed'
+/Users/jayhwang/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.6/lib/sass/plugin/compiler.rb:320:in `block in watch'
+/Users/jayhwang/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/event/config.rb:23:in `call'
+/Users/jayhwang/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:115:in `_process_changes'
+/Users/jayhwang/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:19:in `block in loop_for'
+/Users/jayhwang/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:15:in `loop'
+/Users/jayhwang/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:15:in `loop_for'
+/Users/jayhwang/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/event/loop.rb:84:in `_wait_for_changes'
+/Users/jayhwang/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/event/loop.rb:42:in `block in setup'
+/Users/jayhwang/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/internals/thread_pool.rb:6:in `block in add'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: File to import not found or unreadable: nav/index.\A        Load path: /Users/jayhwang/.sandbox/projects/todo/100x/100x-frontend/src/assets/stylesheets/scss\A         on line 5 of src/assets/stylesheets/scss/index.scss\A \A 1: @import 'reset';\A 2: @import 'App';\A 3: @import 'Body';\A 4: @import 'Layout';\A 5: @import 'nav/index';\A 6: @import 'landing/index';\A 7: @import 'blogs/index';"; }

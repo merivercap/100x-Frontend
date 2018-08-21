@@ -19,10 +19,10 @@ time, mark, audio, video {
   padding: 0;
   border: 0;
   font-size: 100%;
-  font: inherit;
-  font-family: 'Lato';
+  font-family: 'Lato', sans-serif;
   vertical-align: baseline;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  text-decoration: none; }
 
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
@@ -48,6 +48,18 @@ table {
   border-spacing: 0; }
 
 input {
+  outline: none;
+  box-sizing: border-box;
+  padding: 0;
+  border: none;
+  margin: 0; }
+
+button {
+  border: none;
+  background: none;
   outline: none; }
+
+a, button {
+  cursor: pointer; }
 
 /*# sourceMappingURL=reset.css.map */
