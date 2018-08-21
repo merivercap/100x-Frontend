@@ -1,12 +1,11 @@
 // React
 import React, { Fragment } from 'react';
 import { Link } from 'react-router-dom';
-import PropTypes from 'prop-types';
 
 // Apollo / GraphQL
 import { Query } from 'react-apollo';
-// import { fetchNewsBlogs } from '../../../graphql/news_blogs_api';
 import { fetchBlogs } from '../../../graphql/blogs_api';
+// import { FeedBlogs } from '../../../graphql/feed_blogs_api';
 
 // HOCs
 import Layout from '../../../HOCs/Layout';
@@ -15,11 +14,10 @@ import Layout from '../../../HOCs/Layout';
 import BlogPeek from '../BlogPeek';
 import { GqlError, Loading } from '../../shared';
 
-class NewsBlogs extends React.Component {
+class StoryBlogs extends React.Component {
   render() {
     return (
       <Layout>
-        {/* <Query query={ fetchNewsBlogs }> */}
         <Query query={ fetchBlogs }>
           {({ data, error, loading }) => {
             if (loading) return <Loading />
@@ -48,4 +46,4 @@ class NewsBlogs extends React.Component {
   }
 }
 
-export default NewsBlogs;
+export default StoryBlogs;
