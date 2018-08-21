@@ -3,26 +3,39 @@ import React from 'react';
 // Components
 import BlogHeader from './BlogHeader';
 
-/**
- * TODO:
- * Replace static data with actual data
- */
+// Utils
+import htmlParser from '../../utils/htmlParser';
 
-const BlogPeek = ({ blog }) => (
-  <div className="blog">
-    <BlogHeader blog={blog} />
-    <content>
-      <h1>
-        { blog.title }
-      </h1>
-      <div className="blog-img">
-        {/* <img src={ blog.image_url } /> */}
+class BlogPeek extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
+  parseBody = () => {
+    const body = this.props.blog.body;
+    const bodyHtml = htmlParser.getHtml({ body }).props.dangerouslySetInnerHTML;
+    return bodyHtml;
+  }
+  
+  render() {
+    const blog = this.props.blog;
+    const bodyHtml = this.parseBody();
+    
+    return (
+      <div className="blog">
+        <BlogHeader blog={blog} />
+        <content>
+          <h1>
+            {blog.title}
+          </h1>
+          <div className="blog-img">
+            {/* <img src={ blog.image_url } /> */}
+          </div>
+          <p dangerouslySetInnerHTML={ bodyHtml } />
+        </content>
       </div>
-      <p>
-        { blog.body.slice(0, 133) }...
-      </p>
-    </content>
-  </div>
-);
+    );
+  }
+}
 
 export default BlogPeek;
