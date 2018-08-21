@@ -8,7 +8,7 @@ import Layout from '../../HOCs/Layout';
 
 // Utils
 import { loginUser } from '../../graphql/users_api';
-import { handleInputChange } from '../../utils/form';
+import { handleInputChange } from '../../utils/formHelper';
 
 class Login extends React.Component {
   state = {
