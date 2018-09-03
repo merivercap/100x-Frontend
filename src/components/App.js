@@ -1,12 +1,11 @@
+// React
 import React, { Component } from 'react';
 import { Switch, Route, Router } from 'react-router-dom';
 import createBrowserHistory from 'history/createBrowserHistory';
 
+// Apollo / GraphQL
 import { ApolloProvider } from 'react-apollo';
-import gql from 'graphql-tag';
-
 import client from '../utils/apollo';
-// import ApolloClient from 'apollo-boost';
 
 /**
  * TODO:
@@ -20,11 +19,12 @@ import client from '../utils/apollo';
 import Landing from './landing/Landing';
 import Login from './login/Login';
 import Register from './register/Register';
-import Blog from './blogs/blogs/Blog';
+import Blog from './blogs/Blog';
+import BlogForm from './blogs/BlogForm';
 import Blogs from './blogs/blogs/Blogs';
-import NewsBlog from './blogs/news_blogs/NewsBlog';
+import FeedBlogs from './blogs/feed_blogs/FeedBlogs';
+import StoryBlogs from './blogs/story_blogs/StoryBlogs';
 import NewsBlogs from './blogs/news_blogs/NewsBlogs';
-import VideoBlog from './blogs/video_blogs/VideoBlog';
 import VideoBlogs from './blogs/video_blogs/VideoBlogs';
 
 export default class App extends Component {  
@@ -37,12 +37,14 @@ export default class App extends Component {
               <Route exact path="/" component={ Landing } />
               <Route exact path="/login" component={ Login } />
               <Route exact path="/register" component={ Register } />
-              <Route exact path="/blogs/:id" component={ Blog } />
               <Route exact path="/blogs" component={ Blogs } />
-              <Route exact path="/news_blogs/:id" component={ NewsBlog } />
-              <Route exact path="/news_blogs" component={ NewsBlogs } />
-              <Route exact path="/video_blogs/:id" component={ VideoBlog } />
-              <Route exact path="/video_blogs" component={ VideoBlogs } />
+              <Route exact path="/blogs/new" component={ BlogForm } />
+              {/* <Route exact path="/blogs/edit/:id" component={ BlogForm } /> */}
+              <Route exact path="/blogs/feed" component={ FeedBlogs } />
+              <Route exact path="/blogs/news" component={ NewsBlogs } />
+              <Route exact path="/blogs/story" component={ StoryBlogs } />
+              <Route exact path="/blogs/video" component={ VideoBlogs } />
+              <Route exact path="/blogs/:id" component={ Blog } />
             </Switch>
           </div>
         </Router>
