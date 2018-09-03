@@ -11,36 +11,26 @@ import Layout from '../../HOCs/Layout';
 
 // Components
 import BlogPeek from '../blogs/BlogPeek';
+import BlogFilter from '../blogs/BlogFilter';
+import { GqlError, Loading } from '../shared';
 
 class Landing extends React.Component {
-  mapBlogs = () => (
-    /** TODO: fetch blogs from backend endpoint and map them into HTTML elements */
-    this.blogsToRender.map(blog => <BlogPeek blog={blog} />)
-  );
-  
   render() {
     return (
       <Layout>
           <Query query={ fetchBlogs }>
             {
               ({ loading, error, data }) => {
-                if (loading) return 'Loading...';
-                if (error) {
-                  console.log('error: ', error);
-                  return `Error in Landing! ${error.message}`;
-                }
-                
+                if (loading) return <Loading />
+                if (error) return <GqlError error={ error } />
                 return (
                   <section className="landing">
-                    <img
-                      className="landing-logo"
-                      src="https://res.cloudinary.com/ddgtwtbre/image/upload/v1531042766/hundredx-logo_knkvo1.png"
-                    />
+                    <BlogFilter />
                     <div className="landing-blogs">
                       {
                         data.getAllPosts.map(blog => (
                           <Link to={ `/blogs/${blog.id}` } key={ blog.id }>
-                            <li className='blog-peek-container'>
+                            <li className="blog-peek-container">
                               <BlogPeek blog={ blog }/>
                             </li>
                           </Link>

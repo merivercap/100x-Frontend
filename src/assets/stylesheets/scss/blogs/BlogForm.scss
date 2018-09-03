@@ -1,0 +1,17 @@
+.blog-form {
+  width: 100vw;
+  padding: 80px 10vw;
+
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 500px;
+    border: 1px solid #333;
+    padding: 25px;
+
+    .blog-form--item {
+      
+    }
+  }
+}
