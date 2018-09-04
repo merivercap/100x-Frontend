@@ -19,17 +19,7 @@ import { createBlog } from '../../graphql/blogs_api';
 import { handleInputChange } from '../../utils/formHelper';
 
 class BlogForm extends React.Component {
-  state = {
-    title: '',
-    intro: '',
-    body: '',
-    cover_image_url: '',
-    author_id: '',
-    author_image_url: '',
-    author: {},
-    updatedAt: '',
-    error: {},
-  };
+  state = generateDefaultState();
 
   componentDidMount() {
     // TODO: check if user is authenticated - redirect if not
@@ -52,24 +42,23 @@ class BlogForm extends React.Component {
       <Layout>
         <section className="blog-form">
           <form onSubmit={ this._handleSubmit }>
-            <div className="title-container input-container">
-              <label>Title
-                <input
-                  className="blog-form--item title"
-                  type="text"
-                  placeholder="Post Title"
-                  onChange={ this._handleInputChange('title') }
-                  value={ this.state.title } />
-              </label>
+            <div className="title-container input-container blog-form--item">
+              <h4>Title</h4>
+              <input
+                className="blog-form--input title"
+                type="text"
+                placeholder="Post Title"
+                onChange={ this._handleInputChange('title') }
+                value={ this.state.title } />
               {/* <p className="title-error error-message">
                 Your blog must have a title.
                 {/* error.title.message
               </p> */}
             </div>
-            <div className="body-container input-container">
+            <div className="body-container input-container blog-form--item">
               {/* <MediumEditor editorState={ this.state.body } updateEditorState={ this.updateEditorState } /> */}
               <textarea
-                className="blog-form--item body"
+                className="blog-form--input body"
                 value={ this.state.body }
                 onChange={ this._handleInputChange('body') }>
               </textarea>
@@ -78,20 +67,19 @@ class BlogForm extends React.Component {
                 {/* { error.body.message }
               </p> */}
             </div>
-            <div className="cover-image-container input-container">
-              <label>Cover Image
-                <input
-                  className="blog-form--item photo"
-                  type="file"
-                  onChange={ this._handleInputChange('cover_image_url') }
-                  value={ this.state.cover_image_url } />
-              </label>
+            <div className="cover-image-container input-container blog-form--item">
+              <h4>Cover Image</h4>
+              <input
+                className="blog-form--input photo"
+                type="file"
+                onChange={ this._handleInputChange('cover_image_url') }
+                value={ this.state.cover_image_url } />
               {/* <p className="photo-error error-message">
                 Photo size is too large / incorrect file type
                 { error.photo.message }
               </p> */}
             </div>
-            <button type="submit">Publish</button>
+            <button className="blog-form--item" type="submit">Publish</button>
           </form>
         </section>
       </Layout>
@@ -100,3 +88,20 @@ class BlogForm extends React.Component {
 }
 
 export default BlogForm;
+
+
+/** Helper Functions */
+
+function generateDefaultState() {
+  return {
+    author: {},
+    author_id: '',
+    author_image_url: '',
+    body: '',
+    cover_image_url: '',
+    error: {},
+    intro: '',
+    title: '',
+    updatedAt: '',
+  };
+}
