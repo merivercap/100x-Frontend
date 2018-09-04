@@ -1,9 +1,9 @@
 import * as validator from 'validator';
 
 export const FieldValidation = {
-  ERROR = 'ERROR',
-  PRISTINE = 'PRISTINE',
-  SUCCESS = 'SUCCESS',
+  ERROR: 'ERROR',
+  PRISTINE: 'PRISTINE',
+  SUCCESS: 'SUCCESS',
 };
 
 export function getFieldValidationStatus(isValidated) {
