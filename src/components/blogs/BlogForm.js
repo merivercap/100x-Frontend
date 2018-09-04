@@ -16,6 +16,15 @@ import MediumEditor from '../editor/MediumEditor';
 
 // Utils
 import { createBlog } from '../../graphql/blogs_api';
+import {
+  errorMessages,
+  FieldValidation,
+  getFieldValidationStatus,
+  getInputValidationClass,
+  getInputErrorClass,
+  isFileUnderLimit,
+  isNotEmpty,
+} from '../../utils/validators';
 import { handleInputChange } from '../../utils/formHelper';
 
 class BlogForm extends React.Component {
@@ -85,6 +94,31 @@ class BlogForm extends React.Component {
       </Layout>
     );
   }
+
+  handleInput = (event) => {
+    const { form, validation } = this.state;
+    const { name, value } = event.target;
+    switch (name) {
+      case 'cover_image_url':
+        return this.setState({
+          form: { ...form, cover_image_url: value },
+          validation: {
+            ...validation,
+            cover_image_url: isFileUnderLimit(value),
+            submitError: FieldValidation.PRISTINE
+          }
+        });
+      default:
+        this.setState({
+          form: { ...form, [name]: value },
+          validation: {
+            ...validaition,
+            [name]: isNotEmpty(value),
+            submitError: FieldValidation.PRISTINE,
+          }
+        });
+    }
+  }
 }
 
 export default BlogForm;
@@ -94,14 +128,20 @@ export default BlogForm;
 
 function generateDefaultState() {
   return {
-    author: {},
-    author_id: '',
-    author_image_url: '',
-    body: '',
-    cover_image_url: '',
-    error: {},
-    intro: '',
-    title: '',
-    updatedAt: '',
+    author: {
+      author: {},
+      author_id: '',
+      author_image_url: '',
+    },
+    form: {
+      body: '',
+      cover_image_url: '',
+      title: '',
+    },
+    errors: {
+      body: FieldValidation.PRISTINE,
+      submitError: FieldValidation.PRISTINE,
+      title: FieldValidation.PRISTINE,
+    },
   };
 }
