@@ -112,7 +112,7 @@ class BlogForm extends React.Component {
         this.setState({
           form: { ...form, [name]: value },
           validation: {
-            ...validaition,
+            ...validation,
             [name]: isNotEmpty(value),
             submitError: FieldValidation.PRISTINE,
           }

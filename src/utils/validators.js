@@ -33,11 +33,11 @@ export const isFileUnderLimit = file => (
 );
 
 export const isNotEmpty = text => (
-  getFieldValidation(!validator.isEmpty(text))
+  getFieldValidationStatus(!validator.isEmpty(text))
 );
 
 export const isValidEmail = email => (
-  getFieldValidation(validator.isEmail(email))
+  getFieldValidationStatus(validator.isEmail(email))
 );
 
 
