@@ -5,7 +5,7 @@ import React from 'react';
 import { Query } from 'react-apollo';
 
 // HOCs
-import Layout from '../../HOCs/Layout';
+import Layout from '../../../HOCs/Layout';
 
 // Components
 
