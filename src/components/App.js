@@ -16,6 +16,7 @@ import client from '../utils/apollo';
  */
 
 // Components
+import Account from './users/account';
 import Landing from './landing/Landing';
 import Login from './login/Login';
 import Register from './register/Register';
@@ -37,6 +38,7 @@ export default class App extends Component {
               <Route exact path="/" component={ Landing } />
               <Route exact path="/login" component={ Login } />
               <Route exact path="/register" component={ Register } />
+              <Route exact path="/users/account" component={ Account } />
               <Route exact path="/blogs" component={ Blogs } />
               <Route exact path="/blogs/new" component={ BlogForm } />
               {/* <Route exact path="/blogs/edit/:id" component={ BlogForm } /> */}
