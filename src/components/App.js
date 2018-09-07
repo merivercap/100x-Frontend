@@ -27,6 +27,7 @@ import FeedBlogs from './blogs/feed_blogs/FeedBlogs';
 import StoryBlogs from './blogs/story_blogs/StoryBlogs';
 import NewsBlogs from './blogs/news_blogs/NewsBlogs';
 import VideoBlogs from './blogs/video_blogs/VideoBlogs';
+import Wallet from './users/Wallet';
 
 export default class App extends Component {  
   render() {
@@ -38,7 +39,7 @@ export default class App extends Component {
               <Route exact path="/" component={ Landing } />
               <Route exact path="/login" component={ Login } />
               <Route exact path="/register" component={ Register } />
-              <Route exact path="/users/account" component={ Account } />
+              <Route exact path="/account" component={ Account } />
               <Route exact path="/blogs" component={ Blogs } />
               <Route exact path="/blogs/new" component={ BlogForm } />
               {/* <Route exact path="/blogs/edit/:id" component={ BlogForm } /> */}
@@ -47,6 +48,7 @@ export default class App extends Component {
               <Route exact path="/blogs/story" component={ StoryBlogs } />
               <Route exact path="/blogs/video" component={ VideoBlogs } />
               <Route exact path="/blogs/:id" component={ Blog } />
+              <Route exact patht="/account/wallet" component={ Wallet } />
             </Switch>
           </div>
         </Router>
