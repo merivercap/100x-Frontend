@@ -1,66 +1,132 @@
-.wallet {
-  margin: 80px auto;
-  width: 575px;
-  border-radius: 4px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+$secondary: #00969E;
+$body: #263238;
+$spade: #cfcfcf;
+$rock: #aaaabf;
+
+.wallet-container {
+  background-color: whitesmoke;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
 }
 
-.wallet-header {
-  display: flex;
-  background-color: #00969E;
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  padding: 10px 23px;
-  box-sizing: border-box;
-  .user-profile-image {
-    min-height: 44px;
-    min-width: 44px;
-    max-height: 44px;
-    max-width: 44px;
-    height: 44px;
-    width: 44px;
-    background-color: whitesmoke;
-    border-radius: 50%;
-    margin-right: 24px;
-  }
-  h1 {
-    font-size: 24px;
-    font-weight: 500;
-    color: #fff;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    height: 64px;
-    width: 100%;
-    border-top-left-radius: 4px;
-    border-top-right-radius: 4px;
-  }
+.wallet {
+  margin: 120px auto;
+  width: 675px;
+  // border-radius: 4px;
+  // border: 1px solid #9f9f9f;
+  // background-color: #fff;
+  // box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 .wallet-actions {
   width: 100%;
-  min-height: 58px;
-  .wallet-action {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    padding: 10px 23px;
+  height: 48px;
+  display: flex;
+  justify-content: space-between;
+  button {
+    border-radius: 4px;
+    width: calc(50% - 10px);
+    height: 100%;
+    background-color: $secondary;
+    color: #fff;
     font-size: 16px;
-    font-weight: 400;
-    height: 58px;
-    width: 100%;
+    font-weight: 300;
+    letter-spacing: 1px;
+    transition: all .2s ease-in-out;
     cursor: pointer;
-    transition: all .25s ease-in-out;
-    border-bottom: 1px solid #aaa;
-    &:last-child {
-      border: none;
-    }
     &:hover {
-      background-color: #ddd;
+      opacity: 0.5;
+    }
+  }
+}
+
+article {
+  margin: 25px 0 45px;
+  border: 1px solid $spade;
+  border-radius: 4px;
+  background-color: #fff;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .item {
+    width: calc(100% - 30px);
+    height: 72px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid $spade;
+    &:first-child, &:last-child {
+      border: 0;
+    }
+    &.center {
+      justify-content: center;
+    }
+    .left {
+      display: flex;
+      align-items: center;
+      height: 100%;
+      .item-icon {
+        width: 32px;
+        height: 32px;
+        background-color: whitesmoke; 
+        margin-right: 15px;
+      }
+      .item-img {
+        width: 42px;
+        height: 42px;
+        min-width: 42px;
+        min-height: 42px;
+        max-width: 42px;
+        max-height: 42px;
+        border-radius: 50%;
+        margin-right: 15px;
+        background-color: $spade;
+      }
+      .item-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        height: 42px;
+        h5 {
+          font-size: 14px;
+          font-weight: 400;
+          color: $body;
+          letter-spacing: .5px;
+        }
+        span {
+          font-size: 12px;
+          font-weight: 300;
+          color: $body;
+        }
+      }
+      span {
+        font-size: 16px;
+        font-weight: 500;
+        color: $body;
+      }
+    }
+    button {
+      width: 225px;
+      border: 1px solid $spade;
+      height: 48px;
+      border-radius: 4px;
+      margin: 0 10px;
+      background-color: $rock;
+      color: #fff;
+      font-size: 14px;
+      font-weight: 300;
+      letter-spacing: .5px;
+      transition: all .2s ease-in-out;
+      &:hover {
+        opacity: 0.5;
+      }
     }
   }
 }

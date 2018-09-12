@@ -15,23 +15,68 @@ class Wallet extends React.Component {
       <Layout>
         <div className="wallet-container">
           <section className="wallet">
-            <article className="wallet-header">
-              <div className="user-profile-image"></div>
-              <h1>testUsername's Wallet</h1>
+            <div className="wallet-actions">
+              <button>Transfer</button>
+              <button>Claim</button>
+            </div>
+            <article>
+              <div className="item">
+                <div className="left">
+                  <div className="item-icon"></div>
+                  <span>Steem</span>
+                </div>
+                <div className="right">
+                  7 STEEM
+                </div>
+              </div>
+              <div className="item center">
+                <button>
+                  Power Up
+                </button>
+                <button>
+                  Power Down
+                </button>
+              </div>
+              <div className="item">
+                <div className="left">
+                  <div className="item-icon"></div>
+                  <span>Steem Power</span>
+                </div>
+                <div className="right">
+                  3.017 SP
+                </div>
+              </div>
+              <div className="item">
+                <div className="left">
+                  <div className="item-icon"></div>
+                  <span>Steem Dollar</span>
+                </div>
+                <div className="right">
+                  0 SBD
+                </div>
+              </div>
+              <div className="item">
+                <div className="left">
+                  <div className="item-icon"></div>
+                  <span>Est. Account Value</span>
+                </div>
+                <div className="right">
+                  $8.42
+                </div>
+              </div>
             </article>
-            <article className="wallet-actions">
-              <h4 className="wallet-action">
-                Steem Balance: $13.73
-              </h4>
-              <button className="wallet-action">
-                Claim
-              </button>
-              <button className="wallet-action">
-                Mock data
-              </button>
-              <button className="wallet-action">
-                Mock data
-              </button>
+            <h3>Transaction History</h3>
+            <article>
+              <div className="item">
+                <div className="left">
+                  <div className="item-img"></div>
+                  <div className="item-info">
+                    <h5>Received from steemrollin</h5>
+                    <span>2 months ago</span>
+                  </div>
+                </div>
+                <p>+ 10.000 STEEM</p>
+              </div>
             </article>
           </section>
         </div>
