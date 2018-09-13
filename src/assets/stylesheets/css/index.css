@@ -1,60 +1,459 @@
-/*
-Error: File to import not found or unreadable: nav/index.
-       Load path: /Users/jayhwang/.sandbox/projects/todo/100x/100x-frontend/src/assets/stylesheets/scss
-        on line 5 of src/assets/stylesheets/scss/index.scss
-
-1: @import 'reset';
-2: @import 'App';
-3: @import 'Body';
-4: @import 'Layout';
-5: @import 'nav/index';
-6: @import 'landing/index';
-7: @import 'blogs/index';
-
-Backtrace:
-src/assets/stylesheets/scss/index.scss:5
-/Users/jayhwang/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/import_node.rb:67:in `rescue in import'
-/Users/jayhwang/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/import_node.rb:45:in `import'
-/Users/jayhwang/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/import_node.rb:28:in `imported_file'
-/Users/jayhwang/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/import_node.rb:37:in `css_import?'
-/Users/jayhwang/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:314:in `visit_import'
-/Users/jayhwang/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Users/jayhwang/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
-/Users/jayhwang/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.6/lib/sass/stack.rb:79:in `block in with_base'
-/Users/jayhwang/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.6/lib/sass/stack.rb:135:in `with_frame'
-/Users/jayhwang/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.6/lib/sass/stack.rb:79:in `with_base'
-/Users/jayhwang/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:162:in `visit'
-/Users/jayhwang/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
-/Users/jayhwang/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/visitors/base.rb:52:in `map'
-/Users/jayhwang/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/visitors/base.rb:52:in `visit_children'
-/Users/jayhwang/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:171:in `block in visit_children'
-/Users/jayhwang/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
-/Users/jayhwang/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:170:in `visit_children'
-/Users/jayhwang/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/visitors/base.rb:36:in `block in visit'
-/Users/jayhwang/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:190:in `visit_root'
-/Users/jayhwang/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Users/jayhwang/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:161:in `visit'
-/Users/jayhwang/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/visitors/perform.rb:10:in `visit'
-/Users/jayhwang/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/root_node.rb:36:in `css_tree'
-/Users/jayhwang/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.6/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
-/Users/jayhwang/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.6/lib/sass/engine.rb:389:in `_render_with_sourcemap'
-/Users/jayhwang/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.6/lib/sass/engine.rb:307:in `render_with_sourcemap'
-/Users/jayhwang/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.6/lib/sass/plugin/compiler.rb:462:in `update_stylesheet'
-/Users/jayhwang/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.6/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-/Users/jayhwang/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.6/lib/sass/plugin/compiler.rb:209:in `each'
-/Users/jayhwang/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.6/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-/Users/jayhwang/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.6/lib/sass/plugin/compiler.rb:443:in `on_file_changed'
-/Users/jayhwang/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-3.5.6/lib/sass/plugin/compiler.rb:320:in `block in watch'
-/Users/jayhwang/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/event/config.rb:23:in `call'
-/Users/jayhwang/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:115:in `_process_changes'
-/Users/jayhwang/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:19:in `block in loop_for'
-/Users/jayhwang/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:15:in `loop'
-/Users/jayhwang/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:15:in `loop_for'
-/Users/jayhwang/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/event/loop.rb:84:in `_wait_for_changes'
-/Users/jayhwang/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/event/loop.rb:42:in `block in setup'
-/Users/jayhwang/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/internals/thread_pool.rb:6:in `block in add'
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
 */
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: File to import not found or unreadable: nav/index.\A        Load path: /Users/jayhwang/.sandbox/projects/todo/100x/100x-frontend/src/assets/stylesheets/scss\A         on line 5 of src/assets/stylesheets/scss/index.scss\A \A 1: @import 'reset';\A 2: @import 'App';\A 3: @import 'Body';\A 4: @import 'Layout';\A 5: @import 'nav/index';\A 6: @import 'landing/index';\A 7: @import 'blogs/index';"; }
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-family: 'Lato', sans-serif;
+  vertical-align: baseline;
+  box-sizing: border-box;
+  text-decoration: none; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul, li {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+input {
+  outline: none;
+  box-sizing: border-box;
+  padding: 0;
+  border: none;
+  margin: 0; }
+
+button {
+  border: none;
+  background: none;
+  outline: none; }
+
+a, button {
+  cursor: pointer; }
+
+.App {
+  text-align: center; }
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px; }
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white; }
+
+.App-title {
+  font-size: 1.5em; }
+
+.App-intro {
+  font-size: large; }
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
+body {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif; }
+
+.Layout-content {
+  position: relative;
+  padding-top: 64px; }
+
+.hamburger-button {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer; }
+  .hamburger-button div {
+    width: 25px;
+    margin: 2px;
+    height: 3px;
+    background-color: black;
+    border-radius: 1.5px; }
+
+.nav {
+  height: 64px;
+  width: 100vw;
+  z-index: 1;
+  display: flex;
+  justify-content: flex-end;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 64px;
+  box-sizing: border-box;
+  padding: 0 36px;
+  box-shadow: 0 4px 2px -2px lightgrey;
+  background-color: white; }
+  .nav content {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    .nav content .logo {
+      height: 100%; }
+    .nav content img {
+      height: 100%; }
+
+.nav--menu-container {
+  height: 64px;
+  width: 64px;
+  box-sizing: border-box;
+  padding: 7px; }
+
+.nav-menu-dropdown-container {
+  min-height: 48px;
+  width: 200px;
+  z-index: 0;
+  position: absolute;
+  top: 64px;
+  right: 0;
+  opacity: 0;
+  background-color: white;
+  pointer-events: none;
+  box-shadow: 0 4px 2px -2px lightgrey; }
+
+.nav-menu-dropdown {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center; }
+  .nav-menu-dropdown .nav-menu-dropdown--item {
+    height: 48px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 7px 14px;
+    border-bottom: 1px solid #c3c3c3;
+    border-left: 1px solid #c3c3c3;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 400;
+    color: #333;
+    transition: all .25s ease-in-out; }
+    .nav-menu-dropdown .nav-menu-dropdown--item:hover {
+      color: #fff;
+      background-color: #c3c3c3; }
+
+.show {
+  opacity: 1;
+  pointer-events: all; }
+
+.nav--filter-container {
+  height: 100%;
+  width: 335px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10 36px; }
+
+.nav--filter {
+  width: 100%;
+  display: flex;
+  justify-content: space-between; }
+
+.landing {
+  width: 100vw;
+  padding: 80px 10vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+.landing-blogs a {
+  text-decoration: none; }
+
+.blog {
+  width: 100%;
+  max-width: 1200px;
+  box-sizing: border-box;
+  padding: 25px 60px; }
+  .blog h1 {
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: 500;
+    color: #999;
+    text-align: left; }
+  .blog img {
+    max-width: 100%; }
+  .blog p {
+    font-size: 16px;
+    line-height: 22px;
+    color: #5a5a5a;
+    word-break: break-all;
+    text-align: left; }
+
+.blog-filter {
+  height: 80px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end; }
+
+.blog-filter--item {
+  height: 40px;
+  width: 150px;
+  position: relative;
+  cursor: pointer; }
+  .blog-filter--item:hover {
+    background-color: whitesmoke; }
+  .blog-filter--item .blog-filter--button {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+
+.blog-filter--item-dropdown {
+  z-index: 1;
+  position: absolute;
+  top: 40px;
+  opacity: 0;
+  background-color: white;
+  border: 1px solid #333;
+  width: 100%;
+  min-height: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; }
+  .blog-filter--item-dropdown .dropdown-item {
+    padding: 0 10px; }
+  .blog-filter--item-dropdown .new-filter {
+    height: 40px;
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: 10px;
+    width: 100%;
+    border-bottom: 1px solid #333;
+    border-top: 1px solid #e3e3e3; }
+  .blog-filter--item-dropdown .filter-item {
+    height: 25px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 5px 15px; }
+    .blog-filter--item-dropdown .filter-item input {
+      margin-right: 15px;
+      font-size: 13px;
+      font-weight: 400; }
+  .blog-filter--item-dropdown button {
+    height: 40px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+    width: 100%; }
+    .blog-filter--item-dropdown button:hover {
+      color: #fff;
+      background-color: #e3e3e3; }
+
+.show {
+  opacity: 1; }
+
+.blog-form {
+  width: 100vw;
+  padding: 80px 10vw; }
+  .blog-form form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 500px;
+    border: 1px solid #333;
+    padding: 25px; }
+
+.blog-header {
+  display: flex;
+  justify-content: space-between; }
+  .blog-header h2 {
+    color: #000;
+    font-weight: 400;
+    font-size: 22px; }
+
+.about-author {
+  display: flex; }
+  .about-author .author-profile-pic {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    background-color: lightgrey; }
+  .about-author .info {
+    height: 60px; }
+    .about-author .info h3 {
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 22px;
+      color: #000000;
+      text-align: left;
+      margin: 7px; }
+    .about-author .info p {
+      font-size: 12px;
+      font-weight: 300;
+      line-height: 18px;
+      color: #777777;
+      margin: 7px; }
+
+.blog-peek-container {
+  border: 1px solid #000000;
+  margin: 20px 0;
+  list-style: none;
+  box-sizing: border-box;
+  padding: 25px 60px;
+  max-width: 1200px; }
+
+.wallet-container {
+  background-color: whitesmoke;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0; }
+
+.wallet {
+  margin: 120px auto;
+  width: 675px; }
+
+.wallet-actions {
+  width: 100%;
+  height: 48px;
+  display: flex;
+  justify-content: space-between; }
+  .wallet-actions button {
+    border-radius: 4px;
+    width: calc(50% - 10px);
+    height: 100%;
+    background-color: #00969E;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    transition: all .2s ease-in-out;
+    cursor: pointer; }
+    .wallet-actions button:hover {
+      opacity: 0.5; }
+
+article {
+  margin: 25px 0 45px;
+  border: 1px solid #cfcfcf;
+  border-radius: 4px;
+  background-color: #fff;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  article .item {
+    width: calc(100% - 30px);
+    height: 72px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #cfcfcf; }
+    article .item:first-child, article .item:last-child {
+      border: 0; }
+    article .item.center {
+      justify-content: center; }
+    article .item .left {
+      display: flex;
+      align-items: center;
+      height: 100%; }
+      article .item .left .item-icon {
+        width: 32px;
+        height: 32px;
+        background-color: whitesmoke;
+        margin-right: 15px; }
+      article .item .left .item-img {
+        width: 42px;
+        height: 42px;
+        min-width: 42px;
+        min-height: 42px;
+        max-width: 42px;
+        max-height: 42px;
+        border-radius: 50%;
+        margin-right: 15px;
+        background-color: #cfcfcf; }
+      article .item .left .item-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        height: 42px; }
+        article .item .left .item-info h5 {
+          font-size: 14px;
+          font-weight: 400;
+          color: #263238;
+          letter-spacing: .5px; }
+        article .item .left .item-info span {
+          font-size: 12px;
+          font-weight: 300;
+          color: #263238; }
+      article .item .left span {
+        font-size: 16px;
+        font-weight: 500;
+        color: #263238; }
+    article .item button {
+      width: 225px;
+      border: 1px solid #cfcfcf;
+      height: 48px;
+      border-radius: 4px;
+      margin: 0 10px;
+      background-color: #aaaabf;
+      color: #fff;
+      font-size: 14px;
+      font-weight: 300;
+      letter-spacing: .5px;
+      transition: all .2s ease-in-out; }
+      article .item button:hover {
+        opacity: 0.5; }
+
+/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,107 @@
+.wallet-container {
+  background-color: whitesmoke;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0; }
+
+.wallet {
+  margin: 120px auto;
+  width: 675px; }
+
+.wallet-actions {
+  width: 100%;
+  height: 48px;
+  display: flex;
+  justify-content: space-between; }
+  .wallet-actions button {
+    border-radius: 4px;
+    width: calc(50% - 10px);
+    height: 100%;
+    background-color: #00969E;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    transition: all .2s ease-in-out;
+    cursor: pointer; }
+    .wallet-actions button:hover {
+      opacity: 0.5; }
+
+article {
+  margin: 25px 0 45px;
+  border: 1px solid #cfcfcf;
+  border-radius: 4px;
+  background-color: #fff;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  article .item {
+    width: calc(100% - 30px);
+    height: 72px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #cfcfcf; }
+    article .item:first-child, article .item:last-child {
+      border: 0; }
+    article .item.center {
+      justify-content: center; }
+    article .item .left {
+      display: flex;
+      align-items: center;
+      height: 100%; }
+      article .item .left .item-icon {
+        width: 32px;
+        height: 32px;
+        background-color: whitesmoke;
+        margin-right: 15px; }
+      article .item .left .item-img {
+        width: 42px;
+        height: 42px;
+        min-width: 42px;
+        min-height: 42px;
+        max-width: 42px;
+        max-height: 42px;
+        border-radius: 50%;
+        margin-right: 15px;
+        background-color: #cfcfcf; }
+      article .item .left .item-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        height: 42px; }
+        article .item .left .item-info h5 {
+          font-size: 14px;
+          font-weight: 400;
+          color: #263238;
+          letter-spacing: .5px; }
+        article .item .left .item-info span {
+          font-size: 12px;
+          font-weight: 300;
+          color: #263238; }
+      article .item .left span {
+        font-size: 16px;
+        font-weight: 500;
+        color: #263238; }
+    article .item button {
+      width: 225px;
+      border: 1px solid #cfcfcf;
+      height: 48px;
+      border-radius: 4px;
+      margin: 0 10px;
+      background-color: #aaaabf;
+      color: #fff;
+      font-size: 14px;
+      font-weight: 300;
+      letter-spacing: .5px;
+      transition: all .2s ease-in-out; }
+      article .item button:hover {
+        opacity: 0.5; }
+
+/*# sourceMappingURL=index.css.map */
