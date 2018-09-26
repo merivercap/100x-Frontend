@@ -54,7 +54,6 @@ class BlogForm extends React.Component {
             <div className="title-container input-container blog-form--item">
               <h4>Title</h4>
               <input
-                className="blog-form--input title"
                 type="text"
                 placeholder="Post Title"
                 onChange={ this._handleInputChange('title') }

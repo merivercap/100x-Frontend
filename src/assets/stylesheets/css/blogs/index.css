@@ -147,6 +147,8 @@
         width: 100%; }
     .blog-form form .title-container {
       border-bottom: 1px solid #333; }
+      .blog-form form .title-container input {
+        width: 100%; }
 
 .blog-header {
   display: flex;

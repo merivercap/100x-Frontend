@@ -60,6 +60,9 @@
     }
     .title-container {
       border-bottom: 1px solid #333;
+      input {
+        width: 100%;
+      }
     }
   }
 }
