@@ -4,9 +4,11 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+}
 
 .landing-blogs a {
-  text-decoration: none; }
+  text-decoration: none;
+}
 
 /*# sourceMappingURL=Landing.css.map */

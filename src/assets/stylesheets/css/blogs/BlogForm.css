@@ -1,5 +1,6 @@
 .blog-form {
   width: 100vw;
+<<<<<<< Updated upstream
   padding: 80px 10vw; }
   .blog-form form {
     align-items: flex-end;
@@ -54,5 +55,17 @@
       border-bottom: 1px solid #333; }
       .blog-form form .title-container input {
         width: 100%; }
+=======
+  padding: 80px 10vw;
+}
+.blog-form form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 500px;
+  border: 1px solid #333;
+  padding: 25px;
+}
+>>>>>>> Stashed changes
 
 /*# sourceMappingURL=BlogForm.css.map */
