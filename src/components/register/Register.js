@@ -1,13 +1,13 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 
-import { Query } from 'react-apollo';
+// import { Query } from 'react-apollo';
 
 // HOCs
 import Layout from '../../HOCs/Layout';
 
 // Utils
-import { createUser } from '../../graphql/users_api';
+// import { createUser } from '../../graphql/users_api';
 import { handleInputChange } from '../../utils/formHelper';
 
 class Register extends React.Component {
@@ -25,7 +25,7 @@ class Register extends React.Component {
   
   _handleSubmit = event => {
     event.preventDefault();
-    const user = this.state;
+    // const user = this.state;
     /** Call endpoint to create steem user*/
   }
   

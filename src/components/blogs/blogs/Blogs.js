@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 
 import { Query } from 'react-apollo';
 
@@ -7,7 +7,7 @@ import { Query } from 'react-apollo';
 import Layout from '../../../HOCs/Layout';
 
 // Components
-import BlogPeek from '../BlogPeek';
+// import BlogPeek from '../BlogPeek';
 import GqlError from '../../shared/GqlError';
 import Loading from '../../shared/Loading';
 

@@ -7,10 +7,6 @@ import BlogHeader from './BlogHeader';
 import htmlParser from '../../utils/htmlParser';
 
 class BlogPeek extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   parseBody = () => {
     const body = this.props.blog.body;
     const bodyHtml = htmlParser.getHtml({ body }).props.dangerouslySetInnerHTML;

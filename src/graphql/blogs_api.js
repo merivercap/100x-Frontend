@@ -8,17 +8,17 @@ import gql from 'graphql-tag';
 
 // `;
 
-const selectCustomer = gql`
-  query selectCustomer($id: String!)
-  {
-    consumer(id: $id) {
-      id
-      firstname
-      lastname
-      dateOfBirth
-    }
-  }
-`;
+// const selectCustomer = gql`
+//   query selectCustomer($id: String!)
+//   {
+//     consumer(id: $id) {
+//       id
+//       firstname
+//       lastname
+//       dateOfBirth
+//     }
+//   }
+// `;
 
 export const fetchBlog = gql`
   query fetchBlog($postId: Int!) {

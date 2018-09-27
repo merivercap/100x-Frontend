@@ -1,27 +1,27 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 
-import { Query } from 'react-apollo';
+// import { Query } from 'react-apollo';
 
 // Editor libraries
-import { Editor, createEditorState } from 'medium-draft';
-import mediumDraftImporter from 'medium-draft/lib/importer';
-import { EditorState, convertToRaw, convertFromRaw } from 'draft-js';
+// import { Editor, createEditorState } from 'medium-draft';
+// import mediumDraftImporter from 'medium-draft/lib/importer';
+// import { EditorState, convertToRaw, convertFromRaw } from 'draft-js';
 
 // HOCs
 import Layout from '../../HOCs/Layout';
 
 // Components
-import MediumEditor from '../editor/MediumEditor';
+// import MediumEditor from '../editor/MediumEditor';
 
 // Utils
-import { createBlog } from '../../graphql/blogs_api';
+// import { createBlog } from '../../graphql/blogs_api';
 import {
-  errorMessages,
+  // errorMessages,
   FieldValidation,
-  getFieldValidationStatus,
-  getInputValidationClass,
-  getInputErrorClass,
+  // getFieldValidationStatus,
+  // getInputValidationClass,
+  // getInputErrorClass,
   isFileUnderLimit,
   isNotEmpty,
 } from '../../utils/validators';
@@ -46,7 +46,7 @@ class BlogForm extends React.Component {
   }
 
   render() {
-    const error = this.state.error;
+    // const error = this.state.error;
     return (
       <Layout>
         <section className="blog-form">

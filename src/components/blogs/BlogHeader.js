@@ -1,7 +1,7 @@
 import React from 'react';
 
 const BlogHeader = ({ blog }) => {
-  const payoutValue = parseInt(blog.pendingPayoutValue).toFixed(2);
+  const payoutValue = parseInt(blog.pendingPayoutValue, 10).toFixed(2);
   return (
     <header className="blog-header">
       <section className="about-author">

@@ -19,6 +19,7 @@ const NavMenuDropdown = ({ isDropdownShown, isLoggedIn }) => {
               <Link to="/login" className="nav-menu-dropdown--item">Login</Link>
               <a className="nav-menu-dropdown--item"
                 href="https://signup.steemit.com/"
+                rel="noopener noreferrer"
                 target="_blank">
                 Register
               </a>

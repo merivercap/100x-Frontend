@@ -10,7 +10,7 @@ import Layout from '../../HOCs/Layout';
 
 // Components
 import BlogHeader from './BlogHeader';
-import Comments from '../comments/Comments';
+// import Comments from '../comments/Comments';
 
 /**
  * TODO:
