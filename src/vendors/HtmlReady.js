@@ -185,8 +185,8 @@ function iframe(state, child) {
     ? child.parentNode.tagName.toLowerCase()
     : child.parentNode.tagName;
   if (
-    tag == 'div' &&
-    child.parentNode.getAttribute('class') == 'videoWrapper'
+    tag === 'div' &&
+    child.parentNode.getAttribute('class') === 'videoWrapper'
   )
     return;
   const html = XMLSerializer.serializeToString(child);
