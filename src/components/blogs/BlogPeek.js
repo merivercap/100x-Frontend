@@ -24,7 +24,7 @@ class BlogPeek extends React.Component {
     return (
       <div className="blog">
         <BlogHeader blog={blog} />
-        <content>
+        <div className="content">
           <h1>
             {blog.title}
           </h1>
@@ -32,7 +32,7 @@ class BlogPeek extends React.Component {
             {/* <img src={ blog.image_url } /> */}
           </div>
           <p dangerouslySetInnerHTML={ bodyHtml } />
-        </content>
+        </div>
       </div>
     );
   }

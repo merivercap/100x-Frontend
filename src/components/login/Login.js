@@ -28,7 +28,7 @@ class Login extends React.Component {
     return (
       <Layout>
         <section className="login">
-          <content>
+          <div className="content">
             <form onSubmit={ this._handleSubmit }>
               <label>Email
                 <input 
@@ -51,7 +51,7 @@ class Login extends React.Component {
               </div>
               <button type="submit">Login</button>
             </form>
-          </content>
+          </div>
         </section>
       </Layout>
     );

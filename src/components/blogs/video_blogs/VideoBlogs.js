@@ -30,7 +30,7 @@ class VideoBlogs extends React.Component {
             return (
               <Fragment>
                 <section className="blogs">
-                  <content>
+                  <div className="content">
                     {
                       data.getAllPosts.map(blog => (
                         <Link to={ `/blogs/${blog.id}` } key={ blog.id }>
@@ -40,7 +40,7 @@ class VideoBlogs extends React.Component {
                         </Link>
                       ))
                     }
-                  </content>
+                  </div>
                 </section>
               </Fragment>
             );

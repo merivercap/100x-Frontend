@@ -33,7 +33,7 @@ class Register extends React.Component {
     return (
       <Layout>
         <section className="register">
-          <content>
+          <div className="content">
             <form onSubmit={ this._handleSubmit }>
               <label>First Name
                 <input
@@ -76,7 +76,7 @@ class Register extends React.Component {
               </div>
               <button type="submit">Login</button>
             </form>
-          </content>
+          </div>
         </section>
       </Layout>
     );

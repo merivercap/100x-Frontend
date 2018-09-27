@@ -43,7 +43,7 @@ export default class Blog extends React.Component {
               return (
                 <article className="blog">
                   <BlogHeader blog={blog} />
-                  <content>
+                  <div className="content">
                     <h1>
                       { blog.title }
                     </h1>
@@ -53,7 +53,7 @@ export default class Blog extends React.Component {
                     <p>
                       { blog.body }
                     </p>
-                  </content>
+                  </div>
                   {/* <Comments blog={blog} /> */}
                 </article>
               );

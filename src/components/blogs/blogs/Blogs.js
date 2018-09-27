@@ -26,9 +26,9 @@ class Blogs extends React.Component {
             return (
               <Fragment>
                 <section className="blogs">
-                  <content>
+                  <div className="content">
                     { this.mapBlogs() }
-                  </content>
+                  </div>
                 </section>
               </Fragment>
             );

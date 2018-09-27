@@ -31,9 +31,9 @@ class Comments extends React.Component {
     return (
       <Layout>
         <section className="comments">
-          <content>
+          <div className="content">
             <Comment />
-          </content>
+          </div>
         </section>
       </Layout>
     );

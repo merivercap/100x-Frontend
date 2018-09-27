@@ -5,7 +5,7 @@ const Comment = comment => (
     <div className="author-profile-pic">
       {/* { comment.author.profile_pic_url } */}
     </div>
-    <content>
+    <div className="content">
       <div className="info">
         <h4>
           steemUser
@@ -16,7 +16,7 @@ const Comment = comment => (
           {/* { comment.updated_at } */}
         </p>
       </div>
-    </content>
+    </div>
   </div>
 );
 
