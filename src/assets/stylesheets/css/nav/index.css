@@ -31,17 +31,17 @@
   box-shadow: 0 4px 2px -2px lightgrey;
   background-color: white;
 }
-.nav content {
+.nav .content {
   height: 100%;
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.nav content .logo {
+.nav .content .logo {
   height: 100%;
 }
-.nav content img {
+.nav .content img {
   height: 100%;
 }
 
