@@ -109,12 +109,6 @@
   opacity: 1;
 }
 
-.hello {
-  height: 800px;
-  width: 500px;
-  border: 1px solid black;
-}
-
 .blog-form {
   width: 100vw;
   padding: 80px 10vw;
