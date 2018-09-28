@@ -12,7 +12,7 @@ import React from 'react';
 import Layout from '../../HOCs/Layout';
 
 // Components
-// import MediumEditor from '../editor/MediumEditor';
+import Textarea from '../shared/Textarea';
 
 // Utils
 // import { createBlog } from '../../graphql/blogs_api';
@@ -46,7 +46,8 @@ class BlogForm extends React.Component {
   }
 
   render() {
-    // const error = this.state.error;
+    const { errors } = this.state;
+    const { title, body, cover_image_url } = this.state.form;
     return (
       <Layout>
         <section className="blog-form">
@@ -57,31 +58,42 @@ class BlogForm extends React.Component {
                 type="text"
                 placeholder="Post Title"
                 onChange={ this._handleInputChange('title') }
-                value={ this.state.title } />
+                value={ title } />
               {/* <p className="title-error error-message">
                 Your blog must have a title.
                 {/* error.title.message
               </p> */}
             </div>
             <div className="body-container input-container blog-form--item">
-              {/* <MediumEditor editorState={ this.state.body } updateEditorState={ this.updateEditorState } /> */}
+              <Textarea 
+                error={false}
+                html={body}
+                notPlainText
+                handleChange={this.handleTextareaInput}
+                placeholder={'can you keep up'}
+                success={false}
+                value={ body } />
+            </div>
+
+            {/* <div className="body-container input-container blog-form--item">
+              <MediumEditor editorState={ body } updateEditorState={ this.updateEditorState } />
               <textarea
                 className="blog-form--input body"
-                value={ this.state.body }
+                value={ body }
                 onChange={ this._handleInputChange('body') }>
               </textarea>
-              {/* <p className="body-error error-message">
+              <p className="body-error error-message">
                 Blog body cannot be blank.
-                {/* { error.body.message }
-              </p> */}
-            </div>
+                { errors.body.message }
+              </p>
+            </div> */}
             <div className="cover-image-container input-container blog-form--item">
               <h4>Cover Image</h4>
               <input
                 className="blog-form--input photo"
                 type="file"
                 onChange={ this._handleInputChange('cover_image_url') }
-                value={ this.state.cover_image_url } />
+                value={ cover_image_url } />
               {/* <p className="photo-error error-message">
                 Photo size is too large / incorrect file type
                 { error.photo.message }
@@ -92,6 +104,16 @@ class BlogForm extends React.Component {
         </section>
       </Layout>
     );
+  }
+
+  handleTextareaInput = event => {
+    console.log('event: ', event);
+    this.setState({
+      form: {
+        ...this.state.form,
+        body: event,
+      }
+    });
   }
 
   handleInput = (event) => {
