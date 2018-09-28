@@ -1,0 +1,30 @@
+.textarea-container {
+  border: 1px solid #aaa;
+  // box-shadow: 0 4px 10px rgba(0,0,0,0.7);
+  border-radius: 4px;
+  height: 64px;
+  padding: 7px;
+  width: 100%;
+
+
+  .textarea-wrapper {
+    height: 100%;
+    width: 100%;
+    .textarea-content {
+      height: 100%;
+      width: 100%;
+      .textarea-label {
+        height: 14px;
+        width: 100%;
+      }
+      .textarea-text {
+        height: 50px;
+        width: 100%;
+        .editor {
+          height: 100%;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
