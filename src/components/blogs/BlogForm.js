@@ -65,14 +65,7 @@ class BlogForm extends React.Component {
               </p> */}
             </div>
             <div className="body-container input-container blog-form--item">
-              <Textarea 
-                error={false}
-                html={body}
-                notPlainText
-                handleChange={this.handleTextareaInput}
-                placeholder={'can you keep up'}
-                success={false}
-                value={ body } />
+              <Textarea  />
             </div>
 
             {/* <div className="body-container input-container blog-form--item">
