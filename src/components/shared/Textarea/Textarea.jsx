@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { DraftailEditor, BLOCK_TYPE, INLINE_STYLE } from 'draftail';
+import { DraftailEditor, BLOCK_TYPE, ENTITY_TYPE, INLINE_STYLE } from 'draftail';
 
 const initial = JSON.parse(sessionStorage.getItem('draftail:content'));
 
@@ -9,21 +9,35 @@ const onSave = content => {
   sessionStorage.setItem('draftail:content', JSON.stringify(content));
 };
 
+const blockTypes = [
+  { type: BLOCK_TYPE.BLOCKQUOTE, label: '""' },
+  { type: BLOCK_TYPE.CODE, label: '``' },
+];
+
+const entityTypes = [
+  { type: ENTITY_TYPE.LINK, label: 'link'},
+  { type: ENTITY_TYPE.IMAGE, label: 'image' },
+];
+
+const inlineStyles = [
+  { type: INLINE_STYLE.BOLD, label: 'B' },
+  { type: INLINE_STYLE.ITALIC, label: 'I' },
+];
+
 class Textarea extends React.Component {
   render() {
     return (
-  <DraftailEditor
-    rawContentState={initial || null}
-    onSave={onSave}
-    blockTypes={[
-      { type: BLOCK_TYPE.HEADER_THREE, label: 'H3' },
-      { type: BLOCK_TYPE.UNORDERED_LIST_ITEM, label: 'UL' },
-    ]}
-    inlineStyles={[
-      { type: INLINE_STYLE.BOLD, label: 'B' },
-      { type: INLINE_STYLE.ITALIC, label: 'I' },
-    ]}
-  />
+      <DraftailEditor
+        blockTypes={blockTypes}
+        rawContentState={initial || null}
+        onSave={onSave}
+        placeholder={`Tell your story here...`}
+        enableHorizontalRule={true}
+        enableLineBreak={true}
+        // entityTypes={entityTypes}
+        spellCheck={true}
+        inlineStyles={inlineStyles}
+      />
     );
   }
 };
