@@ -34,30 +34,20 @@ class BlogForm extends React.Component {
     // TODO: check if user is authenticated - redirect if not
   }
 
-  _updateEditorState = editorState => {
-    this.setState({ body: editorState });
-  }
-  
-  _handleInputChange = field => handleInputChange(this, field)
-
-  _handleSubmit = event => {
-    event.preventDefault();
-    // TODO: make query to craete blog here
-  }
-
   render() {
     const { errors } = this.state;
     const { title, body, cover_image_url } = this.state.form;
     return (
       <Layout>
         <section className="blog-form">
-          <form onSubmit={ this._handleSubmit }>
+          <form onSubmit={ this.handleSubmit }>
             <div className="title-container input-container blog-form--item">
               <h4>Title</h4>
               <input
-                type="text"
                 placeholder="Post Title"
-                onChange={ this._handleInputChange('title') }
+                name="title"
+                onChange={ this.handleInput }
+                type="text"
                 value={ title } />
               {/* <p className="title-error error-message">
                 Your blog must have a title.
@@ -65,48 +55,25 @@ class BlogForm extends React.Component {
               </p> */}
             </div>
             <div className="body-container input-container blog-form--item">
-              <Textarea  />
+              <Textarea onChange={ this.handleTextareaInput } />
             </div>
-
-            {/* <div className="body-container input-container blog-form--item">
-              <MediumEditor editorState={ body } updateEditorState={ this.updateEditorState } />
-              <textarea
-                className="blog-form--input body"
-                value={ body }
-                onChange={ this._handleInputChange('body') }>
-              </textarea>
-              <p className="body-error error-message">
-                Blog body cannot be blank.
-                { errors.body.message }
-              </p>
-            </div> */}
-            <div className="cover-image-container input-container blog-form--item">
+            {/* <div className="cover-image-container input-container blog-form--item">
               <h4>Cover Image</h4>
               <input
                 className="blog-form--input photo"
                 type="file"
                 onChange={ this._handleInputChange('cover_image_url') }
                 value={ cover_image_url } />
-              {/* <p className="photo-error error-message">
+              <p className="photo-error error-message">
                 Photo size is too large / incorrect file type
                 { error.photo.message }
-              </p> */}
-            </div>
+              </p>
+            </div> */}
             <button className="blog-form--item submit-button" type="submit">Publish</button>
           </form>
         </section>
       </Layout>
     );
-  }
-
-  handleTextareaInput = event => {
-    console.log('event: ', event);
-    this.setState({
-      form: {
-        ...this.state.form,
-        body: event,
-      }
-    });
   }
 
   handleInput = (event) => {
@@ -132,6 +99,20 @@ class BlogForm extends React.Component {
           }
         });
     }
+  }
+
+  handleSubmit = event => {
+    event.preventDefault();
+    console.log('this.state: ', this.state);
+    // TODO: make query to create blog here    
+  }
+
+  handleTextareaInput = event => {
+    sessionStorage.setItem('draftail:content', JSON.stringify(event));
+    const { form } = this.state;
+    this.setState({
+      form: { ...form, body: event, }
+    });
   }
 }
 
