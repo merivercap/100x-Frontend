@@ -2,78 +2,72 @@
   width: 100vw;
   padding: 80px 10vw;
 
-
   form {
-    width: 925px;
+    align-items: flex-end;
+    display: flex;
+    flex-direction: column;
     margin: 0 auto;
+    min-height: 500px;
+    width: 650px;
+    .blog-form--item {
+      margin: 12px 0;
+    }
+    .submit-button {
+      background-color: #00969E;
+      border-radius: 4px;
+      color: #fff;
+      cursor: pointer;
+      font-size: 16px;
+      height: 48px;
+      transition: all .15s ease-in-out;
+      width: 200px;
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+    .input-container {
+      align-items: flex-start;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 56px;
+      width: 100%;
+      .Draftail-Editor {
+        width: 100%;
+      }
+      input {
+        align-items: center;
+        color: #333;
+        display: flex;
+        font-size: 16px;
+        font-weight: 400;
+        height: 28px;
+        line-height: 22px;
+        width: 100%;
+      }
+      h4 {
+        color: #333;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px;
+        height: 20px;
+      }
+      textarea {
+        color: #333;
+        font-size: 16px;
+        font-weight: 400;
+        height: 400px;
+        outline: none;
+        padding: 7px;
+        resize: vertical;
+        // width: 100%;
+      }
+    }
+    .title-container {
+      border-bottom: 1px solid #333;
+      input {
+        // width: 100%;
+      }
+    }
   }
 }
-
-// .blog-form {
-//   // width: 100vw;
-//   padding: 80px 10vw;
-
-//   form {
-//     align-items: flex-end;
-//     display: flex;
-//     flex-direction: column;
-//     min-height: 500px;
-//     width: 550px;
-//     .blog-form--item {
-//       margin: 12px 0;
-//     }
-//     .submit-button {
-//       background-color: #00969E;
-//       border-radius: 4px;
-//       color: #fff;
-//       cursor: pointer;
-//       font-size: 16px;
-//       height: 48px;
-//       transition: all .15s ease-in-out;
-//       // width: 200px;
-//       &:hover {
-//         opacity: 0.5;
-//       }
-//     }
-//     .input-container {
-//       align-items: flex-start;
-//       display: flex;
-//       flex-direction: column;
-//       justify-content: space-between;
-//       min-height: 56px;
-//       // width: 100%;
-//       input {
-//         align-items: center;
-//         color: #333;
-//         display: flex;
-//         font-size: 16px;
-//         font-weight: 400;
-//         height: 28px;
-//         line-height: 22px;
-//       }
-//       h4 {
-//         color: #333;
-//         font-size: 14px;
-//         font-weight: 400;
-//         line-height: 20px;
-//         height: 20px;
-//       }
-//       textarea {
-//         color: #333;
-//         font-size: 16px;
-//         font-weight: 400;
-//         height: 400px;
-//         outline: none;
-//         padding: 7px;
-//         resize: vertical;
-//         // width: 100%;
-//       }
-//     }
-//     .title-container {
-//       border-bottom: 1px solid #333;
-//       input {
-//         // width: 100%;
-//       }
-//     }
-//   }
-// }
