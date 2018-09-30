@@ -1,43 +1,56 @@
 import React from 'react';
 
 import { DraftailEditor, BLOCK_TYPE, ENTITY_TYPE, INLINE_STYLE } from 'draftail';
+import {
+  INLINE_CONTROL,
+  BLOCK_CONTROL,
+  ENTITY_CONTROL,
+  BR_ICON,
+} from '../../draft/examples/constants/ui';
 
 const initial = JSON.parse(sessionStorage.getItem('draftail:content'));
+
+const enableHorizontalRule = {
+  description: 'Horizontal rule',
+};
+const enableLineBreak = {
+  description: 'Soft line break',
+  icon: BR_ICON,
+};
+const entityTypes = [
+  ENTITY_CONTROL.IMAGE,
+  ENTITY_CONTROL.LINK
+];
+const showRedoControl = {
+  description: 'Redo last change',
+};
+const showUndoControl = {
+  descriptio: 'Undo last change',
+};
 
 const onSave = content => {
   console.log('saving', content);
   sessionStorage.setItem('draftail:content', JSON.stringify(content));
 };
 
-const blockTypes = [
-  { type: BLOCK_TYPE.BLOCKQUOTE, label: '""' },
-  { type: BLOCK_TYPE.CODE, label: '``' },
-];
-
-const entityTypes = [
-  { type: ENTITY_TYPE.LINK, label: 'link'},
-  { type: ENTITY_TYPE.IMAGE, label: 'image' },
-];
-
-const inlineStyles = [
-  { type: INLINE_STYLE.BOLD, label: 'B' },
-  { type: INLINE_STYLE.ITALIC, label: 'I' },
-];
-
 class Textarea extends React.Component {
   render() {
     return (
       <DraftailEditor
-        blockTypes={blockTypes}
-        rawContentState={initial || null}
+        ariaDescribedBy="all-editor"
+        blockTypes={Object.values(BLOCK_CONTROL)}
+        enableHorizontalRule={enableHorizontalRule}
+        enableLineBreak={enableLineBreak}
+        entityTypes={entityTypes}
+        inlineStyles={Object.values(INLINE_CONTROL)}
+        maxListNesting={6}
         onSave={onSave}
-        placeholder={`Tell your story here...`}
-        enableHorizontalRule={true}
-        enableLineBreak={true}
-        // entityTypes={entityTypes}
+        p laceholder="Tell your story here..."
+        rawContentState={initial || null}
         spellCheck={true}
-        inlineStyles={inlineStyles}
-      />
+        showRedoControl={showRedoControl}
+        showUndoControl={showUndoControl}
+        stripPastedStyles={false} />
     );
   }
 };
