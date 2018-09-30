@@ -92,7 +92,7 @@ class BlogForm extends React.Component {
                 { error.photo.message }
               </p> */}
             </div>
-            <button className="blog-form--item" type="submit">Publish</button>
+            <button className="blog-form--item submit-button" type="submit">Publish</button>
           </form>
         </section>
       </Layout>
