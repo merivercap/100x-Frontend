@@ -271,6 +271,15 @@ body {
   opacity: 1;
 }
 
+.blog-form {
+  width: 100vw;
+  padding: 80px 10vw;
+}
+.blog-form form {
+  width: 925px;
+  margin: 0 auto;
+}
+
 .blog-header {
   display: flex;
   justify-content: space-between;
