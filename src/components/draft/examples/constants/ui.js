@@ -55,17 +55,17 @@ export const ENTITY_CONTROL = {
             href: '^(?![#/])',
         },
     },
-    // IMAGE: {
-    //     type: ENTITY_TYPE.IMAGE,
-    //     description: 'Image',
-    //     // icon: '#icon-image',
-    //     source: ImageSource,
-    //     block: ImageBlock,
-    //     attributes: ['src', 'alt'],
-    //     whitelist: {
-    //         src: '^(?!(data:|file:))',
-    //     },
-    // },
+    IMAGE: {
+        type: ENTITY_TYPE.IMAGE,
+        description: 'Image',
+        // icon: '#icon-image',
+        source: ImageSource,
+        block: ImageBlock,
+        attributes: ['src', 'alt'],
+        whitelist: {
+            src: '^(?!(data:|file:))',
+        },
+    },
     // EMBED: {
     //     type: 'EMBED',
     //     description: 'Embed',
