@@ -44,8 +44,8 @@ class Textarea extends React.Component {
         entityTypes={entityTypes}
         inlineStyles={Object.values(INLINE_CONTROL)}
         maxListNesting={6}
-        onSave={onSave}
-        p laceholder="Tell your story here..."
+        onSave={this.props.onChange}
+        placeholder="Tell your story here..."
         rawContentState={initial || null}
         spellCheck={true}
         showRedoControl={showRedoControl}
