@@ -1,0 +1,39 @@
+.page-header {
+    > a {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    margin-bottom: 5vh;
+    text-align: center;
+
+    @include xsmall {
+        text-align: left;
+    }
+}
+
+.page-title {
+    @include font-smoothing;
+    font-size: 3.5rem;
+    letter-spacing: 2px;
+
+    @include medium {
+        font-size: 5rem;
+    }
+}
+
+.page-description {
+    margin-top: 1.5rem;
+    margin-bottom: 0;
+    font-size: 1.5rem;
+
+    img {
+        vertical-align: middle;
+    }
+}
+
+.page-disclaimer {
+    > a > svg {
+        vertical-align: middle;
+    }
+}

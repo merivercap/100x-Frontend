@@ -1,0 +1,36 @@
+$FONT_FAMILY_SANS: system-ui, -apple-system, BlinkMacSystemFont,
+    'Helvetica Neue', Helvetica, Arial, sans-serif;
+$FONT_FAMILY_MONOSPACE: Monaco, Bitstream Vera Sans Mono, Lucida Console,
+    Terminal, Consolas, Liberation Mono, DejaVu Sans Mono, Courier New,
+    monospace;
+
+body {
+    font-family: $FONT_FAMILY_SANS;
+}
+
+code {
+    font-family: $FONT_FAMILY_MONOSPACE;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0 0 1rem;
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1.1;
+}
+
+.page-section > h2 {
+    font-size: 2.5rem;
+}
+
+.example > h3 {
+    font-size: 1.75rem;
+}

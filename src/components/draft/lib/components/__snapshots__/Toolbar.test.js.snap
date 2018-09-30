@@ -1,0 +1,69 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Toolbar #controls 1`] = `
+<div
+  className="Draftail-Toolbar"
+  role="toolbar"
+>
+  <ToolbarDefaults
+    addBR={[Function]}
+    addHR={[Function]}
+    blockTypes={Array []}
+    controls={
+      Array [
+        [Function],
+      ]
+    }
+    currentBlock="unstyled"
+    currentStyles={Immutable.OrderedSet []}
+    enableHorizontalRule={false}
+    enableLineBreak={false}
+    entityTypes={Array []}
+    getEditorState={[Function]}
+    inlineStyles={Array []}
+    onChange={[Function]}
+    onRequestSource={[Function]}
+    onUndoRedo={[Function]}
+    showRedoControl={false}
+    showUndoControl={false}
+    toggleBlockType={[Function]}
+    toggleInlineStyle={[Function]}
+  />
+  <ToolbarGroup>
+    <Component
+      getEditorState={[Function]}
+      key="0"
+      onChange={[Function]}
+    />
+  </ToolbarGroup>
+</div>
+`;
+
+exports[`Toolbar empty 1`] = `
+<div
+  className="Draftail-Toolbar"
+  role="toolbar"
+>
+  <ToolbarDefaults
+    addBR={[Function]}
+    addHR={[Function]}
+    blockTypes={Array []}
+    controls={Array []}
+    currentBlock="unstyled"
+    currentStyles={Immutable.OrderedSet []}
+    enableHorizontalRule={false}
+    enableLineBreak={false}
+    entityTypes={Array []}
+    getEditorState={[Function]}
+    inlineStyles={Array []}
+    onChange={[Function]}
+    onRequestSource={[Function]}
+    onUndoRedo={[Function]}
+    showRedoControl={false}
+    showUndoControl={false}
+    toggleBlockType={[Function]}
+    toggleInlineStyle={[Function]}
+  />
+  <ToolbarGroup />
+</div>
+`;

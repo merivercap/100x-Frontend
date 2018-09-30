@@ -1,0 +1,7 @@
+.page-nav {
+    text-align: center;
+
+    @include xsmall {
+        text-align: left;
+    }
+}
