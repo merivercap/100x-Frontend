@@ -1,7 +1,7 @@
 // React
 import React, { Fragment } from 'react';
 import { Link } from 'react-router-dom';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 
 // Apollo / GraphQL
 import { Query } from 'react-apollo';
@@ -30,7 +30,7 @@ class VideoBlogs extends React.Component {
             return (
               <Fragment>
                 <section className="blogs">
-                  <content>
+                  <div className="content">
                     {
                       data.getAllPosts.map(blog => (
                         <Link to={ `/blogs/${blog.id}` } key={ blog.id }>
@@ -40,7 +40,7 @@ class VideoBlogs extends React.Component {
                         </Link>
                       ))
                     }
-                  </content>
+                  </div>
                 </section>
               </Fragment>
             );

@@ -1,0 +1,91 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ToolbarButton #active 1`] = `
+<button
+  aria-label={null}
+  className="Draftail-ToolbarButton Draftail-ToolbarButton--active"
+  data-draftail-balloon={null}
+  name={null}
+  onMouseDown={[Function]}
+  onMouseLeave={[Function]}
+  tabIndex={-1}
+  type="button"
+/>
+`;
+
+exports[`ToolbarButton #icon 1`] = `
+<button
+  aria-label={null}
+  className="Draftail-ToolbarButton"
+  data-draftail-balloon={null}
+  name={null}
+  onMouseDown={[Function]}
+  onMouseLeave={[Function]}
+  tabIndex={-1}
+  type="button"
+>
+  <Icon
+    className={null}
+    icon="icon-test"
+    title={null}
+  />
+</button>
+`;
+
+exports[`ToolbarButton #label 1`] = `
+<button
+  aria-label={null}
+  className="Draftail-ToolbarButton"
+  data-draftail-balloon={null}
+  name={null}
+  onMouseDown={[Function]}
+  onMouseLeave={[Function]}
+  tabIndex={-1}
+  type="button"
+>
+  <span
+    className="Draftail-ToolbarButton__label"
+  >
+    Test label
+  </span>
+</button>
+`;
+
+exports[`ToolbarButton #name 1`] = `
+<button
+  aria-label={null}
+  className="Draftail-ToolbarButton"
+  data-draftail-balloon={null}
+  name="TEST"
+  onMouseDown={[Function]}
+  onMouseLeave={[Function]}
+  tabIndex={-1}
+  type="button"
+/>
+`;
+
+exports[`ToolbarButton #title 1`] = `
+<button
+  aria-label="Test title"
+  className="Draftail-ToolbarButton"
+  data-draftail-balloon={true}
+  name={null}
+  onMouseDown={[Function]}
+  onMouseLeave={[Function]}
+  tabIndex={-1}
+  type="button"
+/>
+`;
+
+exports[`ToolbarButton empty 1`] = `
+<button
+  aria-label={null}
+  className="Draftail-ToolbarButton"
+  data-draftail-balloon={null}
+  name={null}
+  onMouseDown={[Function]}
+  onMouseLeave={[Function]}
+  tabIndex={-1}
+  type="button"
+/>
+`;

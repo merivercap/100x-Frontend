@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ToolbarGroup children 1`] = `
+<div
+  className="Draftail-ToolbarGroup"
+>
+  <span>
+    Test child
+  </span>
+</div>
+`;
+
+exports[`ToolbarGroup empty 1`] = `""`;
+
+exports[`ToolbarGroup empty array children 1`] = `""`;
+
+exports[`ToolbarGroup empty children 1`] = `""`;

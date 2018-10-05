@@ -1,13 +1,13 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 
-import { Query } from 'react-apollo';
+// import { Query } from 'react-apollo';
 
 // HOCs
 import Layout from '../../HOCs/Layout';
 
 // Utils
-import { loginUser } from '../../graphql/users_api';
+// import { loginUser } from '../../graphql/users_api';
 import { handleInputChange } from '../../utils/formHelper';
 
 class Login extends React.Component {
@@ -20,7 +20,7 @@ class Login extends React.Component {
 
   _handleSubmit = event => {
     event.preventDefault();
-    const user = this.state;
+    // const user = this.state;
     /** Call endpoint to login steem user*/
   }
   
@@ -28,7 +28,7 @@ class Login extends React.Component {
     return (
       <Layout>
         <section className="login">
-          <content>
+          <div className="content">
             <form onSubmit={ this._handleSubmit }>
               <label>Email
                 <input 
@@ -51,7 +51,7 @@ class Login extends React.Component {
               </div>
               <button type="submit">Login</button>
             </form>
-          </content>
+          </div>
         </section>
       </Layout>
     );

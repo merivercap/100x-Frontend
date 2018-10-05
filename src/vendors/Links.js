@@ -99,7 +99,7 @@ export const determineViewMode = search => {
       : search.split('&');
   for (let i = 0; i < searchList.length; i++) {
     if (searchList[i].indexOf(PARAM_VIEW_MODE) === 0) {
-      if (searchList[i] == PARAM_VIEW_MODE + '=' + VIEW_MODE_WHISTLE) {
+      if (searchList[i] === PARAM_VIEW_MODE + '=' + VIEW_MODE_WHISTLE) {
         //we only want to support known view modes.
         return VIEW_MODE_WHISTLE;
       }

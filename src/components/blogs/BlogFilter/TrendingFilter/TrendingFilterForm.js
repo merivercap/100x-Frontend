@@ -2,8 +2,8 @@
 import React from 'react';
 
 // Apollo / GraphQL
-import { compose, graphql } from 'react-apollo';
-import { createTrendingFilter, fetchTrendingFilters, filterByTags } from '../../../../graphql/filters_api';
+// import { compose, graphql } from 'react-apollo';
+// import { createTrendingFilter, fetchTrendingFilters, filterByTags } from '../../../../graphql/filters_api';
 
 class TrendingFilterForm extends React.Component {
   state = {
@@ -22,14 +22,16 @@ class TrendingFilterForm extends React.Component {
 
   createNewFilter = newFilter => {
     // Make mutation query
+    console.log(newFilter);
   }
 
   filterByTrending = filters => {
     // make filter query
+    console.log(filters);
   }
 
   handleFilterClick = event => {
-    const { value } = event.target;
+    // const { value } = event.target;
     const updatedFilters = this.state.form.filters;
     // updatedFilters.push(value);
     this.setState({

@@ -5,12 +5,14 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  cursor: pointer; }
-  .hamburger-button div {
-    width: 25px;
-    margin: 2px;
-    height: 3px;
-    background-color: black;
-    border-radius: 1.5px; }
+  cursor: pointer;
+}
+.hamburger-button div {
+  width: 25px;
+  margin: 2px;
+  height: 3px;
+  background-color: black;
+  border-radius: 1.5px;
+}
 
 /*# sourceMappingURL=HamburgerButton.css.map */

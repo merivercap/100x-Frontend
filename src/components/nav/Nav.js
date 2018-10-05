@@ -15,11 +15,11 @@ class Nav extends React.Component {
   render() {
     return (
       <nav className="nav">
-        <content>
+        <div className="content">
           <Logo />
           <NavFilter />
           <NavMenu isLoggedIn={ this.state.isLoggedIn } />
-        </content>
+        </div>
       </nav>
     );
   }

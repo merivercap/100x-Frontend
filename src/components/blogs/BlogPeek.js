@@ -7,10 +7,6 @@ import BlogHeader from './BlogHeader';
 import htmlParser from '../../utils/htmlParser';
 
 class BlogPeek extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   parseBody = () => {
     const body = this.props.blog.body;
     const bodyHtml = htmlParser.getHtml({ body }).props.dangerouslySetInnerHTML;
@@ -24,7 +20,7 @@ class BlogPeek extends React.Component {
     return (
       <div className="blog">
         <BlogHeader blog={blog} />
-        <content>
+        <div className="content">
           <h1>
             {blog.title}
           </h1>
@@ -32,7 +28,7 @@ class BlogPeek extends React.Component {
             {/* <img src={ blog.image_url } /> */}
           </div>
           <p dangerouslySetInnerHTML={ bodyHtml } />
-        </content>
+        </div>
       </div>
     );
   }

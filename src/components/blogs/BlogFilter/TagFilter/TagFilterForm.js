@@ -2,8 +2,8 @@
 import React from 'react';
 
 // Apollo / GraphQL
-import { compose, graphql } from 'react-apollo';
-import { createTagFilter, fetchTagFilters, filterByTags } from '../../../../graphql/filters_api';
+// import { compose, graphql } from 'react-apollo';
+// import { createTagFilter, fetchTagFilters, filterByTags } from '../../../../graphql/filters_api';
 
 class TagFilter extends React.Component {
   state = {

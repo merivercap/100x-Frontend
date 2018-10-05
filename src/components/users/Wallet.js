@@ -2,7 +2,7 @@
 import React from 'react';
 
 // Apollo / GraphQL
-import { Query } from 'react-apollo';
+// import { Query } from 'react-apollo';
 
 // HOCs
 import Layout from '../../HOCs/Layout';
