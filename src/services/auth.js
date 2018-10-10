@@ -9,6 +9,8 @@
 import steemConnect from './steemConnect';
 
 const AuthService = {
+  isLoggedIn: () => !!localStorage.getItem('access_token'),
+
   login: authResponse => {
     const steemUserData = _parseAuthResponse(authResponse);
     _cache(steemUserData);
