@@ -18,9 +18,7 @@ class NavMenu extends React.Component {
     return (
       <div className="nav--menu-container">
         <HamburgerButton handleClick={ this.toggleDropdown } />
-        <NavMenuDropdown
-          isLoggedIn={ this.props.isLoggedIn }
-          isDropdownShown={ this.state.isDropdownShown } />
+        <NavMenuDropdown isDropdownShown={ this.state.isDropdownShown } />
       </div> 
     );
   }

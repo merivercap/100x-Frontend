@@ -6,23 +6,14 @@ import Logo from './Logo';
 import NavFilter from './NavFilter';
 import NavMenu from './NavMenu';
 
-class Nav extends React.Component {
-  // TODO: connect with steem user state
-  state = {
-    isLoggedIn: true,
-  };
-
-  render() {
-    return (
-      <nav className="nav">
-        <div className="content">
-          <Logo />
-          <NavFilter />
-          <NavMenu isLoggedIn={ this.state.isLoggedIn } />
-        </div>
-      </nav>
-    );
-  }
-}
+const Nav = () => (
+  <nav className="nav">
+    <div className="content">
+      <Logo />
+      <NavFilter />
+      <NavMenu />
+    </div>
+  </nav>
+);
 
 export default Nav;
