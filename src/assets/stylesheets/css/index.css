@@ -990,7 +990,7 @@ button[data-draftail-balloon] {
 [data-draftail-balloon]:after {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: hsla(0, 0%, 7%, 0.9);
+  background: rgba(18, 18, 18, 0.9);
   border-radius: 4px;
   color: #fff;
   content: attr(aria-label);
