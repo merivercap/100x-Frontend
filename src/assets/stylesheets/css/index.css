@@ -490,7 +490,7 @@ body {
   font-size: 14px;
   font-weight: 400;
   color: #333;
-  transition: all 0.25s ease-in-out;
+  transition: all 0.15s ease-in-out;
 }
 .nav-menu-dropdown .nav-menu-dropdown--item:hover {
   color: #fff;
@@ -515,6 +515,9 @@ body {
   width: 100%;
   display: flex;
   justify-content: space-between;
+}
+.nav--filter .nav-filter--item {
+  color: #000;
 }
 
 /* http://meyerweb.com/eric/tools/css/reset/
