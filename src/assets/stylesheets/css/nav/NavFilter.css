@@ -12,5 +12,8 @@
   display: flex;
   justify-content: space-between;
 }
+.nav--filter .nav-filter--item {
+  color: #000;
+}
 
 /*# sourceMappingURL=NavFilter.css.map */
