@@ -46,7 +46,6 @@ class TrendingFilterForm extends React.Component {
 
   handleTextInputChange = event => {
     const { value } = event.target;
-    console.log('handleInputChange value: ', value);
     this.setState({
       errors: this.state.errors,
       isVisible: this.state.isVisible,
@@ -60,16 +59,12 @@ class TrendingFilterForm extends React.Component {
   handleSubmit = event => {
     event.preventDefault();
     const { filters, newFilter } = this.state.form;
-    console.log('handleSubmit');
-    console.log('filters: ', filters);
-    console.log('newFilter: ', newFilter);
     if (filters.length > 0) this.filterByTags(filters);
     if (newFilter.name.length > 2) this.createNewFilter(newFilter);
   }
     
   mapFilters = () => {
     const filters = this.state.form.filters;
-    console.log('filters: ', filters);
     return filters.map(filter => (
       <div className="filter-item">
         <input
