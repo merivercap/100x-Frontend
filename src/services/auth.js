@@ -1,8 +1,16 @@
+/**
+ * This is the steemConnect user authentication service
+ * Responsible for handling user login/logout
+ * 
+ * @author jay-ithiel
+ * 
+ */
+
 import steemConnect from './steemConnect';
 
 const AuthService = {
   login: authResponse => {
-    const steemUserData = _parseSteemUserParams(authResponse);
+    const steemUserData = _parseAuthResponse(authResponse);
     _cache(steemUserData);
   },
 
@@ -10,14 +18,16 @@ const AuthService = {
     steemConnect.revokeToken();
     _clearCache();
   },
-}
+};
 
 export default AuthService;
 
 
-function _cache(userData) {
-  userData.forEach(metaData => {
-    const [key, value] = _parseSteemUserData(metaData);
+/** Helper functions */
+
+function _cache(steemUserData) {
+  steemUserData.forEach(metaData => {
+    const [key, value] = metaData.split('=');
     localStorage.setItem(key, value);
   });
 }
@@ -28,16 +38,7 @@ function _clearCache() {
   localStorage.removeItem('expires_in');
 }
 
-function _parseSteemUserData(userData) {
-  return userData.split('=');
-}
-
-function _parseSteemUserParams(steemUserParams) {
-  let [steemToken, expiresIn, username] = steemUserParams.split('&');
-  steemToken = steemToken.slice(1); // Remove '&' prefix
-  return [
-    steemToken,
-    expiresIn,
-    username,
-  ];
+function _parseAuthResponse(authResponse) {
+  const [ steemToken, expiresIn, username ] = authResponse.split('&');
+  return [ steemToken.slice(1), expiresIn, username ];
 }
