@@ -113,7 +113,8 @@ article .item .left .item-img {
   max-height: 42px;
   border-radius: 50%;
   margin-right: 15px;
-  background-color: #cfcfcf;
+  background-size: cover !important;
+  background-position: center !important;
 }
 article .item .left .item-info {
   display: flex;
