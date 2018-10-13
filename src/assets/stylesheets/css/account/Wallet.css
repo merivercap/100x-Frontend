@@ -47,12 +47,13 @@ article {
   align-items: center;
 }
 article .item {
-  width: calc(100% - 30px);
-  height: 72px;
-  display: flex;
-  justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid #cfcfcf;
+  display: flex;
+  height: 72px;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: calc(100% - 30px);
 }
 article .item:first-child, article .item:last-child {
   border: 0;
