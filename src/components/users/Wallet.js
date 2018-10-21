@@ -23,8 +23,8 @@ class Wallet extends React.Component {
             ({ loading, error, data }) => {
               if (loading) return <Loading/>
               if (error) return <GqlError error={ error }/>
-              const user = data.getProfileInformation;
-              console.log('user: ', user);
+              const steemUser = data.getProfileInformation;
+              if (!steemUser) return <div>You have no wallet data to show yet!</div>;
               return (
                 <div className="wallet-container">
                   <section className="wallet">
@@ -35,7 +35,9 @@ class Wallet extends React.Component {
                     <article>
                       <div className="item">
                         <div className="left">
-                          <div className="item-icon"></div>
+                          <div className="item-icon">
+                            <img alt="steem" src="https://res.cloudinary.com/ddgtwtbre/image/upload/v1539313680/steem_ernbpt.jpg" />
+                          </div>
                           <span>Steem</span>
                         </div>
                         <div className="right">
@@ -52,7 +54,9 @@ class Wallet extends React.Component {
                       </div>
                       <div className="item">
                         <div className="left">
-                          <div className="item-icon"></div>
+                          <div className="item-icon">
+                            <img alt="lightning" src="https://res.cloudinary.com/ddgtwtbre/image/upload/v1539314359/lightning_wx43lr.jpg" />
+                          </div>
                           <span>Steem Power</span>
                         </div>
                         <div className="right">
@@ -61,7 +65,9 @@ class Wallet extends React.Component {
                       </div>
                       <div className="item">
                         <div className="left">
-                          <div className="item-icon"></div>
+                          <div className="item-icon">
+                            <img alt="dollar" src="https://res.cloudinary.com/ddgtwtbre/image/upload/v1539314359/money_fw1g6g.jpg"/>
+                          </div>
                           <span>Steem Dollar</span>
                         </div>
                         <div className="right">
@@ -70,7 +76,9 @@ class Wallet extends React.Component {
                       </div>
                       <div className="item">
                         <div className="left">
-                          <div className="item-icon"></div>
+                          <div className="item-icon">
+                            <img alt="avatar" src="https://res.cloudinary.com/ddgtwtbre/image/upload/v1539314358/avatar_nt5vnh.jpg"/>
+                          </div>
                           <span>Est. Account Value</span>
                         </div>
                         <div className="right">
@@ -82,7 +90,7 @@ class Wallet extends React.Component {
                     <article>
                       <div className="item">
                         <div className="left">
-                          <div className="item-img" style={{ background: `url(${user.profileImageUrl})` }}></div>
+                          <div className="item-img" style={{ backgroundImage: `url(${steemUser.profileImageUrl})`}}></div>
                           <div className="item-info">
                             <h5>Received from steemrollin</h5>
                             <span>2 months ago</span>

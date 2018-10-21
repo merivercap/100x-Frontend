@@ -32,13 +32,13 @@
 }
 .wallet-container {
   background-color: whitesmoke;
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
   bottom: 0;
+  height: 100vh;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100vw;
 }
 
 .wallet {
@@ -47,21 +47,21 @@
 }
 
 .wallet-actions {
-  width: 100%;
-  height: 48px;
   display: flex;
+  height: 48px;
   justify-content: space-between;
+  width: 100%;
 }
 .wallet-actions button {
-  border-radius: 4px;
-  width: calc(50% - 10px);
-  height: 100%;
   background-color: #00969E;
+  border-radius: 4px;
   color: #fff;
   font-size: 16px;
   font-weight: 300;
+  height: 100%;
   letter-spacing: 1px;
   transition: all 0.2s ease-in-out;
+  width: calc(50% - 10px);
   cursor: pointer;
 }
 .wallet-actions button:hover {
@@ -69,14 +69,14 @@
 }
 
 article {
-  margin: 25px 0 45px;
+  align-items: center;
+  background-color: #fff;
   border: 1px solid #cfcfcf;
   border-radius: 4px;
-  background-color: #fff;
-  width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  margin: 25px 0 45px;
+  width: 100%;
 }
 article .item {
   align-items: center;
@@ -94,63 +94,63 @@ article .item.center {
   justify-content: center;
 }
 article .item .left {
-  display: flex;
   align-items: center;
+  display: flex;
   height: 100%;
 }
 article .item .left .item-icon {
-  width: 32px;
-  height: 32px;
   background-color: whitesmoke;
+  height: 32px;
   margin-right: 15px;
+  width: 32px;
 }
 article .item .left .item-img {
-  width: 42px;
-  height: 42px;
-  min-width: 42px;
-  min-height: 42px;
-  max-width: 42px;
-  max-height: 42px;
+  background-position: center;
+  background-size: cover;
   border-radius: 50%;
+  height: 42px;
   margin-right: 15px;
-  background-size: cover !important;
-  background-position: center !important;
+  max-height: 42px;
+  max-width: 42px;
+  min-height: 42px;
+  min-width: 42px;
+  width: 42px;
 }
 article .item .left .item-info {
+  align-items: flex-start;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
   height: 42px;
+  justify-content: space-between;
 }
 article .item .left .item-info h5 {
+  color: #263238;
   font-size: 14px;
   font-weight: 400;
-  color: #263238;
   letter-spacing: 0.5px;
 }
 article .item .left .item-info span {
+  color: #263238;
   font-size: 12px;
   font-weight: 300;
-  color: #263238;
 }
 article .item .left span {
+  color: #263238;
   font-size: 16px;
   font-weight: 500;
-  color: #263238;
 }
 article .item button {
-  width: 225px;
-  border: 1px solid #cfcfcf;
-  height: 48px;
-  border-radius: 4px;
-  margin: 0 10px;
   background-color: #aaaabf;
+  border: 1px solid #cfcfcf;
+  border-radius: 4px;
   color: #fff;
+  height: 48px;
   font-size: 14px;
   font-weight: 300;
   letter-spacing: 0.5px;
+  margin: 0 10px;
   transition: all 0.2s ease-in-out;
+  width: 225px;
 }
 article .item button:hover {
   opacity: 0.5;
@@ -353,35 +353,36 @@ body {
 }
 .blog-header h2 {
   color: #000;
-  font-weight: 400;
   font-size: 22px;
+  font-weight: 400;
 }
 
 .about-author {
   display: flex;
 }
 .about-author .author-profile-pic {
+  background-position: center;
+  border-radius: 50%;
+  background-size: cover;
   height: 60px;
   width: 60px;
-  border-radius: 50%;
-  background-color: lightgrey;
 }
 .about-author .info {
   height: 60px;
 }
 .about-author .info h3 {
+  color: #000000;
   font-size: 16px;
   font-weight: 600;
   line-height: 22px;
-  color: #000000;
-  text-align: left;
   margin: 7px;
+  text-align: left;
 }
 .about-author .info p {
+  color: #777777;
   font-size: 12px;
   font-weight: 300;
   line-height: 18px;
-  color: #777777;
   margin: 7px;
 }
 

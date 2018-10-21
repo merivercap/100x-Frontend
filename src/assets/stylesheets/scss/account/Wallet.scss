@@ -1,43 +1,39 @@
-$secondary: #00969E;
 $body: #263238;
-$spade: #cfcfcf;
 $rock: #aaaabf;
+$secondary: #00969E;
+$spade: #cfcfcf;
 
 .wallet-container {
   background-color: whitesmoke;
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
   bottom: 0;
+  height: 100vh;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100vw;
 }
 
 .wallet {
   margin: 120px auto;
   width: 675px;
-  // border-radius: 4px;
-  // border: 1px solid #9f9f9f;
-  // background-color: #fff;
-  // box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 .wallet-actions {
-  width: 100%;
-  height: 48px;
   display: flex;
+  height: 48px;
   justify-content: space-between;
+  width: 100%;
   button {
-    border-radius: 4px;
-    width: calc(50% - 10px);
-    height: 100%;
     background-color: $secondary;
+    border-radius: 4px;
     color: #fff;
     font-size: 16px;
     font-weight: 300;
+    height: 100%;
     letter-spacing: 1px;
     transition: all .2s ease-in-out;
+    width: calc(50% - 10px);
     cursor: pointer;
     &:hover {
       opacity: 0.5;
@@ -46,14 +42,14 @@ $rock: #aaaabf;
 }
 
 article {
-  margin: 25px 0 45px;
+  align-items: center;
+  background-color: #fff;
   border: 1px solid $spade;
   border-radius: 4px;
-  background-color: #fff;
-  width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  margin: 25px 0 45px;
+  width: 100%;
   .item {
     align-items: center;
     border-bottom: 1px solid $spade;
@@ -69,63 +65,63 @@ article {
       justify-content: center;
     }
     .left {
-      display: flex;
       align-items: center;
+      display: flex;
       height: 100%;
       .item-icon {
-        width: 32px;
-        height: 32px;
         background-color: whitesmoke; 
+        height: 32px;
         margin-right: 15px;
+        width: 32px;
       }
       .item-img {
-        width: 42px;
-        height: 42px;
-        min-width: 42px;
-        min-height: 42px;
-        max-width: 42px;
-        max-height: 42px;
+        background-position: center;
+        background-size: cover;
         border-radius: 50%;
+        height: 42px;
         margin-right: 15px;
-        background-size: cover !important;
-        background-position: center !important;
+        max-height: 42px;
+        max-width: 42px;
+        min-height: 42px;
+        min-width: 42px;
+        width: 42px;
       }
       .item-info {
+        align-items: flex-start;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
-        align-items: flex-start;
         height: 42px;
+        justify-content: space-between;
         h5 {
+          color: $body;
           font-size: 14px;
           font-weight: 400;
-          color: $body;
           letter-spacing: .5px;
         }
         span {
+          color: $body;
           font-size: 12px;
           font-weight: 300;
-          color: $body;
         }
       }
       span {
+        color: $body;
         font-size: 16px;
         font-weight: 500;
-        color: $body;
       }
     }
     button {
-      width: 225px;
-      border: 1px solid $spade;
-      height: 48px;
-      border-radius: 4px;
-      margin: 0 10px;
       background-color: $rock;
+      border: 1px solid $spade;
+      border-radius: 4px;
       color: #fff;
+      height: 48px;
       font-size: 14px;
       font-weight: 300;
       letter-spacing: .5px;
+      margin: 0 10px;
       transition: all .2s ease-in-out;
+      width: 225px;
       &:hover {
         opacity: 0.5;
       }

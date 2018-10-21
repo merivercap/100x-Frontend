@@ -1,4 +1,3 @@
-/*global $STM_Config:false*/
 /**
  * this regular expression should capture all possible proxy domains
  * Possible URL schemes are:

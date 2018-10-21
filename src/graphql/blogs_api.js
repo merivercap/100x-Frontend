@@ -48,7 +48,11 @@ export const fetchBlogs = gql`
   query {
     getAllPosts{
       id
-      # author { id }
+      author {
+        id
+        name
+        profileImageUrl
+      }
       # replies {
       #   id
       #   commenter { id }

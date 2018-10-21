@@ -1,6 +1,11 @@
 import React from 'react';
 
-import { DraftailEditor, BLOCK_TYPE, ENTITY_TYPE, INLINE_STYLE } from 'draftail';
+import {
+  DraftailEditor,
+  // BLOCK_TYPE,
+  // ENTITY_TYPE,
+  // INLINE_STYLE
+} from 'draftail';
 import {
   INLINE_CONTROL,
   BLOCK_CONTROL,
@@ -28,10 +33,10 @@ const showUndoControl = {
   descriptio: 'Undo last change',
 };
 
-const onSave = content => {
-  console.log('saving', content);
-  sessionStorage.setItem('draftail:content', JSON.stringify(content));
-};
+// const onSave = content => {
+//   console.log('saving', content);
+//   sessionStorage.setItem('draftail:content', JSON.stringify(content));
+// };
 
 class Textarea extends React.Component {
   render() {

@@ -32,7 +32,7 @@ class NavMenuDropdown extends React.Component {
               </Fragment>
             ) : (
               <Fragment>
-                <a className="nav-menu-dropdown--item" href={steemConnect.getLoginURL()}>
+                <a className="nav-menu-dropdown--item" href={steemConnect.getLoginURL()} target="_blank">
                   Login
                 </a>
                 <a className="nav-menu-dropdown--item"
