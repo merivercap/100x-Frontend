@@ -25,7 +25,6 @@ import {
   isFileUnderLimit,
   isNotEmpty,
 } from '../../utils/validators';
-import { handleInputChange } from '../../utils/formHelper';
 
 class BlogForm extends React.Component {
   state = generateDefaultState();
@@ -35,8 +34,12 @@ class BlogForm extends React.Component {
   }
 
   render() {
-    const { errors } = this.state;
-    const { title, body, cover_image_url } = this.state.form;
+    // const { errors } = this.state;
+    const {
+      title,
+      // body,
+      // cover_image_url
+    } = this.state.form;
     return (
       <Layout>
         <section className="blog-form">
