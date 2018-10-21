@@ -1,25 +1,26 @@
+// React
 import React from 'react';
 
 const BlogHeader = ({ blog }) => {
   const payoutValue = parseInt(blog.pendingPayoutValue, 10).toFixed(2);
+  const { author } = blog;
+  const profileImageUrl = author && author.profileImageUrl ? author.profileImageUrl : 'https://res.cloudinary.com/ddgtwtbre/image/upload/v1539314358/avatar_nt5vnh.jpg';
   return (
     <header className="blog-header">
       <section className="about-author">
-        <div className="author-profile-pic">
-          {/* { <img src={ blog.author.profile_pic_url } /> } */}
-        </div>
+        <div className="author-profile-pic" style={{ backgroundImage: `url(${profileImageUrl})`}}></div>
         <div className="info">
           <h3>
-            { blog.author }
+            {author.name}
           </h3>
           <p>
-            { blog.created }
+            {blog.created}
           </p>
         </div>
       </section>
       <section>
         <h2>
-          ${ payoutValue }
+          ${payoutValue}
         </h2>
         <p>
           {/* { blog.readTime } */}
