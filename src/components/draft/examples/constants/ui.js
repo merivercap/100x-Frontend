@@ -10,7 +10,7 @@ import ImageSource from '../sources/ImageSource';
 import Link from '../entities/Link';
 import Document from '../entities/Document';
 
-import EmbedBlock from '../blocks/EmbedBlock';
+// import EmbedBlock from '../blocks/EmbedBlock';
 import ImageBlock from '../blocks/ImageBlock';
 
 import FontIcon from '../components/FontIcon';
