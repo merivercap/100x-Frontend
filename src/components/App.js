@@ -45,13 +45,13 @@ const App = () => {
             <Route exact path="/register" component={ Register } />
             <Route exact path="/account" component={ Account } />
             <Route path="/blogs" component={ Blogs } />
-            {/* <Route exact path="/blogs/new" component={ BlogForm } /> */}
-            {/* <Route exact path="/blogs/edit/:id" component={ BlogForm } /> */}
-            {/* <Route exact path="/blogs/feed" component={ FeedBlogs } /> */}
-            {/* <Route exact path="/blogs/news" component={ NewsBlogs } /> */}
-            {/* <Route exact path="/blogs/story" component={ StoryBlogs } /> */}
-            {/* <Route exact path="/blogs/video" component={ VideoBlogs } /> */}
-            {/* <Route exact path="/blogs/:id" component={ Blog } /> */}
+            <Route exact path="/blogs/new" component={ BlogForm } />
+            <Route exact path="/blogs/edit/:id" component={ BlogForm } />
+            <Route exact path="/blogs/feed" component={ FeedBlogs } />
+            <Route exact path="/blogs/news" component={ NewsBlogs } />
+            <Route exact path="/blogs/story" component={ StoryBlogs } />
+            <Route exact path="/blogs/video" component={ VideoBlogs } />
+            <Route exact path="/blogs/:id" component={ Blog } />
             <Route exact patht="/account/wallet" component={ Wallet } />
           </Switch>
         </div>
