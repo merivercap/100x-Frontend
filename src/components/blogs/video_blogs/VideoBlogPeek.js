@@ -3,6 +3,10 @@ import React from 'react';
 // Components
 import BlogHeader from '../BlogHeader';
 
+/** TODO
+ * embed video instead of just dispaying url
+ */
+
 const VideoBlogPeek = ({ blog }) => (
   <div className="blog">
     <BlogHeader blog={blog} />
