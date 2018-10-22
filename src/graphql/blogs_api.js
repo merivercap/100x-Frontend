@@ -24,6 +24,11 @@ export const fetchBlog = gql`
   query fetchBlog($postId: Int!) {
     getPost(postId: $postId) {
       id
+      author {
+        id
+        name
+        profileImageUrl
+      }
       permLink
       title
       body
