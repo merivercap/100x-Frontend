@@ -11,7 +11,7 @@ import { getPostsByType } from '../../../graphql/blogs_api';
 import Layout from '../../../HOCs/Layout';
 
 // Components
-import BlogPeek from '../BlogPeek';
+import VideoBlogPeek from './VideoBlogPeek';
 import { GqlError, Loading } from '../../shared';
 
 class VideoBlogs extends React.Component {
@@ -31,7 +31,7 @@ class VideoBlogs extends React.Component {
                       videoPosts.map(blog => (
                         <Link to={ `/blogs/${blog.id}` } key={ blog.id }>
                           <li className="blog-peek-container">
-                            <BlogPeek blog={ blog } />
+                            <VideoBlogPeek blog={ blog } />
                           </li>
                         </Link>
                       ))
