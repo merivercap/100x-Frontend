@@ -23,13 +23,7 @@ import Account from './users/account';
 import Landing from './landing/Landing';
 import Login from './login/Login';
 import Register from './register/Register';
-import Blog from './blogs/Blog';
-import BlogForm from './blogs/BlogForm';
-import Blogs from './blogs/blogs/Blogs';
-import FeedBlogs from './blogs/feed_blogs/FeedBlogs';
-import StoryBlogs from './blogs/story_blogs/StoryBlogs';
-import NewsBlogs from './blogs/news_blogs/NewsBlogs';
-import VideoBlogs from './blogs/video_blogs/VideoBlogs';
+import Blogs from './blogs/Blogs';
 import Wallet from './users/Wallet';
 
 const App = () => {
@@ -45,13 +39,6 @@ const App = () => {
             <Route exact path="/register" component={ Register } />
             <Route exact path="/account" component={ Account } />
             <Route path="/blogs" component={ Blogs } />
-            <Route exact path="/blogs/new" component={ BlogForm } />
-            <Route exact path="/blogs/edit/:id" component={ BlogForm } />
-            <Route exact path="/blogs/feed" component={ FeedBlogs } />
-            <Route exact path="/blogs/news" component={ NewsBlogs } />
-            <Route exact path="/blogs/story" component={ StoryBlogs } />
-            <Route exact path="/blogs/video" component={ VideoBlogs } />
-            <Route exact path="/blogs/:id" component={ Blog } />
             <Route exact patht="/account/wallet" component={ Wallet } />
           </Switch>
         </div>
