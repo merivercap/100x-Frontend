@@ -7,6 +7,9 @@ import createBrowserHistory from 'history/createBrowserHistory';
 import { ApolloProvider } from 'react-apollo';
 import client from '../utils/apollo';
 
+// Steem
+import steemAuth from '../services/auth';
+
 /**
  * TODO:
  * Refactor blog routes to be more modular
@@ -29,30 +32,32 @@ import NewsBlogs from './blogs/news_blogs/NewsBlogs';
 import VideoBlogs from './blogs/video_blogs/VideoBlogs';
 import Wallet from './users/Wallet';
 
-export default class App extends Component {  
-  render() {
-    return (
-      <ApolloProvider client={ client }>
-        <Router history={ createBrowserHistory() }>
-          <div className="App">
-            <Switch>
-              <Route exact path="/" component={ Landing } />
-              <Route exact path="/login" component={ Login } />
-              <Route exact path="/register" component={ Register } />
-              <Route exact path="/account" component={ Account } />
-              <Route exact path="/blogs" component={ Blogs } />
-              <Route exact path="/blogs/new" component={ BlogForm } />
-              {/* <Route exact path="/blogs/edit/:id" component={ BlogForm } /> */}
-              <Route exact path="/blogs/feed" component={ FeedBlogs } />
-              <Route exact path="/blogs/news" component={ NewsBlogs } />
-              <Route exact path="/blogs/story" component={ StoryBlogs } />
-              <Route exact path="/blogs/video" component={ VideoBlogs } />
-              <Route exact path="/blogs/:id" component={ Blog } />
-              <Route exact patht="/account/wallet" component={ Wallet } />
-            </Switch>
-          </div>
-        </Router>
-      </ApolloProvider>
-    );
-  }
+const App = () => {
+  const authResponse = window.location.search;
+  if (authResponse) steemAuth.login(authResponse);
+  return (
+    <ApolloProvider client={ client }>
+      <Router history={ createBrowserHistory() }>
+        <div className="App">
+          <Switch>
+            <Route exact path="/" component={ Landing } />
+            <Route exact path="/login" component={ Login } />
+            <Route exact path="/register" component={ Register } />
+            <Route exact path="/account" component={ Account } />
+            <Route path="/blogs" component={ Blogs } />
+            {/* <Route exact path="/blogs/new" component={ BlogForm } /> */}
+            {/* <Route exact path="/blogs/edit/:id" component={ BlogForm } /> */}
+            {/* <Route exact path="/blogs/feed" component={ FeedBlogs } /> */}
+            {/* <Route exact path="/blogs/news" component={ NewsBlogs } /> */}
+            {/* <Route exact path="/blogs/story" component={ StoryBlogs } /> */}
+            {/* <Route exact path="/blogs/video" component={ VideoBlogs } /> */}
+            {/* <Route exact path="/blogs/:id" component={ Blog } /> */}
+            <Route exact patht="/account/wallet" component={ Wallet } />
+          </Switch>
+        </div>
+      </Router>
+    </ApolloProvider>
+  );
 }
+
+export default App;

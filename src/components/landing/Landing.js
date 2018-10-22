@@ -18,9 +18,6 @@ import { GqlError, Loading } from '../shared';
 import steemAuth from '../../services/auth';
 
 const Landing = () => {
-  const authResponse = window.location.search;
-  if (authResponse) steemAuth.login(authResponse);
-
   return (
     <Layout>
       <Query query={fetchBlogs}>
