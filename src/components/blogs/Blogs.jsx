@@ -2,16 +2,20 @@ import React from 'react';
 import { Link, Redirect, Route, Switch } from 'react-router-dom';
 import { Query } from 'react-apollo';
 
-import { fetchBlogs } from '../../../graphql/blogs_api';
+import { fetchBlogs } from '../../graphql/blogs_api';
 
 // Components
-import GqlError from '../../shared/GqlError';
-import Layout from '../../../HOCs/Layout';
-import Loading from '../../shared/Loading';
+import Layout from '../../HOCs/Layout';
+import { GqlError, Loading } from '../shared';
 
-import BlogFilter from '../BlogFilter';
-import BlogForm from '../BlogForm';
-import BlogPeek from '../BlogPeek';
+import Blog from './Blog';
+import BlogFilter from './BlogFilter';
+import BlogForm from './BlogForm';
+import BlogPeek from './BlogPeek';
+import FeedBlogs from './FeedBlogs';
+import NewsBlogs from './NewsBlogs';
+import StoryBlogs from './StoryBlogs';
+import VideoBlogs from './VideoBlogs';
 
 
 class Blogs extends React.Component {  
@@ -38,7 +42,13 @@ class Blogs extends React.Component {
                   }
                 </div>
                 <Switch>
+                  <Route exact path="/blogs/:id" component={ Blog } />
+                  <Route exact path="/blogs/edit/:id" component={ BlogForm } />
+                  <Route exact path="/blogs/feed" component={ FeedBlogs } />
                   <Route exact path="/blogs/new" component={ BlogForm } />
+                  <Route exact path="/blogs/news" component={ NewsBlogs } />
+                  <Route exact path="/blogs/story" component={StoryBlogs} />
+                  <Route exact path="/blogs/video" component={VideoBlogs} />
                 </Switch>
               </section>
             );
