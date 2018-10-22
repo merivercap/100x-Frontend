@@ -4,6 +4,9 @@ import React from 'react';
 const BlogHeader = ({ blog }) => {
   const payoutValue = parseInt(blog.pendingPayoutValue, 10).toFixed(2);
   const { author } = blog;
+  if (!author) {
+    return <div>Blog has no author</div>
+  }
   const profileImageUrl = author && author.profileImageUrl ? author.profileImageUrl : 'https://res.cloudinary.com/ddgtwtbre/image/upload/v1539314358/avatar_nt5vnh.jpg';
   return (
     <header className="blog-header">
