@@ -11,6 +11,10 @@ import Layout from '../../HOCs/Layout';
 // Components
 import BlogHeader from './BlogHeader';
 // import Comments from '../comments/Comments';
+import { GqlError, Loading } from '../shared';
+
+// Utils
+import htmlParser from '../../utils/htmlParser';
 
 /**
  * TODO:
@@ -28,31 +32,19 @@ export default class Blog extends React.Component {
         <Query 
           query={ fetchBlog }
           variables={ { postId: this.state.blogId } }
-          notifyOnNetworkStatusChange
-        >
+          notifyOnNetworkStatusChange>
           {
             ({ loading, error, data }) => {
-              if (loading) return 'Loading...';
-              if (error) {
-                console.log('error', error);
-                return `Error in landing! ${error.message}`;
-              }
-
+              if (loading) return <Loading />
+              if (error) return <GqlError error={ error } />;
               const blog = data.getPost;
-
+              const bodyHtml = htmlParser.getHtml({ body: blog.body }).props.dangerouslySetInnerHTML;
               return (
                 <article className="blog">
                   <BlogHeader blog={blog} />
                   <div className="content">
-                    <h1>
-                      { blog.title }
-                    </h1>
-                    <div className="blog-img">
-                      {/* <img src={ blog.image_url } /> */}
-                    </div>
-                    <p>
-                      { blog.body }
-                    </p>
+                    <h1>{ blog.title }</h1>
+                    <p dangerouslySetInnerHTML={ bodyHtml } />
                   </div>
                   {/* <Comments blog={blog} /> */}
                 </article>
