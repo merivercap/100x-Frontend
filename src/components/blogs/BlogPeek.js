@@ -6,32 +6,22 @@ import BlogHeader from './BlogHeader';
 // Utils
 import htmlParser from '../../utils/htmlParser';
 
-class BlogPeek extends React.Component {
-  parseBody = () => {
-    const body = this.props.blog.body;
-    const bodyHtml = htmlParser.getHtml({ body }).props.dangerouslySetInnerHTML;
-    return bodyHtml;
-  }
-  
-  render() {
-    const blog = this.props.blog;
-    const bodyHtml = this.parseBody();
-    
-    return (
-      <div className="blog">
-        <BlogHeader blog={blog} />
-        <div className="content">
-          <h1>
-            {blog.title}
-          </h1>
-          <div className="blog-img">
-            {/* <img src={ blog.image_url } /> */}
-          </div>
-          <p dangerouslySetInnerHTML={ bodyHtml } />
-        </div>
-      </div>
-    );
-  }
-}
+const BlogPeek = ({ blog }) => (
+  <div className="blog">
+    <BlogHeader blog={blog} />
+    <div className="content">
+      <h1>{blog.title}</h1>
+      <p dangerouslySetInnerHTML={ parseBody(blog.body) } />
+    </div>
+  </div>
+);
 
 export default BlogPeek;
+
+
+/** Helper functions */
+
+function parseBody(body) {
+  const bodyHtml = htmlParser.getHtml({ body }).props.dangerouslySetInnerHTML;
+  return bodyHtml;
+}

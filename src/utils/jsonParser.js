@@ -5,8 +5,6 @@ const jsonParser = {
       return JSON.parse(input);
     } catch (error) {
       /** if input is not valid argument */
-      // throw new Error(`error: ${error}`);
-      console.log('error: ', error);
       return {};
     }
   },
