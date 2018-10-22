@@ -5,8 +5,7 @@ import { Link } from 'react-router-dom';
 
 // Apollo / GraphQL
 import { Query } from 'react-apollo';
-// import { fetchVideoBlogs } from '../../../graphql/video_blogs_api';
-import { fetchBlogs } from '../../../graphql/blogs_api';
+import { getPostsByType } from '../../../graphql/blogs_api';
 
 // HOCs
 import Layout from '../../../HOCs/Layout';
@@ -16,23 +15,20 @@ import BlogPeek from '../BlogPeek';
 import { GqlError, Loading } from '../../shared';
 
 class VideoBlogs extends React.Component {
-  mapVideoBlogs() {
-    /** TODO: fetch VideoBlogs from backend endpoint and map them into HTTML elements */
-  }
-
   render() {
     return (
       <Layout>
-        <Query query={ fetchBlogs }>
+        <Query query={ getPostsByType } variables={{ postType: "NEWS_POST" }}>
           {({ data, error, loading }) => {
             if (loading) return <Loading />
             if (error) return <GqlError error={ error } />
+            const videoPosts = data.getPostsByType;
             return (
               <Fragment>
                 <section className="blogs">
                   <div className="content">
                     {
-                      data.getAllPosts.map(blog => (
+                      videoPosts.map(blog => (
                         <Link to={ `/blogs/${blog.id}` } key={ blog.id }>
                           <li className="blog-peek-container">
                             <BlogPeek blog={ blog } />
