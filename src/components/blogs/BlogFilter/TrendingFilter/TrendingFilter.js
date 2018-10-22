@@ -2,7 +2,7 @@
 import React from 'react';
 
 // Components
-import TrendingFilterForm from './TrendingFilterForm';
+import TrendingFilterSelect from './TrendingFilterSelect';
 
 class TrendingFilter extends React.Component {
   state = {
@@ -18,7 +18,7 @@ class TrendingFilter extends React.Component {
       <div className="blog-filter--item trending-filter-container" onClick={this.toggleTrendingFilterVisibility}>
         {/* TODO: Replace button with down-arrow svg */}
         <div className="blog-filter--button">Trending v</div>
-        <TrendingFilterForm isVisible={ this.state.isTrendingFilterVisible } />
+        <TrendingFilterSelect isVisible={ this.state.isTrendingFilterVisible } />
       </div>
     );
   }
