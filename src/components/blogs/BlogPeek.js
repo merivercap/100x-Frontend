@@ -10,18 +10,14 @@ const BlogPeek = ({ blog }) => (
   <div className="blog">
     <BlogHeader blog={blog} />
     <div className="content">
-      <h1>
-        {blog.title}
-      </h1>
-      <div className="blog-img">
-        {/* <img src={ blog.image_url } /> */}
-      </div>
+      <h1>{blog.title}</h1>
       <p dangerouslySetInnerHTML={ parseBody(blog.body) } />
     </div>
   </div>
 );
 
 export default BlogPeek;
+
 
 /** Helper functions */
 
