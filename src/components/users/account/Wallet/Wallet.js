@@ -3,13 +3,13 @@ import React from 'react';
 
 // Apollo / GraphQL
 import { Query } from 'react-apollo';
-import { getProfileInformation } from '../../graphql/users_api';
+import { getProfileInformation } from '../../../../graphql/users_api';
 
 // HOCs
-import Layout from '../../HOCs/Layout';
+import Layout from '../../../../HOCs/Layout';
 
 // Components
-import { GqlError, Loading } from '../shared';
+import { GqlError, Loading } from '../../../shared';
 
 
 class Wallet extends React.Component {

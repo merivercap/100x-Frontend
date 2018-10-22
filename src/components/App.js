@@ -24,7 +24,6 @@ import Landing from './landing/Landing';
 import Login from './login/Login';
 import Register from './register/Register';
 import Blogs from './blogs/Blogs';
-import Wallet from './users/Wallet';
 
 const App = () => {
   const authResponse = window.location.search;
@@ -39,7 +38,6 @@ const App = () => {
             <Route exact path="/register" component={ Register } />
             <Route exact path="/account" component={ Account } />
             <Route path="/blogs" component={ Blogs } />
-            <Route exact patht="/account/wallet" component={ Wallet } />
           </Switch>
         </div>
       </Router>
