@@ -14,7 +14,7 @@ import Layout from '../../../HOCs/Layout';
 import BlogPeek from '../BlogPeek';
 import { GqlError, Loading } from '../../shared';
 
-class StoryBlogs extends React.Component {
+class FeedBlogs extends React.Component {
   render() {
     return (
       <Layout>
@@ -46,4 +46,4 @@ class StoryBlogs extends React.Component {
   }
 }
 
-export default StoryBlogs;
+export default FeedBlogs;
