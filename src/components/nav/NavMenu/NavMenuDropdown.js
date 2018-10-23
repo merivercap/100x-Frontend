@@ -27,7 +27,7 @@ class NavMenuDropdown extends React.Component {
             this.state.isLoggedIn ? (
               <Fragment>
                 <Link to="/blogs/new" className="nav-menu-dropdown--item">Write a Story</Link>
-                <Link to="/users/account" className="nav-menu-dropdown--item">Account</Link>
+                <Link to="/account" className="nav-menu-dropdown--item">Account</Link>
                 <button onClick={this.handleLogout} className="nav-menu-dropdown--item">Logout</button>
               </Fragment>
             ) : (
