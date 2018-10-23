@@ -22,19 +22,19 @@ class TagFilter extends React.Component {
 
   createNewFilter = newFilter => {
     // Make Mutation query to create new filter
-    console.log('createNewFilter. newFilter: ', newFilter);
+    // console.log('createNewFilter. newFilter: ', newFilter);
   }
 
   filterByTags = filters => {
     // Make query filtered by tags in filters array
-    console.log('filterByTags: ', filters);
+    // console.log('filterByTags: ', filters);
   }
   
   handleFilterClick = event => {
     const { value } = event.target;
     const updatedFilters = this.state.form.filters;
     // updatedFilters.push(value); 
-    console.log('handleFilterClick value: ', value);
+    // console.log('handleFilterClick value: ', value);
     this.setState({
       errors: this.state.errors,
       isVisible: this.state.isVisible,
@@ -47,7 +47,7 @@ class TagFilter extends React.Component {
 
   handleTextInputChange = event => {
     const { value } = event.target;
-    console.log('handleInputChange value: ', value);
+    // console.log('handleInputChange value: ', value);
     this.setState({
       errors: this.state.errors,
       isVisible: this.state.isVisible,
@@ -61,18 +61,18 @@ class TagFilter extends React.Component {
   handleSubmit = event => {
     event.preventDefault();
     const { filters, newFilter } = this.state.form;
-    console.log('handleSubmit');
-    console.log('filters: ', filters);
-    console.log('newFilter: ', newFilter);
+    // console.log('handleSubmit');
+    // console.log('filters: ', filters);
+    // console.log('newFilter: ', newFilter);
     if (filters.length > 0) this.filterByTags(filters);
     if (newFilter.name.length > 2) this.createNewFilter(newFilter);
   }
   
   mapFilters = () => {
     const filters = this.state.form.filters;
-    console.log('filters: ', filters);
-    return filters.map(filter => (
-      <div className="filter-item">
+    // console.log('filters: ', filters);
+    return filters.map((filter, index) => (
+      <div className="filter-item" key={ index }>
         <input 
           name={ filter }
           onChange={ this.handleFilterClick }
