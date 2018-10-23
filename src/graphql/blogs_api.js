@@ -1,7 +1,7 @@
 import gql from 'graphql-tag';
 
 export const createBlog = gql`
-  query broadcastPost($post: Post!) {
+  query broadcastPost($post: Post) {
     broadcastPost(post: $post) {
       id
       author {
