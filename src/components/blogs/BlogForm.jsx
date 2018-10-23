@@ -1,7 +1,6 @@
 import React from 'react';
 // import PropTypes from 'prop-types';
-
-// import { Query } from 'react-apollo';
+import { compose, graphql } from 'react-apollo';
 
 // Editor libraries
 // import { Editor, createEditorState } from 'medium-draft';
@@ -15,7 +14,7 @@ import Layout from '../../HOCs/Layout';
 import Textarea from '../shared/Textarea';
 
 // Utils
-// import { createBlog } from '../../graphql/blogs_api';
+import { createBlog, fetchBlogs } from '../../graphql/blogs_api';
 import {
   // errorMessages,
   FieldValidation,
@@ -60,18 +59,6 @@ class BlogForm extends React.Component {
             <div className="body-container input-container blog-form--item">
               <Textarea onChange={ this.handleTextareaInput } />
             </div>
-            {/* <div className="cover-image-container input-container blog-form--item">
-              <h4>Cover Image</h4>
-              <input
-                className="blog-form--input photo"
-                type="file"
-                onChange={ this._handleInputChange('cover_image_url') }
-                value={ cover_image_url } />
-              <p className="photo-error error-message">
-                Photo size is too large / incorrect file type
-                { error.photo.message }
-              </p>
-            </div> */}
             <button className="blog-form--item submit-button" type="submit">Publish</button>
           </form>
         </section>
@@ -119,7 +106,29 @@ class BlogForm extends React.Component {
   }
 }
 
-export default BlogForm;
+export default compose(
+  graphql(createBlog, {
+    props: ({ mutate }) => ({
+      broadcastPost: post => {
+        return mutate({
+          variables: { post },
+          refetchQueries: [{ query: fetchBlogs }],
+          update: (store, { data: { broadcastPost } }) => {
+            // ignore writing cache if we don't have access
+            // see https://github.com/apollographql/apollo-client/issues/1701#issuecomment-380213533
+            if (!store.data.data.ROOT_QUERY) {
+              return;
+            }
+
+            const { getAllPosts } = store.readQuery({ query: fetchBloogs });
+            getAllPosts.push(broadcastPost);
+            store.writeQuery({ query: fetchBlogs, data: { getAllPosts } });
+          },
+        });
+      },
+    }),
+  })
+)(BlogForm);
 
 
 /** Helper Functions */
