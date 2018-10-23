@@ -23,7 +23,7 @@ import Account from './users/account';
 import Landing from './landing/Landing';
 import Login from './login/Login';
 import Register from './register/Register';
-import Blogs from './blogs/Blogs';
+import BlogRoutes from './blogs/BlogRoutes';
 
 const App = () => {
   const authResponse = window.location.search;
@@ -33,11 +33,11 @@ const App = () => {
       <Router history={ createBrowserHistory() }>
         <div className="App">
           <Switch>
-            <Route exact path="/" component={ Landing } />
+            <Route path="/blogs" component={ BlogRoutes } />
             <Route exact path="/login" component={ Login } />
             <Route exact path="/register" component={ Register } />
-            <Route exact path="/account" component={ Account } />
-            <Route path="/blogs" component={ Blogs } />
+            <Route path="/account" component={ Account } />
+            <Route exact path="/" component={ Landing } />
           </Switch>
         </div>
       </Router>
