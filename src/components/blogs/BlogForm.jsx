@@ -120,7 +120,7 @@ export default compose(
               return;
             }
 
-            const { getAllPosts } = store.readQuery({ query: fetchBloogs });
+            const { getAllPosts } = store.readQuery({ query: fetchBlogs });
             getAllPosts.push(broadcastPost);
             store.writeQuery({ query: fetchBlogs, data: { getAllPosts } });
           },
