@@ -95,6 +95,7 @@ class BlogForm extends React.Component {
     event.preventDefault();
     console.log('this.state: ', this.state);
     // TODO: make query to create blog here    
+    this.props.broadcastPost(this.state);
   }
 
   handleTextareaInput = event => {
@@ -108,9 +109,10 @@ class BlogForm extends React.Component {
 
 export default compose(
   graphql(createBlog, {
-    props: ({ mutate }) => ({
+    props: (props) => ({
       broadcastPost: post => {
-        return mutate({
+        debugger;
+        return props.mutate({
           variables: { post },
           refetchQueries: [{ query: fetchBlogs }],
           update: (store, { data: { broadcastPost } }) => {
@@ -142,7 +144,8 @@ function generateDefaultState() {
     },
     form: {
       body: '',
-      cover_image_url: '',
+      permLink: '',
+      tags: '',
       title: '',
     },
     errors: {
