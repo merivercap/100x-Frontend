@@ -4,8 +4,7 @@ import { Link } from 'react-router-dom';
 
 // Apollo / GraphQL
 import { Query } from 'react-apollo';
-import { fetchBlogs } from '../../../graphql/blogs_api';
-// import { FeedBlogs } from '../../../graphql/feed_blogs_api';
+import { getUserFeed } from '../../../graphql/blogs_api';
 
 // HOCs
 import Layout from '../../../HOCs/Layout';
@@ -18,16 +17,19 @@ class FeedBlogs extends React.Component {
   render() {
     return (
       <Layout>
-        <Query query={ fetchBlogs }>
+        <Query query={ getUserFeed }>
           {({ data, error, loading }) => {
+            debugger;
             if (loading) return <Loading />
             if (error) return <GqlError error={ error } />
+            const blogs = data.getUserFeed;
+            debugger; // check blogs;
             return (
               <Fragment>
                 <section className="blogs">
                   <div className="content">
                     {
-                      data.getAllPosts.map(blog => (
+                      blogs.map(blog => (
                         <Link to={ `/blogs/${blog.id}` } key={ blog.id }>
                           <li className="blog-peek-container">
                             <BlogPeek blog={ blog } />
