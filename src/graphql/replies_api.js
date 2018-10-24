@@ -1,20 +1,36 @@
 import gql from 'graphql-tag';
 
 export const GET_ALL_POST_REPLIES = gql`
-  query getAllPostReplies($postId: ID!) {
+  query getAllPostReplies($postId: Int) {
     getAllPostReplies(postId: $postId) {
       id
       body
       children
-      commenter
+      commenter {
+        id
+        name
+        profileImageUrl
+      }
       createdAt
       depth
       isDeleted
       netVotes
-      parent
+      parent {
+        id
+        commenter {
+          id
+          name
+        }
+      }
       pendingPayoutValue
       permLink
-      post
+      post {
+        id
+        author {
+          id
+          name
+        }
+      }
     }
   }
 `;
