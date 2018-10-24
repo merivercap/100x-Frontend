@@ -52,6 +52,7 @@ article .item {
   display: flex;
   height: 72px;
   justify-content: space-between;
+  margin: 0 auto;
   width: calc(100% - 30px);
 }
 article .item:first-child, article .item:last-child {
