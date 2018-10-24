@@ -1,8 +1,32 @@
 import gql from 'graphql-tag';
 
-// export const createBlog = gql`
-
-// `;
+export const createBlog = gql`
+  query broadcastPost($post: Post) {
+    broadcastPost(post: $post) {
+      id
+      author {
+        id
+        name
+        profileImageUrl
+      }
+      permLink
+      title
+      body
+      createdAt
+      netVotes
+      children
+      pendingPayoutValue
+      trending
+      hot
+      postType
+      tag1
+      tag2
+      tag3
+      tag4
+      tag5
+    }
+  }
+`;
 
 // export const updateBlog = gql`
 
