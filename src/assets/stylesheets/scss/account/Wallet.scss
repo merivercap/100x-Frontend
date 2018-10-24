@@ -56,6 +56,7 @@ article {
     display: flex;
     height: 72px;
     justify-content: space-between;
+    margin: 0 auto;
     width: calc(100% - 30px);
     &:first-child, &:last-child {
       border: 0;

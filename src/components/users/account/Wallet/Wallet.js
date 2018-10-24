@@ -14,10 +14,11 @@ import { GqlError, Loading } from '../../../shared';
 
 class Wallet extends React.Component {
   render() {
-    const username = localStorage.getItem('username');//'adetorrent';
+    const username = "adetorrent";// localStorage.getItem('username');
+    console.log('username: ',username);
     return (
       <Layout>
-        <Query query={ getProfileInformation } variables={{ name: username }}>
+        <Query query={getProfileInformation} variables={{ name: username }}>
           {
             ({ loading, error, data }) => {
               if (loading) return <Loading/>
