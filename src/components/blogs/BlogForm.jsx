@@ -95,7 +95,7 @@ class BlogForm extends React.Component {
     event.preventDefault();
     console.log('this.state: ', this.state);
     // TODO: make query to create blog here    
-    this.props.broadcastPost(this.state);
+    this.props.broadcastPost(this.state.form);
   }
 
   handleTextareaInput = event => {
