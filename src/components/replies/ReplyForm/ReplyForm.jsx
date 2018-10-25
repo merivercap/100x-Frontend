@@ -14,7 +14,7 @@ class ReplyForm extends React.Component {
   };
 
   componentDidMount() {
-    const post = this.props.blog;
+    const { post } = this.props;
     this.setState({
       reply: {
         body: '',
