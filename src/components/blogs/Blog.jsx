@@ -11,6 +11,7 @@ import Layout from '../../HOCs/Layout';
 // Components
 import BlogHeader from './BlogHeader';
 // import Comments from '../comments/Comments';
+import Replies from '../replies';
 import { GqlError, Loading } from '../shared';
 
 // Utils
@@ -46,7 +47,7 @@ export default class Blog extends React.Component {
                     <h1>{ blog.title }</h1>
                     <p dangerouslySetInnerHTML={ bodyHtml } />
                   </div>
-                  {/* <Comments blog={blog} /> */}
+                  <Replies post={ blog } />
                 </article>
               );
             }

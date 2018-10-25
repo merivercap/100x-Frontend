@@ -118,10 +118,7 @@ export default compose(
           update: (store, { data: { broadcastPost } }) => {
             // ignore writing cache if we don't have access
             // see https://github.com/apollographql/apollo-client/issues/1701#issuecomment-380213533
-            if (!store.data.data.ROOT_QUERY) {
-              return;
-            }
-
+            if (!store.data.data.ROOT_QUERY) return;
             const { getAllPosts } = store.readQuery({ query: fetchBlogs });
             getAllPosts.push(broadcastPost);
             store.writeQuery({ query: fetchBlogs, data: { getAllPosts } });
