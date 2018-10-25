@@ -10,7 +10,7 @@ class NavBlogFilter extends React.Component {
           All Blogs
         </Link>
         <Link to="/blogs/feed" className="nav-filter--item">
-          Feed
+          Home
         </Link>
         <Link to="/blogs/story" className="nav-filter--item">
           Blog
