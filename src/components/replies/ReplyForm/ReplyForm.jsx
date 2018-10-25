@@ -27,11 +27,12 @@ class ReplyForm extends React.Component {
   render() {
     return (
       <div className="reply-form-container">
+        <h3>Write a reply</h3>
         <form>
           <textarea placeholder="Write your comment here.."></textarea>
           <div className="reply-form--actions">
-            <button type="button">Cancel</button>
-            <button type="submit">Submit</button>
+            <button className="cancel-reply" type="button">Cancel</button>
+            <button className="submit-reply" type="submit">Submit</button>
           </div>
         </form>
       </div>
