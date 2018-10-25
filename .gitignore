@@ -28,4 +28,11 @@ steemConfig.md
 .vscode/
 
 # css
+src/assets/stylesheets/css
+src/assets/stylesheets/css*
+src/assets/stylesheets/css/
 src/assets/stylesheets/css/*
+/src/assets/stylesheets/css
+/src/assets/stylesheets/css*
+/src/assets/stylesheets/css/
+/src/assets/stylesheets/css/*
