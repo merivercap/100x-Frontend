@@ -7,10 +7,11 @@ import { GET_ALL_POST_REPLIES } from '../../graphql/replies_api';
 import Layout from '../../HOCs/Layout';
 import { GqlError, Loading } from '../shared';
 import Reply from './Reply';
+import ReplyForm from './ReplyForm';
 
-const Replies = ({ postId }) => (
+const Replies = ({ post }) => (
   <Layout>
-    <Query query={ GET_ALL_POST_REPLIES } variables={{ postId }}>
+    <Query query={ GET_ALL_POST_REPLIES } variables={{ postId: post.id }}>
       {({ data, error, loading }) => {
         if (loading) return <Loading />;
         if (error) return <GqlError error={ error } />;
@@ -18,6 +19,7 @@ const Replies = ({ postId }) => (
         return (
           <section className="replies">
             <div className="replies--content">
+              <ReplyForm post={post} />
               { replies.map(reply => <Reply reply={reply} key={reply.id} />) }
             </div>
           </section>
