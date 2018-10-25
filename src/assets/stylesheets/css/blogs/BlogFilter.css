@@ -1,6 +1,7 @@
 .blog-filter {
   height: 80px;
   width: 100%;
+  max-width: 1025px;
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
