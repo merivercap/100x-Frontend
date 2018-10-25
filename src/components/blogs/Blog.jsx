@@ -47,8 +47,7 @@ export default class Blog extends React.Component {
                     <h1>{ blog.title }</h1>
                     <p dangerouslySetInnerHTML={ bodyHtml } />
                   </div>
-                  {/* <Comments blog={blog} /> */}
-                  <Replies postId={ blog.id } />
+                  <Replies post={ blog } />
                 </article>
               );
             }
