@@ -1,6 +1,7 @@
 .blog-filter {
   height: 80px;
   width: 100%;
+  max-width: 1025px;
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
@@ -76,15 +77,17 @@
   font-weight: 400;
 }
 .blog-filter--item-dropdown button {
+  background-color: #fff;
+  color: #629dfc;
   height: 40px;
   font-size: 14px;
   font-weight: 600;
-  color: #333;
+  transition: all 0.2s ease-in-out;
   width: 100%;
 }
 .blog-filter--item-dropdown button:hover {
   color: #fff;
-  background-color: #e3e3e3;
+  background-color: #629dfc;
 }
 
 .show {

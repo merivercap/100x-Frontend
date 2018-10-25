@@ -19,11 +19,9 @@ class FeedBlogs extends React.Component {
       <Layout>
         <Query query={ getUserFeed }>
           {({ data, error, loading }) => {
-            debugger;
             if (loading) return <Loading />
             if (error) return <GqlError error={ error } />
             const blogs = data.getUserFeed;
-            debugger; // check blogs;
             return (
               <Fragment>
                 <section className="blogs">

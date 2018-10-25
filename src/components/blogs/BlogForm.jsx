@@ -111,7 +111,7 @@ export default compose(
   graphql(createBlog, {
     props: (props) => ({
       broadcastPost: post => {
-        debugger;
+        // debugger;
         return props.mutate({
           variables: { post },
           refetchQueries: [{ query: fetchBlogs }],

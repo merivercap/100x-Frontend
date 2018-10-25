@@ -163,32 +163,35 @@ body {
 }
 
 .blog {
-  width: 100%;
-  max-width: 1200px;
   box-sizing: border-box;
+  margin: 0 auto;
+  max-width: 750px;
   padding: 25px 60px;
+  width: 100%;
 }
 .blog h1 {
-  font-size: 20px;
-  line-height: 26px;
-  font-weight: 500;
   color: #999;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 26px;
+  margin: 8px 0 16px;
   text-align: left;
 }
 .blog img {
   max-width: 100%;
 }
 .blog p {
+  color: #5a5a5a;
   font-size: 16px;
   line-height: 22px;
-  color: #5a5a5a;
-  word-break: break-all;
   text-align: left;
+  word-break: break-all;
 }
 
 .blog-filter {
   height: 80px;
   width: 100%;
+  max-width: 1025px;
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
@@ -264,15 +267,17 @@ body {
   font-weight: 400;
 }
 .blog-filter--item-dropdown button {
+  background-color: #fff;
+  color: #629dfc;
   height: 40px;
   font-size: 14px;
   font-weight: 600;
-  color: #333;
+  transition: all 0.2s ease-in-out;
   width: 100%;
 }
 .blog-filter--item-dropdown button:hover {
   color: #fff;
-  background-color: #e3e3e3;
+  background-color: #629dfc;
 }
 
 .show {
@@ -295,17 +300,19 @@ body {
   margin: 12px 0;
 }
 .blog-form form .submit-button {
-  background-color: #00969E;
+  background-color: #fff;
+  border: 1px solid #629dfc;
   border-radius: 4px;
-  color: #fff;
+  color: #629dfc;
   cursor: pointer;
   font-size: 16px;
   height: 48px;
-  transition: all 0.15s ease-in-out;
+  transition: all 0.2s ease-in-out;
   width: 200px;
 }
 .blog-form form .submit-button:hover {
-  opacity: 0.5;
+  background-color: #629dfc;
+  color: #fff;
 }
 .blog-form form .input-container {
   align-items: flex-start;
@@ -388,11 +395,34 @@ body {
 
 .blog-peek-container {
   border: 1px solid #000000;
-  margin: 20px 0;
-  list-style: none;
+  border-radius: 4px;
   box-sizing: border-box;
+  list-style: none;
+  margin: 20px 0;
+  max-width: 1025px;
+  max-height: 250px;
+  overflow: hidden;
   padding: 25px 60px;
-  max-width: 1200px;
+  position: relative;
+}
+.blog-peek-container:hover .blog-peek--gradient {
+  color: #629dfc;
+}
+
+.blog-peek--gradient {
+  align-items: flex-end;
+  background: linear-gradient(rgba(255, 255, 255, 0), white);
+  bottom: 0;
+  color: grey;
+  display: flex;
+  font-size: 14px;
+  height: 150px;
+  justify-content: center;
+  padding-bottom: 8px;
+  position: absolute;
+  right: 0;
+  transition: all 0.2s ease-in-out;
+  width: 100%;
 }
 
 .Layout-content {
@@ -503,7 +533,7 @@ body {
 }
 .nav-menu-dropdown .nav-menu-dropdown--item:hover {
   color: #fff;
-  background-color: #c3c3c3;
+  background-color: #629dfc;
 }
 
 .show {

@@ -13,16 +13,18 @@
       margin: 12px 0;
     }
     .submit-button {
-      background-color: #00969E;
+      background-color: #fff;
+      border: 1px solid #629dfc;
       border-radius: 4px;
-      color: #fff;
+      color: #629dfc;
       cursor: pointer;
       font-size: 16px;
       height: 48px;
-      transition: all .15s ease-in-out;
+      transition: all .2s ease-in-out;
       width: 200px;
       &:hover {
-        opacity: 0.5;
+        background-color: #629dfc;
+        color: #fff;
       }
     }
     .input-container {
