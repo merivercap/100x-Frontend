@@ -82,13 +82,15 @@
   }
 
   button {
+    background-color: #fff;
+    color: #629dfc;
     height: 40px;
     font-size: 14px;
     font-weight: 600;
-    color: #333;
+    transition: all .2s ease-in-out;
     &:hover {
       color: #fff;
-      background-color: #e3e3e3;
+      background-color: #629dfc;
     }
     width: 100%;
   }
