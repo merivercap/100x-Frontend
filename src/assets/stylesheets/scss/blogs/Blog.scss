@@ -5,24 +5,29 @@
   padding: 25px 60px;
   width: 100%;
   
-  h1 {
-    color: #999;
-    font-size: 24px;
-    font-weight: 600;
-    line-height: 26px;
-    margin: 8px 0 16px;
-    text-align: left;
-  }
 
-  img {
-    max-width: 100%;
-  }
-
-  p {
-    color: #5a5a5a;
-    font-size: 16px;
-    line-height: 22px;
-    text-align: left;
-    word-break: break-all;
+  .blog--content {
+    h1 {
+      color: #333;
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 26px;
+      margin: 8px 0 16px;
+      text-align: left;
+    }
+    img {
+      max-width: 100%;
+      width: 100%;
+    }
+    p {
+      color: #5a5a5a;
+      font-size: 16px;
+      line-height: 22px;
+      text-align: left;
+      margin: 16px 0;
+    }
+    table {
+      width: 100%;
+    }
   }
 }
