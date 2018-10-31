@@ -1,6 +1,6 @@
 import gql from 'graphql-tag';
 
-export const createBlog = gql`
+export const BROADCAST_POST = gql`
   query broadcastPost($post: Post) {
     broadcastPost(post: $post) {
       id
@@ -28,11 +28,7 @@ export const createBlog = gql`
   }
 `;
 
-// export const updateBlog = gql`
-
-// `;
-
-export const fetchBlog = gql`
+export const FETCH_BLOG = gql`
   query fetchBlog($postId: Int!) {
     getPost(postId: $postId) {
       id
@@ -61,7 +57,7 @@ export const fetchBlog = gql`
 `;
 
 /** fetching author and replies breaks query */
-export const fetchBlogs = gql`
+export const GET_ALL_POSTS = gql`
   query {
     getAllPosts{
       id
@@ -102,7 +98,7 @@ export const fetchBlogs = gql`
   }
 `;
 
-export const getPostsByType = gql`
+export const GET_POSTS_BY_TYPE = gql`
   query getPostsByType($postType: String!) {
     getPostsByType(postType: $postType) {
       id
@@ -143,7 +139,7 @@ export const getPostsByType = gql`
   }
 `;
 
-export const getUserFeed = gql`
+export const GET_USER_FEED = gql`
   query getUserFeed {
     getUserFeed {
       id

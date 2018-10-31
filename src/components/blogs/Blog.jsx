@@ -3,7 +3,7 @@ import React from 'react';
 
 // Apollo / GraphQL
 import { Query } from 'react-apollo';
-import { fetchBlog } from '../../graphql/blogs_api';
+import { FETCH_BLOG } from '../../graphql/blogs_api';
 
 // HOCs
 import Layout from '../../HOCs/Layout';
@@ -31,7 +31,7 @@ export default class Blog extends React.Component {
     return (
       <Layout>
         <Query 
-          query={ fetchBlog }
+          query={ FETCH_BLOG }
           variables={ { postId: this.state.blogId } }
           notifyOnNetworkStatusChange>
           {
