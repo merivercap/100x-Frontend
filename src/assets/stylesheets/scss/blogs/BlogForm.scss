@@ -1,4 +1,4 @@
-.blog-form {
+.blog-form--container {
   width: 100vw;
   padding: 80px 10vw;
 
@@ -8,7 +8,7 @@
     flex-direction: column;
     margin: 0 auto;
     min-height: 500px;
-    width: 650px;
+    width: 750px;
     .blog-form--item {
       margin: 12px 0;
     }
