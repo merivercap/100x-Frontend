@@ -3,7 +3,7 @@ import { Route, Switch } from 'react-router-dom';
 
 import Blog from './Blog';
 import Blogs from './Blogs';
-import BlogForm from './BlogForm';
+import BlogForm from './Forms/BlogForm';
 import FeedBlogs from './FeedBlogs';
 import NewsBlogs from './NewsBlogs';
 import StoryBlogs from './StoryBlogs';
