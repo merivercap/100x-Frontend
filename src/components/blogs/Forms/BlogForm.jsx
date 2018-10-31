@@ -23,11 +23,11 @@ class BlogForm extends React.Component {
       <Layout>
         <div className="blog-form--container">
           <BlogTypeBar handleTypeChange={ this.handleTypeChange } />
-          {/* <div className="blog-form--wrapper">
-            <NewsForm type={ blogType } />
+          <div className="blog-form--wrapper">
             <StoryForm type={ blogType } />
-            <VideoForm type={ blogType } />
-          </div> */}
+            {/* <NewsForm type={ blogType } />
+            <VideoForm type={ blogType } /> */}
+          </div>
         </div>
       </Layout>
     );
