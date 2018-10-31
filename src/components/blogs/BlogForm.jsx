@@ -14,7 +14,7 @@ import Layout from '../../HOCs/Layout';
 import Textarea from '../shared/Textarea';
 
 // Utils
-import { createBlog, fetchBlogs } from '../../graphql/blogs_api';
+import { BROADCAST_POST, GET_ALL_POSTS } from '../../graphql/blogs_api';
 import {
   // errorMessages,
   FieldValidation,
@@ -109,20 +109,20 @@ class BlogForm extends React.Component {
 }
 
 export default compose(
-  graphql(createBlog, {
+  graphql(BROADCAST_POST, {
     props: (props) => ({
       broadcastPost: post => {
         // debugger;
         return props.mutate({
           variables: { post },
-          refetchQueries: [{ query: fetchBlogs }],
+          refetchQueries: [{ query: GET_ALL_POSTS }],
           update: (store, { data: { broadcastPost } }) => {
             // ignore writing cache if we don't have access
             // see https://github.com/apollographql/apollo-client/issues/1701#issuecomment-380213533
             if (!store.data.data.ROOT_QUERY) return;
-            const { getAllPosts } = store.readQuery({ query: fetchBlogs });
+            const { getAllPosts } = store.readQuery({ query: GET_ALL_POSTS });
             getAllPosts.push(broadcastPost);
-            store.writeQuery({ query: fetchBlogs, data: { getAllPosts } });
+            store.writeQuery({ query: GET_ALL_POSTS, data: { getAllPosts } });
           },
         });
       },
