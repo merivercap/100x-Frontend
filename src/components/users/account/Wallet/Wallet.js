@@ -3,7 +3,7 @@ import React from 'react';
 
 // Apollo / GraphQL
 import { Query } from 'react-apollo';
-import { getProfileInformation } from '../../../../graphql/users_api';
+import { GET_PROFILE_INFORMATION } from '../../../../graphql/users_api';
 
 // HOCs
 import Layout from '../../../../HOCs/Layout';
@@ -18,12 +18,12 @@ class Wallet extends React.Component {
     console.log('username: ',username);
     return (
       <Layout>
-        <Query query={getProfileInformation} variables={{ name: username }}>
+        <Query query={GET_PROFILE_INFORMATION} variables={{ name: username }}>
           {
             ({ loading, error, data }) => {
               if (loading) return <Loading/>
               if (error) return <GqlError error={ error }/>
-              const steemUser = data.getProfileInformation;
+              const steemUser = data.GET_PROFILE_INFORMATION;
               if (!steemUser) return <div>You have no wallet data to show yet!</div>;
               return (
                 <div className="wallet-container">
