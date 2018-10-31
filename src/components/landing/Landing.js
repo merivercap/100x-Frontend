@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 // Apollo / GraphQL
 import { Query } from 'react-apollo';
-import { fetchBlogs } from '../../graphql/blogs_api';
+import { GET_ALL_POSTS } from '../../graphql/blogs_api';
 
 // HOCs
 import Layout from '../../HOCs/Layout';
@@ -20,7 +20,7 @@ import steemAuth from '../../services/auth';
 const Landing = () => {
   return (
     <Layout>
-      <Query query={fetchBlogs}>
+      <Query query={GET_ALL_POSTS}>
         {
           ({ loading, error, data }) => {
             if (loading) return <Loading />
