@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 // Apollo / GraphQL
 import { Query } from 'react-apollo';
-import { getPostsByType } from '../../../graphql/blogs_api';
+import { GET_POSTS_BY_TYPE } from '../../../graphql/blogs_api';
 
 // HOCs
 import Layout from '../../../HOCs/Layout';
@@ -16,11 +16,11 @@ import { GqlError, Loading } from '../../shared';
 
 const VideoBlogs = () => (
   <Layout>
-    <Query query={ getPostsByType } variables={{ postType: "NEWS_POST" }}>
+    <Query query={ GET_POSTS_BY_TYPE } variables={{ postType: "NEWS_POST" }}>
       {({ data, error, loading }) => {
         if (loading) return <Loading />
         if (error) return <GqlError error={ error } />
-        const videoPosts = data.getPostsByType;
+        const videoPosts = data.GET_POSTS_BY_TYPE;
         return (
           <Fragment>
             <section className="blogs">
