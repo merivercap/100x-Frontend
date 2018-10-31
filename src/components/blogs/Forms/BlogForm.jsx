@@ -23,9 +23,9 @@ class BlogForm extends React.Component {
       <Layout>
         <div className="blog-form--container">
           <div className="blog-form--wrapper">
-            <BlogTypeBar handleTypeChange={ this.handleTypeChange } />
+            <BlogTypeBar blogType={ blogType } handleTypeChange={ this.handleTypeChange } />
             <div className="blog-form--content">
-              <StoryForm type={ blogType } />
+              { blogType === BLOG_TYPES.story && <StoryForm /> }
               {/* <NewsForm type={ blogType } />
               <VideoForm type={ blogType } /> */}
             </div>
@@ -35,13 +35,7 @@ class BlogForm extends React.Component {
     );
   }
 
-  handleTypeChange = blogType => {
-    const self = this;
-    return event => {
-      console.log('blogType: ', blogType);
-      self.setState({ blogType });
-    }
-  }
+  handleTypeChange = blogType => event => this.setState({ blogType });
 }
 
 export default BlogForm;
