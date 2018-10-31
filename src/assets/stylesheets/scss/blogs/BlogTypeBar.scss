@@ -1,0 +1,24 @@
+.blog-type-bar--container {
+  width: 750px;
+  background-color: whitesmoke;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+
+
+  .blog-type--item {
+    align-items: center;
+    border-right: 1px solid #333;
+    cursor: pointer;
+    display: flex;
+    height: 48px;
+    justify-content: center;
+    max-width: 33.33333%;
+    min-width: 33.33333%;
+    text-align: center;
+    width: 33.33333%;
+    &:last-child {
+      border: none;
+    }
+  }
+}
