@@ -6,7 +6,7 @@ import Layout from '../../../HOCs/Layout';
 // Components
 import BlogTypeBar from './BlogTypeBar';
 // import NewsForm from './NewsForm';
-// import StoryForm from './StoryForm';
+import StoryForm from './StoryForm';
 // import VideoForm from './VideoForm';
 
 // Utils
@@ -22,11 +22,13 @@ class BlogForm extends React.Component {
     return (
       <Layout>
         <div className="blog-form--container">
-          <BlogTypeBar handleTypeChange={ this.handleTypeChange } />
           <div className="blog-form--wrapper">
-            <StoryForm type={ blogType } />
-            {/* <NewsForm type={ blogType } />
-            <VideoForm type={ blogType } /> */}
+            <BlogTypeBar handleTypeChange={ this.handleTypeChange } />
+            <div className="blog-form--content">
+              <StoryForm type={ blogType } />
+              {/* <NewsForm type={ blogType } />
+              <VideoForm type={ blogType } /> */}
+            </div>
           </div>
         </div>
       </Layout>
