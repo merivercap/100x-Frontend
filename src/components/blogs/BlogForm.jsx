@@ -30,6 +30,7 @@ class BlogForm extends React.Component {
 
   componentDidMount() {
     // TODO: check if user is authenticated - redirect if not
+    // Use AuthenticatedRoute for this
   }
 
   render() {
