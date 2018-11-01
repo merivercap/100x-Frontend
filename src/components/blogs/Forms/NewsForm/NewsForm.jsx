@@ -1,9 +1,6 @@
 import React from 'react';
 import { compose, graphql } from 'react-apollo';
 
-import Layout from '../../../../HOCs/Layout';
-import Textarea from '../../../shared/Textarea';
-
 import { BROADCAST_POST, GET_ALL_POSTS } from '../../../../graphql/blogs_api';
 import {
   FieldValidation,
