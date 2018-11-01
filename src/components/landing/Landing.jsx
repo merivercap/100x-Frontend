@@ -23,9 +23,9 @@ const Landing = () => {
             if (loading) return <Loading />
             if (error) return <GqlError error={error} />
             return (
-              <section className="landing">
+              <section className="blogs">
                 <BlogFilter />
-                <div className="landing-blogs">
+                <div className="blogs--content">
                   {
                     data.getAllPosts.map(blog => (
                       <Link to={`/blogs/${blog.id}`} key={blog.id}>

@@ -18,12 +18,12 @@ const StoryBlogs = () => (
     <Query query={ GET_POSTS_BY_TYPE } variables={{ postType: "BLOG_POST" }}>
       {({ data, error, loading }) => {
         if (loading) return <Loading />
-        if (error) return <GqlError error={ error } />
-        const blogPosts = data.getAllPosts;
+        if (error || !data) return <GqlError error={ error } />
+        const blogPosts = data.getPostsByType;
         return (
           <Fragment>
             <section className="blogs">
-              <div className="content">
+              <div className="blogs--content">
                 {
                   blogPosts.map(blog => (
                     <Link to={ `/blogs/${blog.id}` } key={ blog.id }>

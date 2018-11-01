@@ -10,7 +10,7 @@ import BlogHeader from '../BlogHeader';
 const VideoBlogPeek = ({ blog }) => (
   <div className="blog">
     <BlogHeader blog={blog} />
-    <div className="content">
+    <div className="blog--content">
       <h1>{blog.title}</h1>
       <a onClick={stopPropagation} href={blog.body} target="_blank">{blog.body}</a>
       
