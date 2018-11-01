@@ -1,8 +1,10 @@
 .reply-form-container {
   align-items: flex-start;
+  border-bottom: 1px solid #d8d8d8;
   display: flex;
   flex-direction: column;
-  margin-top: 16px;
+  padding-bottom: 36px;
+  margin: 16px 0 48px;
 
 
   h3 {
@@ -13,18 +15,21 @@
   form {
     width: 100%;
     textarea {
+      border: 1px solid #d8d8d8;
       border-radius: 2px;
+      box-sizing: border-box;
       min-height: 70px;
       outline: none;
+      max-width: 750px;
       padding: 8px;
       resize: none;
       width: 100%;
     }
     .reply-form--actions {
       display: flex;
-      justify-content: space-between;
+      justify-content: flex-end;
       margin-top: 16px;
-      width: 480px;
+      width: 100%;
       
       button {
         background-color: #fff;
@@ -34,19 +39,20 @@
         font-weight: 400;
         height: 40px;
         transition: all .2s ease-in-out;
-        width: 220px;
+        width: 168px;
       }
       .cancel-reply {
-        border: 1px solid grey;
-        color: grey;
+        border: 1px solid #d8d8d8;
+        color: #d8d8d8;
         &:hover {
-          background-color: grey; 
+          background-color: #d8d8d8; 
           color: #fff;
         }
       }
       .submit-reply {
         border: 1px solid #629dfc;
         color: #629dfc;
+        margin-left: 24px;
         &:hover {
           background-color: #629dfc;
           color: #fff;
