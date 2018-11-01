@@ -19,17 +19,16 @@ class StoryForm extends React.Component {
       <section className="blog-form story-form">
         <form onSubmit={this.handleSubmit}>
           <div className="title-container input-container blog-form--item">
-            <h4>Title</h4>
             <input
               placeholder="Title"
               name="title"
               onChange={this.handleInput}
               type="text"
-              value={this.state.title} />
+              value={this.state.form.title} />
             {/* <p className="title-error error-message">
-                Your blog must have a title.
-                {/* error.title.message
-              </p> */}
+              Your blog must have a title.
+              {/* error.title.message
+            </p> */}
           </div>
           <div className="body-container input-container blog-form--item">
             <Textarea onChange={this.handleTextareaInput} />
@@ -117,6 +116,7 @@ function generateDefaultState() {
     form: {
       body: '',
       permLink: '',
+      postType: 'BLOG_POST',
       tags: '',
       title: '',
     },

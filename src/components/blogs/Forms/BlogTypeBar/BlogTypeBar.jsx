@@ -10,11 +10,11 @@ const BlogTypeBar = ({ blogType, handleTypeChange }) => (
       { blogType === BLOG_TYPES.story && <div className="active-bar"></div> }
     </div>
     <div className="blog-type--item" onClick={ handleTypeChange(BLOG_TYPES.news) }>
-      <span>News</span>
+      <span>News & Link</span>
       { blogType === BLOG_TYPES.news && <div className="active-bar"></div> }
     </div>
     <div className="blog-type--item" onClick={ handleTypeChange(BLOG_TYPES.video) }>
-      <span>Video</span>
+      <span>Image & Video</span>
       { blogType === BLOG_TYPES.video && <div className="active-bar"></div> }
     </div>
   </nav>
