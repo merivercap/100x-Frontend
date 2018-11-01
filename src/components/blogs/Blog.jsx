@@ -43,7 +43,7 @@ export default class Blog extends React.Component {
               return (
                 <article className="blog">
                   <BlogHeader blog={blog} />
-                  <div className="content">
+                  <div className="blog--content">
                     <h1>{ blog.title }</h1>
                     <p dangerouslySetInnerHTML={ bodyHtml } />
                   </div>

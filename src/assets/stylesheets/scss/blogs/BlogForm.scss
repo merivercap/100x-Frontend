@@ -1,14 +1,24 @@
-.blog-form {
+.blog-form--container {
   width: 100vw;
-  padding: 80px 10vw;
+  
+  .blog-form--wrapper {
+    border: 1px solid #d8d8d8;
+    border-radius: 8px;
+    margin: 80px auto;
+    min-width: 750px;
+    width: 750px;
+  }
+
+  .blog-form--content {
+    padding: 24px;
+  }
 
   form {
     align-items: flex-end;
     display: flex;
     flex-direction: column;
     margin: 0 auto;
-    min-height: 500px;
-    width: 650px;
+    width: 100%;
     .blog-form--item {
       margin: 12px 0;
     }
@@ -32,43 +42,54 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      min-height: 56px;
+      min-height: 42px;
       width: 100%;
       .Draftail-Editor {
+        min-height: 250px;
         width: 100%;
       }
       input {
         align-items: center;
+        border: 1px solid #d8d8d8;
+        border-radius: 6px;
         color: #333;
         display: flex;
-        font-size: 16px;
+        font-size: 14px;
         font-weight: 400;
-        height: 28px;
+        height: 42px;
         line-height: 22px;
+        padding: 8px 12px;
+        transition: all .2s ease-in-out;
         width: 100%;
+        &:focus {
+          border: 1px solid #7d7d7d !important;
+        }
       }
       h4 {
         color: #333;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 16px;
+        height: 16px;
+      }
+      .news-link-input {
+        align-items: center;
+        border: 1px solid #d8d8d8;
+        border-radius: 6px;
+        box-sizing: border-box;
+        color: #333;
+        display: flex;
         font-size: 14px;
         font-weight: 400;
-        line-height: 20px;
-        height: 20px;
-      }
-      textarea {
-        color: #333;
-        font-size: 16px;
-        font-weight: 400;
-        height: 400px;
+        min-height: 84px;
         outline: none;
-        padding: 7px;
-        resize: vertical;
-        // width: 100%;
-      }
-    }
-    .title-container {
-      border-bottom: 1px solid #333;
-      input {
-        // width: 100%;
+        padding: 8px 12px;
+        resize: none;
+        transition: all .2s ease-in-out;
+        width: 100%;
+        &:focus {
+          border: 1px solid #7d7d7d;
+        }
       }
     }
   }

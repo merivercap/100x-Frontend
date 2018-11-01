@@ -1,68 +1,40 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
 import { compose, graphql } from 'react-apollo';
 
-// Editor libraries
-// import { Editor, createEditorState } from 'medium-draft';
-// import mediumDraftImporter from 'medium-draft/lib/importer';
-// import { EditorState, convertToRaw, convertFromRaw } from 'draft-js';
+import Textarea from '../../../shared/Textarea';
 
-// HOCs
-import Layout from '../../HOCs/Layout';
-
-// Components
-import Textarea from '../shared/Textarea';
-
-// Utils
-import { BROADCAST_POST, GET_ALL_POSTS } from '../../graphql/blogs_api';
+import { BROADCAST_POST, GET_ALL_POSTS } from '../../../../graphql/blogs_api';
 import {
-  // errorMessages,
   FieldValidation,
-  // getFieldValidationStatus,
-  // getInputValidationClass,
-  // getInputErrorClass,
   isFileUnderLimit,
   isNotEmpty,
-} from '../../utils/validators';
+} from '../../../../utils/validators';
 
-class BlogForm extends React.Component {
+class StoryForm extends React.Component {
   state = generateDefaultState();
 
-  componentDidMount() {
-    // TODO: check if user is authenticated - redirect if not
-  }
-
   render() {
-    // const { errors } = this.state;
-    const {
-      title,
-      // body,
-      // cover_image_url
-    } = this.state.form;
     return (
-      <Layout>
-        <section className="blog-form">
-          <form onSubmit={ this.handleSubmit }>
-            <div className="title-container input-container blog-form--item">
-              <h4>Title</h4>
-              <input
-                placeholder="Post Title"
-                name="title"
-                onChange={ this.handleInput }
-                type="text"
-                value={ title } />
-              {/* <p className="title-error error-message">
-                Your blog must have a title.
-                {/* error.title.message
-              </p> */}
-            </div>
-            <div className="body-container input-container blog-form--item">
-              <Textarea onChange={ this.handleTextareaInput } />
-            </div>
-            <button className="blog-form--item submit-button" type="submit">Publish</button>
-          </form>
-        </section>
-      </Layout>
+      <section className="blog-form story-form">
+        <form onSubmit={this.handleSubmit}>
+          <div className="title-container input-container blog-form--item">
+            <input
+              placeholder="Title"
+              name="title"
+              onChange={this.handleInput}
+              type="text"
+              value={this.state.form.title} />
+            {/* <p className="title-error error-message">
+              Your blog must have a title.
+              {/* error.title.message
+            </p> */}
+          </div>
+          <div className="body-container input-container blog-form--item">
+            <Textarea onChange={this.handleTextareaInput} />
+          </div>
+          <button className="blog-form--item submit-button" type="submit">Publish</button>
+        </form>
+      </section>
     );
   }
 
@@ -107,6 +79,7 @@ class BlogForm extends React.Component {
   }
 }
 
+
 export default compose(
   graphql(BROADCAST_POST, {
     props: (props) => ({
@@ -127,7 +100,7 @@ export default compose(
       },
     }),
   })
-)(BlogForm);
+)(StoryForm);
 
 
 /** Helper Functions */
@@ -142,6 +115,7 @@ function generateDefaultState() {
     form: {
       body: '',
       permLink: '',
+      postType: 'BLOG_POST',
       tags: '',
       title: '',
     },
@@ -152,3 +126,4 @@ function generateDefaultState() {
     },
   };
 }
+

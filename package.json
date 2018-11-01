@@ -13,6 +13,7 @@
     "apollo-link-state": "^0.4.1",
     "classnames": "^2.2.6",
     "counterpart": "^0.18.6",
+    "date-fns": "^1.29.0",
     "draft-convert": "^1.4.10",
     "draft-js": "^0.10.5",
     "draft-js-export-html": "^1.2.0",
