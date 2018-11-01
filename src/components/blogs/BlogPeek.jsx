@@ -8,9 +8,9 @@ import htmlParser from '../../utils/htmlParser';
 
 const BlogPeek = ({ blog }) => (
   <div className="blog">
-    <BlogHeader blog={blog} />
+    <BlogHeader blog={ blog } />
     <div className="blog--content">
-      <h1>{blog.title}</h1>
+      <h1>{ blog.title }</h1>
       <p dangerouslySetInnerHTML={ parseBody(blog.body) } />
       <div className="blog-peek--gradient">Read more...</div>
     </div>
