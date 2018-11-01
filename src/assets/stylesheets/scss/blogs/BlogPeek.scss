@@ -4,17 +4,18 @@
   box-sizing: border-box;
   list-style: none;
   margin: 20px 0;
-  max-width: 1025px;
+  max-width: 750px;
   max-height: 250px;
   overflow: hidden;
-  padding: 25px 60px;
+  padding: 48px;
   position: relative;
   transition: all .2s ease-in-out;
+  width: 100%;
   &:hover {
-    border: 1px solid #629dfc;
+    border: 1px solid #7d7d7d;
   }
   &:hover .blog-peek--gradient{
-    color: #629dfc;
+    color: #7d7d7d;
   }
 }
 

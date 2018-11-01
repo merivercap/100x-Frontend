@@ -2,7 +2,8 @@ import React from 'react';
 
 const Loading = () => (
   <div className="gql-loading">
-    Loading...
+    <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+    <h1>Loading</h1>
   </div>
 );
 

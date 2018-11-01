@@ -1,17 +1,18 @@
-.landing {
+.blogs {
+  // padding: 80px;
   width: 100vw;
   padding: 80px 10vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-.landing-blogs {
-  width: 750px; 
-
   
-  a {
-    text-decoration: none;
+
+  .blogs--content {
+    margin: 0 auto;
+    width: 750px; 
+    a {
+      text-decoration: none;
+    }
   }
 }

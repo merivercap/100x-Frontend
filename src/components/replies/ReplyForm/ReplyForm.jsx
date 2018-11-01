@@ -27,7 +27,7 @@ class ReplyForm extends React.Component {
   render() {
     return (
       <div className="reply-form-container">
-        <h3>Write a reply</h3>
+        <h3>Join the conversation:</h3>
         <form>
           <textarea placeholder="Write your comment here.."></textarea>
           <div className="reply-form--actions">

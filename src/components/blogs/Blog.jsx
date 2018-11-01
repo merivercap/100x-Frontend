@@ -10,7 +10,6 @@ import Layout from '../../HOCs/Layout';
 
 // Components
 import BlogHeader from './BlogHeader';
-// import Comments from '../comments/Comments';
 import Replies from '../replies';
 import { GqlError, Loading } from '../shared';
 
@@ -41,7 +40,7 @@ export default class Blog extends React.Component {
               const blog = data.getPost;
               const bodyHtml = htmlParser.getHtml({ body: blog.body }).props.dangerouslySetInnerHTML;
               return (
-                <article className="blog">
+                <article className="blog blog-view">
                   <BlogHeader blog={blog} />
                   <div className="blog--content">
                     <h1>{ blog.title }</h1>
