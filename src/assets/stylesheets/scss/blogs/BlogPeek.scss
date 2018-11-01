@@ -1,5 +1,5 @@
 .blog-peek-container {
-  border: 1px solid #000000;
+  border: 1px solid #d8d8d8;
   border-radius: 4px;
   box-sizing: border-box;
   list-style: none;
@@ -9,6 +9,10 @@
   overflow: hidden;
   padding: 25px 60px;
   position: relative;
+  transition: all .2s ease-in-out;
+  &:hover {
+    border: 1px solid #629dfc;
+  }
   &:hover .blog-peek--gradient{
     color: #629dfc;
   }
