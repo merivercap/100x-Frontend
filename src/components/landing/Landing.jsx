@@ -14,9 +14,6 @@ import BlogPeek from '../blogs/BlogPeek';
 import BlogFilter from '../blogs/BlogFilter';
 import { GqlError, Loading } from '../shared';
 
-// Services
-import steemAuth from '../../services/auth';
-
 const Landing = () => {
   return (
     <Layout>
