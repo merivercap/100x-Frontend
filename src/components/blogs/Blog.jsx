@@ -10,7 +10,6 @@ import Layout from '../../HOCs/Layout';
 
 // Components
 import BlogHeader from './BlogHeader';
-// import Comments from '../comments/Comments';
 import Replies from '../replies';
 import { GqlError, Loading } from '../shared';
 
