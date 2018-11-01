@@ -4,7 +4,6 @@ import { Query } from 'react-apollo';
 import { GET_ALL_POST_REPLIES } from '../../graphql/replies_api';
 
 // Components
-import Layout from '../../HOCs/Layout';
 import { GqlError, Loading } from '../shared';
 import Reply from './Reply';
 import ReplyForm from './ReplyForm';
