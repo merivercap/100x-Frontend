@@ -17,8 +17,8 @@ const Replies = ({ post }) => (
       return (
         <section className="replies">
           <div className="replies--content">
-            <ReplyForm post={post} />
             <h1>Replies</h1>
+            <ReplyForm post={post} />
             { replies.map(reply => <Reply reply={reply} key={reply.id} />) }
           </div>
         </section>
