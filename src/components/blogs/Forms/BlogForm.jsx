@@ -5,7 +5,7 @@ import Layout from '../../../HOCs/Layout';
 
 // Components
 import BlogTypeBar from './BlogTypeBar';
-// import NewsForm from './NewsForm';
+import NewsForm from './NewsForm';
 import StoryForm from './StoryForm';
 // import VideoForm from './VideoForm';
 
@@ -26,8 +26,8 @@ class BlogForm extends React.Component {
             <BlogTypeBar blogType={ blogType } handleTypeChange={ this.handleTypeChange } />
             <div className="blog-form--content">
               { blogType === BLOG_TYPES.story && <StoryForm /> }
-              {/* <NewsForm type={ blogType } />
-              <VideoForm type={ blogType } /> */}
+              { blogType === BLOG_TYPES.news && <NewsForm /> }
+              {/* <VideoForm type={ blogType } /> */}
             </div>
           </div>
         </div>
