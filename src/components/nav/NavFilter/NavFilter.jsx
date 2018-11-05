@@ -2,9 +2,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-// Components
-import NavBlogFilter from './NavBlogFilter';
-
 export default class NavFilter extends React.Component {
   render() {
     return (
@@ -12,19 +9,19 @@ export default class NavFilter extends React.Component {
         <div className="nav--filter">
           <Link to="/" className="nav-filter--item">
             All Blogs
-        </Link>
+          </Link>
           <Link to="/blogs/feed" className="nav-filter--item">
             Home
-        </Link>
+          </Link>
           <Link to="/blogs/story" className="nav-filter--item">
             Blog
-        </Link>
+          </Link>
           <Link to="/blogs/news" className="nav-filter--item">
             News
-        </Link>
+          </Link>
           <Link to="/blogs/video" className="nav-filter--item">
             Video
-        </Link>
+          </Link>
         </div>
       </div>
     );
