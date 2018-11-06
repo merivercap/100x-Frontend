@@ -1,13 +1,13 @@
 import * as React from 'react';
 
-export enum ScreenType {
-  MOBILE = 1,
-  TABLET = 2,
-  DESKTOP = 3,
-  LARGE_DESKTOP = 4,
-}
+export const ScreenType = {
+  MOBILE: 1,
+  TABLET: 2,
+  DESKTOP: 3,
+  LARGE_DESKTOP: 4,
+};
 
-export function getScreenWidth() {
+export function getScreenType() {
   const { innerWidth } = window;
   if (innerWidth < 768) {
     return ScreenType.MOBILE;
@@ -19,3 +19,5 @@ export function getScreenWidth() {
     return ScreenType.LARGE_DESKTOP;
   }
 }
+
+export const { Provider: AppProvider, Consumer: AppConsumer } = React.createContext({});
