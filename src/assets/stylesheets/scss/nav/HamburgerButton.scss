@@ -5,11 +5,12 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 0;
   cursor: pointer;
 
   div {
     width: 25px;
-    margin: 2px;
+    margin: 2px 0;
     height: 3px;
     background-color: black;
     border-radius: 1.5px;

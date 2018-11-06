@@ -44,12 +44,19 @@
 @media (min-width: 1024px) {
   .nav {
     height: 64px;
-  }
+    padding: 8px 48px;
 
+
+    .content {
+      .logo {
+        height: 36px;
+      }
+    }
+  }
 }
 
 
 /** Large Desktop */
-@media (min-width: 1440px) {
+@media (min-width: 1920px) {
 
 }

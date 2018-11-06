@@ -1,18 +1,78 @@
+/** Mobile */
 .nav--filter-container {
-  height: 100%;
-  width: 335px;
-  display: flex;
-  justify-content: center;
   align-items: center;
+  display: flex;
+  height: 100%;
+  justify-content: center;
   padding: 10 36px;
+  position: relative;
+  width: 80px;
+
+  .nav--filter-wrapper {
+    .bg {
+      background: rgba(0,0,0,0.3);
+      bottom: 0;
+      left: 0;
+      height: 100%;
+      position: fixed;
+      right: 0;
+      top: 48px;
+      width: 100%;
+    }
+    .nav--filter {
+      background: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      left: 0;
+      position: fixed;
+      right: 0;
+      top: 48px;
+      width: 100vw;
+    
+      .nav-filter--item {
+        align-items: center;
+        border-bottom: 1px solid #d8d8d8;
+        color: #000;
+        display: flex;
+        height: 48px;
+        padding: 8px 16px;
+        width: 100%;
+      }
+    }
+  }
 }
 
-.nav--filter {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
 
-  .nav-filter--item {
-    color: #000;
+
+/** Tablet */
+@media (min-width: 768px) {
+
+}
+
+
+/** Desktop */
+@media (min-width: 1024px) {
+  .nav--filter-container {
+    width: 335px;
+
+    .nav--filter-wrapper {
+      .nav--filter {
+        flex-direction: row;
+        justify-content: space-between;
+        position: static;
+        width: 100%;
+        .nav-filter--item {
+          border: none;
+          padding: none;
+        }
+      }
+    }
   }
+}
+
+
+/** Large Desktop */
+@media (min-width: 1920px) {
+
 }
