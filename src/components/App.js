@@ -19,30 +19,54 @@ import steemAuth from '../services/auth';
  */
 
 // Components
+import { AppProvider, getScreenType } from './shared/ScreenType';
 import Account from './users/account';
 import Landing from './landing/Landing';
 import Login from './login/Login';
 import Register from './register/Register';
 import BlogRoutes from './blogs/BlogRoutes';
 
-const App = () => {
-  const authResponse = window.location.search;
-  if (authResponse) steemAuth.login(authResponse);
-  return (
-    <ApolloProvider client={ client }>
-      <Router history={ createBrowserHistory() }>
-        <div className="App">
-          <Switch>
-            <Route path="/blogs" component={ BlogRoutes } />
-            <Route exact path="/login" component={ Login } />
-            <Route exact path="/register" component={ Register } />
-            <Route path="/account" component={ Account } />
-            <Route exact path="/" component={ Landing } />
-          </Switch>
-        </div>
-      </Router>
-    </ApolloProvider>
-  );
+class App extends React.Component {
+  state = {
+    screenType: getScreenType(),
+  };
+
+  componentDidMount() {
+    window.addEventListener('resize', this.refreshScreenType);
+    const authResponse = window.location.search;
+    if (authResponse) steemAuth.login(authResponse);
+  }
+
+  componentWIllUnmount() {
+    window.removeEventListener('resize', this.refreshScreenType);
+  }
+
+  render() {
+    return (
+      <AppProvider value={ this.state }>
+        <ApolloProvider client={client}>
+          <Router history={createBrowserHistory()}>
+            <div className="App">
+              <Switch>
+                <Route path="/blogs" component={BlogRoutes} />
+                <Route exact path="/login" component={Login} />
+                <Route exact path="/register" component={Register} />
+                <Route path="/account" component={Account} />
+                <Route exact path="/" component={Landing} />
+              </Switch>
+            </div>
+          </Router>
+        </ApolloProvider>
+      </AppProvider>
+    );
+  }
+
+  refreshScreenType = () => {
+    const screenType = getScreenType();
+    if (this.state.screenType !== screenType) {
+      return this.setState({ screenType });
+    }
+  }
 }
 
 export default App;
