@@ -24,9 +24,9 @@ class NavFilter extends React.Component {
           {({ screenType }) => {
             console.log('screenType: ', screenType);
             if (screenType < ScreenType.TABLET) {
-              return <NavFilterMobile feedType={feedType} />;
+              return <NavFilterMobile feedType={ feedType } />;
             } else {
-              return <NavFilters />;
+              return <NavFilterDesktop />;
             }
           }}
         </AppConsumer>
@@ -44,31 +44,52 @@ export default NavFilter;
 
 /** Helper Components */
 
-const NavFilterMobile = ({ feedType }) => (
-  <div className="nav--filter-container mobile">
-    <button>{ feedType }</button>
+class NavFilterMobile extends React.Component {
+  state = {
+    showFiltersDropdown: false,
+  };
+
+  render() {
+    const { feedType } = this.props;
+    const { showFiltersDropdown } = this.state;
+    return (
+      <div className="nav--filter-wrapper mobile">
+        <button onClick={ this.toggleDropdown }>{ feedType }</button>
+        { showFiltersDropdown && (
+          <div>
+            <div className="bg"></div>
+            <NavFilters />
+          </div>
+        )}
+      </div>
+    );
+  }
+
+  toggleDropdown = () => this.setState({ showFiltersDropdown: !this.state.showFiltersDropdown });
+}
+
+const NavFilterDesktop = () => (
+  <div className="nav--filter-wrapper desktop">
     <NavFilters />
   </div>
 );
 
 const NavFilters = () => (
-  <div className="nav--filter-container">
-    <div className="nav--filter">
-      <Link to="/" className="nav-filter--item">
-        All Blogs
-      </Link>
-      <Link to="/blogs/feed" className="nav-filter--item">
-        Home
-      </Link>
-      <Link to="/blogs/story" className="nav-filter--item">
-        Blog
-      </Link>
-      <Link to="/blogs/news" className="nav-filter--item">
-        News
-      </Link>
-      <Link to="/blogs/video" className="nav-filter--item">
-        Video
-      </Link>
-    </div>
+  <div className="nav--filter">
+    <Link to="/" className="nav-filter--item">
+      All Blogs
+    </Link>
+    <Link to="/blogs/feed" className="nav-filter--item">
+      Home
+    </Link>
+    <Link to="/blogs/story" className="nav-filter--item">
+      Blog
+    </Link>
+    <Link to="/blogs/news" className="nav-filter--item">
+      News
+    </Link>
+    <Link to="/blogs/video" className="nav-filter--item">
+      Video
+    </Link>
   </div>
 );
