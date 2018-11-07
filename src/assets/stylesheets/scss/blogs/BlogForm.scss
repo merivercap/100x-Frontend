@@ -1,16 +1,15 @@
+/** Mobile */
 .blog-form--container {
   width: 100vw;
   
   .blog-form--wrapper {
     border: 1px solid #d8d8d8;
     border-radius: 8px;
-    margin: 80px auto;
-    min-width: 750px;
-    width: 750px;
+    margin: 0 auto;
   }
 
   .blog-form--content {
-    padding: 24px;
+    padding: 0 8px;
   }
 
   form {
@@ -93,4 +92,33 @@
       }
     }
   }
+}
+
+/** Tablet */
+@media (min-width: 768px) {
+
+}
+
+
+/** Desktop */
+@media (min-width: 1024px) {
+  /** Mobile */
+.blog-form--container {
+  .blog-form--wrapper {
+    margin: 80px auto;
+    min-width: 750px;
+    width: 750px;
+  }
+
+  .blog-form--content {
+    padding: 48px;
+  }
+}
+
+}
+
+
+/** Large Desktop */
+@media (min-width: 1920px) {
+
 }

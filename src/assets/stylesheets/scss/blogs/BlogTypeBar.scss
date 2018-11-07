@@ -1,3 +1,4 @@
+/** Mobile */
 .blog-type-bar--container {
   background-color: #fff;
   border-bottom: 1px solid #d8d8d8;
@@ -7,7 +8,6 @@
   justify-content: center;
   margin: 0 auto;
   transition: all .2s ease-in-out;
-  width: 748px;
   
   .blog-type--item {
     align-items: center;
@@ -46,4 +46,24 @@
       width: 100%;
     }
   }
+}
+
+
+/** Tablet */
+@media (min-width: 768px) {
+  .blog-type-bar--container {
+    width: 748px;
+  }
+}
+
+
+/** Desktop */
+@media (min-width: 1024px) {
+  
+}
+
+
+/** Large Desktop */
+@media (min-width: 1920px) {
+
 }

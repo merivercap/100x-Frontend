@@ -1,5 +1,6 @@
+/** Mobile */
 .blog-view {
-  padding: 80px 60px;
+  padding: 8px 24px;
 }
 
 .blog {
@@ -37,4 +38,24 @@
       width: 100%;
     }
   }
+}
+
+
+/** Tablet */
+@media (min-width: 768px) {
+
+}
+
+
+/** Desktop */
+@media (min-width: 1024px) {
+  .blog-view {
+    padding: 80px 60px;
+  }
+}
+
+
+/** Large Desktop */
+@media (min-width: 1920px) {
+
 }
