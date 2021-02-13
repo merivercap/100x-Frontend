@@ -13,7 +13,7 @@ const BlogHeader = ({ blog }) => {
         <div className="author-profile-pic" style={{ backgroundImage: `url(${profileImageUrl})` }}></div>
         <div className="info">
           <h3>{author.name}</h3>
-          <p>{parseCreatedAtTime(blog.createdAt)}</p>
+          <p>{parseCreatedAtTime(blog.createdAt)} ago</p>
         </div>
       </section>
       <section>

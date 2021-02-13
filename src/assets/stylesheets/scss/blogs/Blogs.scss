@@ -1,17 +1,43 @@
+/** Mobile */
 .blogs {
-  width: 100vw;
-  padding: 80px 10vw;
+  align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  padding: 0 24px;
+  width: 100vw;
   
-
+  
   .blogs--content {
     margin: 0 auto;
-    width: 750px; 
+    width: 100%;
     a {
       text-decoration: none;
     }
   }
+}
+
+
+/** Tablet */
+@media (min-width: 768px) {
+  
+}
+
+
+/** Desktop */
+@media (min-width: 1024px) {
+  .blogs {
+    padding: 80px 10vw;
+
+
+    .blogs--content {
+      width: 750px;
+    }
+  }
+}
+
+
+/** Large Desktop */
+@media (min-width: 1920px) {
+
 }

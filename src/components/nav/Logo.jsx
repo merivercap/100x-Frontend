@@ -7,7 +7,7 @@ const Logo = () => (
       {/* TODO: Get svg file for logo and inject here */}
       <img
         alt="logo"
-        src="https://res.cloudinary.com/ddgtwtbre/image/upload/v1531042766/hundredx-logo_knkvo1.png"
+        src="https://res.cloudinary.com/ddgtwtbre/image/upload/v1541460504/hundredx_nnhbj5.png"
       />
     </Link>
   </div>

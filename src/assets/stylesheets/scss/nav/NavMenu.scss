@@ -1,46 +1,47 @@
+/** Mobile */
 .nav--menu-container {
-  height: 64px;
-  width: 64px;
-  box-sizing: border-box;
-  padding: 7px;
+  height: 21px;
+  width: 25px;
 }
 
 .nav-menu-dropdown-container {
-  min-height: 48px;
-  width: 200px;
-  z-index: 0;
-  position: absolute;
-  top: 64px;
-  right: 0;
-  opacity: 0;
-  background-color: white;
-  pointer-events: none;
   box-shadow: 0 4px 2px -2px lightgrey;
+  background-color: white;
+  height: 100vh;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  top: 48px;
+  width: 100vw;
+  z-index: 0;
 }
 
 .nav-menu-dropdown {
+  align-items: center;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: center;
+  padding: 0 24px;
+  width: 100vw;
 
   .nav-menu-dropdown--item {
-    height: 48px;
-    width: 100%;
-    box-sizing: border-box;
-    padding: 7px 14px;
-    border-bottom: 1px solid #c3c3c3;
-    border-left: 1px solid #c3c3c3;
-    display: flex;
-    justify-content: flex-start;
     align-items: center;
-    font-size: 14px;
-    font-weight: 400;
+    box-sizing: border-box;
     color: #333;
-    transition: all .15s ease-in-out;
+    border-bottom: 1px solid #d8d8d8;
+    display: flex;
+    font-size: 14px;
+    font-weight: 500;
+    height: 48px;
+    justify-content: flex-start;
+    padding: 7px 14px;
+    transition: all .2s ease-in-out;
+    width: 100%;
     &:hover {
-      color: #fff;
       background-color: #629dfc;
+      color: #fff;
     }
   }
 }
@@ -48,4 +49,42 @@
 .show {
   opacity: 1;
   pointer-events: all;
+}
+
+
+/** Tablet */
+@media (min-width: 768px) {
+  .nav--menu-container {
+
+  }
+}
+
+
+/** Desktop */
+@media (min-width: 1024px) {
+  .nav--menu-container {
+    height: 64px;
+    width: 64px;
+  }
+
+  .nav-menu-dropdown-container {
+    min-height: 48px;
+    top: 64px;
+    width: 200px;
+  }
+
+  .nav-menu-dropdown {
+    padding: 0;
+    
+    .nav-menu-dropdown--item {
+      border-left: 1px solid #c3c3c3;
+      width: 100%;
+    }
+  }
+}
+
+
+/** Large Desktop */
+@media (min-width: 1920px) {
+
 }
